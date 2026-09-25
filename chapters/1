@@ -1,0 +1,30 @@
+\begin{enumerate}
+
+% --------------------------------------------------
+% QUESTION 1
+% --------------------------------------------------
+\item   
+A line passes through the points $\vec{A} = \myvec{1 \\ 2}$ and $\vec{B} = \myvec{4 \\ 6}$. Find the directional vector $\vec{m}$ of the line.
+
+\textbf{Solution:}  
+The directional vector $\vec{m}$ is obtained by finding the difference between vector $\vec{B}$ and vector $\vec{A}$:
+\begin{align}
+    \vec{m} &= \vec{B} - \vec{A} \\
+    \vec{m} &= \myvec{4 \\ 6} - \myvec{1 \\ 2} \\
+    \vec{m} &= \myvec{3 \\ 4}
+\end{align}
+
+% --------------------------------------------------
+% QUESTION 2
+% --------------------------------------------------
+\item   
+Evaluate the determinant of the matrix $\mathbf{M} = \myvec{2 & 5 \\ 1 & 3}$.
+
+\textbf{Solution:}  
+Using the standard determinant formula for a $2 \times 2$ matrix:
+\begin{align}
+    \det(\mathbf{M}) &= (2)(3) - (5)(1) \\
+    \det(\mathbf{M}) &= 6 - 5 = 1
+\end{align}
+
+\end{enumerate}

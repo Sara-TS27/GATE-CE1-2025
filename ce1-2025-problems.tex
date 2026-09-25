@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\subsection*{Problem}
+At how many points will the curves $y=x^{2}$ and $y=-x^{2}-2x-1$ intersect in the real $(x, y)$ plane?
+\begin{enumerate}
+    \item[(A)] 0
+    \item[(B)] 1
+    \item[(C)] 2
+    \item[(D)] 3
+\end{enumerate}
+
+\subsection*{Solution (Direct Method)}
+Equating the two curves to find points of intersection:
+\[
+x^{2} = -x^{2} - 2x - 1
+\]
+\[
+2x^{2} + 2x + 1 = 0
+\]
+
+Using the quadratic formula $x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$:
+\[
+\Delta = b^{2} - 4ac = (2)^{2} - 4(2)(1) = 4 - 8 = -4
+\]
+
+Since the discriminant $\Delta < 0$, there are no real solutions for $x$, meaning the two parabolas do not intersect in the real $(x, y)$ plane.
+
+\textbf{Answer:} \textbf{(A) 0}
+
+\subsection*{Solution (Pencil of Conics / Matrix Formulation)}
+Representing the curves in general conic form $x^{\top}Vx + 2u^{\top}x + f = 0$ where $x = \begin{pmatrix} x \\ y \end{pmatrix}$:
+
+\begin{itemize}
+    \item Curve 1: $x^2 - y = 0 \implies V_1 = \begin{pmatrix}1 & 0\\0 & 0\end{pmatrix}, \quad u_1 = \begin{pmatrix}0\\-0.5\end{pmatrix}, \quad f_1 = 0$
+    \item Curve 2: $x^2 + 2x + y + 1 = 0 \implies V_2 = \begin{pmatrix}1 & 0\\0 & 0\end{pmatrix}, \quad u_2 = \begin{pmatrix}1\\0.5\end{pmatrix}, \quad f_2 = 1$
+\end{itemize}
+
+Forming the radical line equation by setting $\mu = -1$:
+\[
+2(u_1 - u_2)^{\top}x + (f_1 - f_2) = 0
+\]
+\[
+2\begin{pmatrix}-1 & -1\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix} - 1 = 0 \implies 2x + 2y + 1 = 0
+\]
+
+Parametrizing the radical line with base point $h = \begin{pmatrix}0\\-0.5\end{pmatrix}$ and direction $m = \begin{pmatrix}1\\-1\end{pmatrix}$:
+\[
+\kappa = \frac{-m^{\top}(V_1 h + u_1) \pm \sqrt{[m^{\top}(V_1 h + u_1)]^2 - g(h)(m^{\top}V_1 m)}}{m^{\top}V_1 m}
+\]
+\[
+\kappa = \frac{-0.5 \pm \sqrt{0.25 - 0.5}}{1} = -0.5 \pm 0.5i
+\]
+
+Since $\kappa$ is complex, no real intersection points exist.
+
+\end{document}

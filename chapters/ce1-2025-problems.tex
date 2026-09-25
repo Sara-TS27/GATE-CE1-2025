@@ -1,0 +1,951 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=red,citecolor=red,urlcolor=black]{hyperref}
+
+% ---------------- headings in the style of BT25 ----------------
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesectiondis}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsectiondis}{\Alph{subsection}.}
+
+\newcommand{\codebox}[1]{\par\smallskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\centering #1}}\par\smallskip}
+
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\sbrak}[1]{\ensuremath{\left[#1\right]}}
+\newcommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\newcommand{\gate}{\hfill (GATE CE 2026)}
+
+% ---------------- numbering in the style of BT25 ----------------
+\newcounter{formula}
+\newcounter{problem}
+\newcommand{\eqprefix}{}
+\renewcommand{\theequation}{\eqprefix.\arabic{equation}}
+\renewcommand{\thefigure}{\eqprefix.\arabic{figure}}
+\newcommand{\formula}[1]{\refstepcounter{formula}%
+  \renewcommand{\eqprefix}{1.1.\arabic{formula}}\setcounter{equation}{0}%
+  \par\medskip\needspace{5\baselineskip}\noindent{1.1.\arabic{formula}\quad #1}\par\nopagebreak\smallskip}
+\newcommand{\problem}{\refstepcounter{problem}%
+  \renewcommand{\eqprefix}{1.2.\arabic{problem}}\setcounter{equation}{0}\setcounter{figure}{0}%
+  \item }
+\renewcommand{\theformula}{1.1.\arabic{formula}}
+\renewcommand{\theproblem}{1.2.\arabic{problem}}
+\newcommand{\solution}{\par\medskip\hspace*{1em}\textbf{Solution:} }
+\newenvironment{options}{\par\medskip\begin{multicols}{2}\begin{enumerate}[label=\alph*),itemsep=0pt,topsep=0pt,leftmargin=1.5em]}{\end{enumerate}\end{multicols}}
+
+\begin{document}
+
+\section*{About this Book}
+This book introduces matrices through high school coordinate geometry. This approach makes it easier for beginners to learn Python for scientific computing. All problems in the book are from NCERT mathematics textbooks from Class 9-12. Exercises are from CBSE board exam papers.
+
+The content is sufficient for industry jobs and covers nearly all matrix prerequisites for machine learning. There is no copyright, so readers are free to print and share.
+
+License: \url{https://creativecommons.org/licenses/by-sa/3.0/}\\
+and\\
+\url{https://www.gnu.org/licenses/fdl-1.3.en.html}\\
+First manual appeared in January 2018\\
+First edition published on July 10, 2024\\
+In this edition, some incorrect solutions were removed. All figures redrawn. More problems added.
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{GATE CE 2026 (CE1)}
+
+\subsection{Formulae}
+
+% =============================================================
+\formula{Intersection of Conics and Common Chord}
+\begin{itemize}
+
+\item Line-Conic Intersection: The points of intersection of a line $L: \mathbf{x} = \mathbf{h} + \kappa\mathbf{m}$ $\brak{\kappa\in\mathbb{R}}$ with a conic section $\mathbf{x}^\top\mathbf{V}\mathbf{x} + 2\mathbf{u}^\top\mathbf{x} + f = 0$ are given by
+\begin{align}
+\mathbf{x}_i = \mathbf{h} + \kappa_i\mathbf{m}
+\label{eq:lc}
+\end{align}
+where the parameter values $\kappa_i$ are:
+\begin{align}
+\kappa_i = \frac{-\mathbf{m}^\top\brak{\mathbf{V}\mathbf{h}+\mathbf{u}} \pm \sqrt{\sbrak{\mathbf{m}^\top\brak{\mathbf{V}\mathbf{h}+\mathbf{u}}}^2 - g\brak{\mathbf{h}}\brak{\mathbf{m}^\top\mathbf{V}\mathbf{m}}}}{\mathbf{m}^\top\mathbf{V}\mathbf{m}}
+\label{eq:kappa}
+\end{align}
+with $g\brak{\mathbf{h}} = \mathbf{h}^\top\mathbf{V}\mathbf{h} + 2\mathbf{u}^\top\mathbf{h} + f$. The line meets the conic at two, one or no real points according as the discriminant
+\begin{align}
+\Delta = \sbrak{\mathbf{m}^\top\brak{\mathbf{V}\mathbf{h}+\mathbf{u}}}^2 - g\brak{\mathbf{h}}\brak{\mathbf{m}^\top\mathbf{V}\mathbf{m}}
+\label{eq:disc}
+\end{align}
+is positive, zero or negative.
+\item Pencil of Conics: The intersection of two conics with parameters $\brak{\mathbf{V}_1,\mathbf{u}_1,f_1}$ and $\brak{\mathbf{V}_2,\mathbf{u}_2,f_2}$ lies on every member of the pencil
+\begin{align}
+\mathbf{x}^\top\brak{\mathbf{V}_1+\mu\mathbf{V}_2}\mathbf{x} + 2\brak{\mathbf{u}_1+\mu\mathbf{u}_2}^\top\mathbf{x} + \brak{f_1+\mu f_2} = 0
+\label{eq:pencil}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{Line Intersection and Angle Between Vectors}
+\begin{itemize}
+
+\item The lines $\mathbf{x} = \mathbf{A} + \kappa_1\mathbf{m}_1$ and $\mathbf{x} = \mathbf{B} + \kappa_2\mathbf{m}_2$ meet where
+\begin{align}
+\myvec{\mathbf{m}_1 & -\mathbf{m}_2}\myvec{\kappa_1\\ \kappa_2} = \mathbf{B} - \mathbf{A}
+\label{eq:lineint}
+\end{align}
+\item The angle $\theta$ between two vectors $\mathbf{a}$ and $\mathbf{b}$ is given by
+\begin{align}
+\cos\theta = \frac{\mathbf{a}^\top\mathbf{b}}{\norm{\mathbf{a}}\norm{\mathbf{b}}}
+\label{eq:angle}
+\end{align}
+
+\item A point on a circle of radius $r$ centred at the origin is $\mathbf{x} = r\myvec{\cos\alpha\\ \sin\alpha}$, and
+\begin{align}
+\mathbf{e}_\alpha^\top\mathbf{e}_\beta = \cos\alpha\cos\beta + \sin\alpha\sin\beta = \cos\brak{\alpha-\beta},\quad \mathbf{e}_\alpha \triangleq \myvec{\cos\alpha\\ \sin\alpha}
+\label{eq:cosdiff}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{System of Linear Equations and Rouch\'e--Capelli Theorem}
+\begin{itemize}
+
+\item A system of $m$ linear equations in $n$ variables is represented as
+\begin{align}
+\mathbf{A}\mathbf{x} = \mathbf{b}
+\label{eq:axb}
+\end{align}
+where $\mathbf{A}\in\mathbb{R}^{m\times n}$, $\mathbf{x}\in\mathbb{R}^{n\times 1}$ and $\mathbf{b}\in\mathbb{R}^{m\times 1}$.
+The system is consistent if and only if
+\begin{align}
+\text{rank}\brak{\mathbf{A}} = \text{rank}\brak{\sbrak{\mathbf{A}\mid\mathbf{b}}} = r
+\label{eq:rc}
+\end{align}
+\item If $r = n$ the solution is unique; if $r < n$ there are infinitely many solutions with $n-r$ free variables.
+If $\mathbf{A}$ is square and non-singular, $\mathbf{x} = \mathbf{A}^{-1}\mathbf{b}$. If $\mathbf{A}\in\mathbb{R}^{n\times(n-1)}$, the system is consistent only if the square augmented matrix is singular:
+\begin{align}
+\mydet{\mathbf{A} & \mathbf{b}} = 0
+\label{eq:augdet}
+\end{align}
+\item For $\mathbf{A}\in\mathbb{R}^{2\times 3}$ with rank 2, the solution of $\mathbf{A}\mathbf{x} = \mathbf{0}$ is the line through the origin along the cross product of the two rows:
+\begin{align}
+\mathbf{x} = \kappa\brak{\mathbf{a}_1\times\mathbf{a}_2}
+\label{eq:cross}
+\end{align}
+\item Zero Norm: For $\mathbf{v}\in\mathbb{R}^n$,
+\begin{align}
+\norm{\mathbf{v}}^2 = \mathbf{v}^\top\mathbf{v} = \sum_i v_i^2 = 0 \iff \mathbf{v} = \mathbf{0}
+\label{eq:zeronorm}
+\end{align}
+\end{itemize}
+% =============================================================
+\formula{Relation Between Eigenvalues and Trace of a Matrix}
+\begin{itemize}
+
+\item The characteristic polynomial of $\mathbf{A}\in\mathbb{R}^{n\times n}$ is
+\begin{align}
+P\brak{\lambda} = \abs{\lambda\mathbf{I} - \mathbf{A}}
+\label{eq:charpoly}
+\end{align}
+
+\item The sum of all eigenvalues is equal to the trace:
+\begin{align}
+\sum_{i=1}^{n}\lambda_i = \sum_{i=1}^{n}a_{ii} = \text{tr}\brak{\mathbf{A}}
+\label{eq:trace}
+\end{align}
+where $\mathbf{A}$ is symmetric if $\mathbf{A}^\top = \mathbf{A}$ and skew-symmetric if $\mathbf{A}^\top = -\mathbf{A}$.
+\end{itemize}
+
+% =============================================================
+\formula{Cholesky Decomposition}
+\begin{itemize}
+
+\item A symmetric positive definite matrix $\mathbf{A}$ can be factorised as
+\begin{align}
+\mathbf{A} = \mathbf{L}\mathbf{L}^\top
+\label{eq:chol}
+\end{align}
+where $\mathbf{L}$ is lower triangular. For a $2\times 2$ matrix,
+\begin{align}
+\myvec{a_{11} & a_{12}\\ a_{12} & a_{22}} = \myvec{l_{11} & 0\\ l_{21} & l_{22}}\myvec{l_{11} & l_{21}\\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21}\\ l_{11}l_{21} & l_{21}^2 + l_{22}^2}
+\label{eq:chol2}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{Bayes' Theorem in Vector Form}
+\begin{itemize}
+
+\item Let $\boldsymbol{\pi} = \myvec{\pr{B_1} & \cdots & \pr{B_n}}^\top$ be the prior vector and \newline $\boldsymbol{\ell} = \myvec{\pr{E\mid B_1} & \cdots & \pr{E\mid B_n}}^\top$ the likelihood vector. Then
+\begin{align}
+\pr{E} &= \boldsymbol{\pi}^\top\boldsymbol{\ell} \label{eq:total}\\
+\pr{B_i\mid E} &= \frac{\pi_i\ell_i}{\boldsymbol{\pi}^\top\boldsymbol{\ell}}
+\label{eq:bayes}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{Minimization via Completing the Square}
+\begin{itemize}
+
+\item For real $a$ and $b$,
+\begin{align}
+ab - b^2 = \frac{a^2}{4} - \brak{b - \frac{a}{2}}^2 \le \frac{a^2}{4}
+\label{eq:cts}
+\end{align}
+with equality if and only if $b = \frac{a}{2}$.
+
+\item If $g\brak{x}\ge 0$ is continuous on $\sbrak{a,b}$ and $\int_a^b g\brak{x}dx = 0$, then $g\brak{x} = 0$ on $\sbrak{a,b}$.
+\end{itemize}
+
+% =============================================================
+\formula{Laplace Transform and State-Space Form}
+\begin{itemize}
+
+\item From the derivative property,
+\begin{align}
+y'\brak{t} &\overset{\mathcal{L}}{\longleftrightarrow} sY\brak{s} - y\brak{0} \label{eq:lap1}\\
+y''\brak{t} &\overset{\mathcal{L}}{\longleftrightarrow} s^2Y\brak{s} - sy\brak{0} - y'\brak{0} \label{eq:lap2}\\
+e^{at}u\brak{t} &\overset{\mathcal{L}}{\longleftrightarrow} \frac{1}{s-a} \label{eq:lapexp}
+\end{align}
+
+\item Writing $\mathbf{z} = \myvec{y & y'}^\top$, the equation $y'' + py' + qy = 0$ becomes
+\begin{align}
+\mathbf{z}' = \mathbf{A}\mathbf{z},\quad \mathbf{A} = \myvec{0 & 1\\ -q & -p}
+\label{eq:ss}
+\end{align}
+and the exponents of the solution are the eigenvalues of $\mathbf{A}$.
+\end{itemize}
+
+% =============================================================
+\formula{Newton-Raphson Method}
+\begin{itemize}
+
+\item For a differentiable $f\brak{x}$, the root is approximated iteratively by
+\begin{align}
+x_{n+1} = x_n - \frac{f\brak{x_n}}{f'\brak{x_n}}
+\label{eq:nr}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{Polynomial Interpolation (Vandermonde Matrix)}
+\begin{itemize}
+
+\item The polynomial $P_2\brak{x} = c_0 + c_1x + c_2x^2$ through $\brak{x_i, y_i}$, $i = 1,2,3$, satisfies
+\begin{align}
+\myvec{1 & x_1 & x_1^2\\ 1 & x_2 & x_2^2\\ 1 & x_3 & x_3^2}\myvec{c_0\\ c_1\\ c_2} = \myvec{y_1\\ y_2\\ y_3}
+\label{eq:vander}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{Equilibrium of Rigid Bodies in Vector Form}
+\begin{itemize}
+
+\item For a body in equilibrium under forces $\mathbf{F}_i$ acting at points $\mathbf{r}_i$,
+\begin{align}
+\sum_i\mathbf{F}_i = \mathbf{0},\quad \sum_i\brak{\mathbf{r}_i - \mathbf{O}}\times\mathbf{F}_i = 0
+\label{eq:equil}
+\end{align}
+where in the plane $\mathbf{r}\times\mathbf{F} = r_xF_y - r_yF_x$.
+
+\item The bending moment at a section $\mathbf{P}$ of a member is the moment about $\mathbf{P}$ of all forces on one side of the section:
+\begin{align}
+M\brak{\mathbf{P}} = \sum_{\text{one side}}\brak{\mathbf{r}_i - \mathbf{P}}\times\mathbf{F}_i
+\label{eq:bm}
+\end{align}
+\item When sliding impends, the limiting friction force is $F = \mu N$.
+\end{itemize}
+
+% =============================================================
+\formula{Direct Stiffness Method}
+\begin{itemize}
+
+\item For an axial member of length $L$, area $A$, modulus $E$, with unit direction vector $\mathbf{m}$, the stiffness matrix of its end node is
+\begin{align}
+\mathbf{k} = \frac{AE}{L}\mathbf{m}\mathbf{m}^\top
+\label{eq:kbar}
+\end{align}
+and the member stiffness matrix is $\myvec{\mathbf{k} & -\mathbf{k}\\ -\mathbf{k} & \mathbf{k}}$.
+
+\item The global stiffness matrix is assembled by adding member matrices at the corresponding degrees of freedom:
+\begin{align}
+\mathbf{K}\mathbf{u} = \mathbf{F}
+\label{eq:kuf}
+\end{align}
+\item Boundary conditions are applied by deleting the rows and columns of restrained degrees of freedom.
+A temperature rise $\Delta T$ in a member with coefficient $\alpha$ is equivalent to nodal loads of magnitude $AE\alpha\Delta T$ at its ends, directed outward.
+\end{itemize}
+
+% =============================================================
+\formula{Cellular Update Rule in Matrix Form}
+\begin{itemize}
+
+\item For $N$ bulbs in a line with state vector $\mathbf{x}_k\in\cbrak{0,1}^N$ (1 = ON), the number of ON neighbours is
+\begin{align}
+\mathbf{s}_k = \mathbf{A}\mathbf{x}_k,\quad a_{ij} = \begin{cases}1, & \abs{i-j} = 1\\ 0, & \text{otherwise}\end{cases}
+\label{eq:adj}
+\end{align}
+\end{itemize}
+
+% =============================================================
+\formula{Surveying and Traffic Relations}
+\begin{itemize}
+
+\item Reduced level: With height of instrument (plane of collimation) HI and staff reading $h$,
+\begin{align}
+\text{RL} = \text{HI} - h
+\label{eq:rl}
+\end{align}
+
+\item Space mean speed: For $n$ vehicles covering distance $d$ in times $\mathbf{t} = \myvec{t_1 & \cdots & t_n}^\top$,
+\begin{align}
+v_s = \frac{nd}{\mathbf{1}^\top\mathbf{t}} = \frac{n}{\sum_i\frac{1}{v_i}}
+\label{eq:sms}
+\end{align}
+which is the harmonic mean of the spot speeds $v_i = d/t_i$.
+\end{itemize}
+
+% =============================================================
+\subsection{Problems}
+\begin{enumerate}[label=1.2.\arabic*,leftmargin=*,labelsep=0.8em,itemsep=2ex]
+
+% ----------------------------------------------------------- Q3
+\problem At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
+\begin{options}
+\item 0
+\item 1
+\item 2
+\item 3
+\end{options}
+\solution The given curves can be written in the form $\mathbf{x}^\top\mathbf{V}\mathbf{x} + 2\mathbf{u}^\top\mathbf{x} + f = 0$:
+\begin{align}
+x^2 - y = 0 &\implies \mathbf{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \mathbf{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
+x^2 + 2x + y + 1 = 0 &\implies \mathbf{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \mathbf{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
+\end{align}
+Choosing $\mu = -1$ in the pencil \eqref{eq:pencil} eliminates the second-degree terms $\brak{\mathbf{V}_1 - \mathbf{V}_2 = \mathbf{0}}$:
+\begin{align}
+2\brak{\mathbf{u}_1 - \mathbf{u}_2}^\top\mathbf{x} + \brak{f_1 - f_2} &= 0\\
+2\myvec{-1 & -1}\mathbf{x} - 1 = 0 \implies \myvec{1 & 1}\mathbf{x} &= -\frac{1}{2}
+\end{align}
+All common points of the two curves lie on this line. A point on the line and its direction vector are
+\begin{align}
+\mathbf{h} = \myvec{0\\ -\frac{1}{2}},\quad \mathbf{m} = \myvec{1\\ -1}
+\end{align}
+Substituting into \eqref{eq:disc} for the first curve:
+\begin{align}
+\mathbf{m}^\top\mathbf{V}_1\mathbf{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
+\mathbf{V}_1\mathbf{h} + \mathbf{u}_1 &= \myvec{0\\ 0} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
+\mathbf{m}^\top\brak{\mathbf{V}_1\mathbf{h} + \mathbf{u}_1} &= \myvec{1 & -1}\myvec{0\\ -\frac{1}{2}} = \frac{1}{2}\\
+g\brak{\mathbf{h}} &= \mathbf{h}^\top\mathbf{V}_1\mathbf{h} + 2\mathbf{u}_1^\top\mathbf{h} + f_1 = 0 + \frac{1}{2} + 0 = \frac{1}{2}\\
+\Delta &= \brak{\frac{1}{2}}^2 - \frac{1}{2}\brak{1} = -\frac{1}{4} < 0
+\end{align}
+Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and the curves do not meet in the real plane.
+
+Hence, option (A) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q03.pdf}
+\caption{The two parabolas and the line $x + y = -\frac{1}{2}$ from the pencil}
+\end{figure}
+\codebox{codes/ce1/q03.py}
+\codebox{figs/q03.pdf}
+
+% ----------------------------------------------------------- Q7
+\problem In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
+\begin{options}
+\item $40^\circ$
+\item $50^\circ$
+\item $60^\circ$
+\item $80^\circ$
+\end{options}
+\solution Let $O$ be the origin and the radius be $r$. Then
+\begin{align}
+\mathbf{P} = r\mathbf{e}_{180^\circ} = -r\mathbf{e}_{0},\quad \mathbf{Q} = r\mathbf{e}_{0},\quad \mathbf{R} = r\mathbf{e}_\alpha,\quad \mathbf{S} = r\mathbf{e}_\beta
+\end{align}
+with $0 < \beta < \alpha < 180^\circ$ and, from \eqref{eq:cosdiff},
+\begin{align}
+\cos\angle ROS = \mathbf{e}_\alpha^\top\mathbf{e}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
+\end{align}
+The direction vectors of the lines $PR$ and $QS$ are
+\begin{align}
+\mathbf{R} - \mathbf{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
+\mathbf{S} - \mathbf{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
+\end{align}
+The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrightarrow{TR}$ is along $\mathbf{P} - \mathbf{R}$ and $\overrightarrow{TS}$ is along $\mathbf{Q} - \mathbf{S}$. Using \eqref{eq:angle},
+\begin{align}
+\cos\angle RTS &= \myvec{\cos\frac{\alpha}{2} & \sin\frac{\alpha}{2}}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}\\
+&= \sin\frac{\alpha}{2}\cos\frac{\beta}{2} - \cos\frac{\alpha}{2}\sin\frac{\beta}{2} = \sin\frac{\alpha-\beta}{2}\\
+&= \sin 40^\circ = \cos 50^\circ\\
+\implies \angle RTS &= 50^\circ
+\end{align}
+For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$. From \eqref{eq:lineint},
+\begin{align}
+\myvec{\mathbf{R}-\mathbf{P} & -\brak{\mathbf{S}-\mathbf{Q}}}\myvec{\kappa_1\\ \kappa_2} = \mathbf{Q} - \mathbf{P} \implies \mathbf{T} = \myvec{0\\ 2.1445}
+\end{align}
+and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
+
+Hence, option (B) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q07.pdf}
+\caption{Circle with diameter $PQ$, $\angle ROS = 80^\circ$ and $\angle RTS = 50^\circ$}
+\end{figure}
+\codebox{codes/ce1/q07.py}
+\codebox{figs/q07.pdf}
+
+% ----------------------------------------------------------- Q9
+\problem Consider a linear arrangement of seven bulbs, each of which can be in the ON or OFF states. The initial configuration of the bulbs is shown in the figure. In every Step, the states of the bulbs are changed based on the following rules:
+Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged.
+The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \underline{\hspace{2cm}} \gate
+\begin{options}
+\item 5
+\item 4
+\item 3
+\item 0
+\end{options}
+\solution Let $\mathbf{x}_k\in\cbrak{0,1}^7$ be the state vector after Step $k$ and $\mathbf{s}_k = \mathbf{A}\mathbf{x}_k$ from \eqref{eq:adj}, where
+\begin{align}
+\mathbf{A} = \myvec{0&1&0&0&0&0&0\\ 1&0&1&0&0&0&0\\ 0&1&0&1&0&0&0\\ 0&0&1&0&1&0&0\\ 0&0&0&1&0&1&0\\ 0&0&0&0&1&0&1\\ 0&0&0&0&0&1&0}
+\end{align}
+The rules give the update
+\begin{align}
+\mathbf{x}_{k+1} = \mathbf{x}_k + \brak{\mathbf{1} - \mathbf{x}_k}\odot\sbrak{\mathbf{s}_k = 1} - \mathbf{x}_k\odot\sbrak{\mathbf{s}_k = 2}
+\label{eq:bulbupdate}
+\end{align}
+where $\odot$ is the element-wise product and $\sbrak{\cdot}$ is 1 when the condition holds. The initial configuration has only the middle bulb ON:
+\begin{align}
+\mathbf{x}_0 &= \myvec{0&0&0&1&0&0&0}^\top, & \mathbf{s}_0 &= \myvec{0&0&1&0&1&0&0}^\top\\
+\mathbf{x}_1 &= \myvec{0&0&1&1&1&0&0}^\top, & \mathbf{s}_1 &= \myvec{0&1&1&2&1&1&0}^\top\\
+\mathbf{x}_2 &= \myvec{0&1&1&0&1&1&0}^\top, & \mathbf{s}_2 &= \myvec{1&1&1&2&1&1&1}^\top\\
+\mathbf{x}_3 &= \myvec{1&1&1&0&1&1&1}^\top, & \mathbf{s}_3 &= \myvec{1&2&1&2&1&2&1}^\top\\
+\mathbf{x}_4 &= \myvec{1&0&1&0&1&0&1}^\top, & \mathbf{s}_4 &= \myvec{0&2&0&2&0&2&0}^\top
+\end{align}
+$\mathbf{x}_1$ and $\mathbf{x}_2$ agree with Step 1 and Step 2 in the figure. In $\mathbf{x}_4$, every OFF bulb has two ON neighbours and every ON bulb has none, so \eqref{eq:bulbupdate} gives
+\begin{align}
+\mathbf{x}_5 = \mathbf{x}_4 \implies \mathbf{x}_8 = \mathbf{x}_4 = \myvec{1&0&1&0&1&0&1}^\top
+\end{align}
+The number of ON bulbs after Step 8 is
+\begin{align}
+\mathbf{1}^\top\mathbf{x}_8 = 4
+\end{align}
+Hence, option (B) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q09.pdf}
+\caption{Bulb states from the initial configuration to Step 8}
+\end{figure}
+\codebox{codes/ce1/q09.py}
+\codebox{figs/q09.pdf}
+
+% ----------------------------------------------------------- Q10
+\problem $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \gate
+\begin{options}
+\item 13
+\item 26
+\item 39
+\item 42
+\end{options}
+\solution 
+The given equation can be written as
+\begin{align}
+P^2 - Q^2 = \brak{P-Q}\brak{P+Q} = 13
+\end{align}
+Since 13 is prime and $0 < P - Q < P + Q$,
+\begin{align}
+P - Q = 1,\quad P + Q = 13
+\end{align}
+Expressing in the matrix form \eqref{eq:axb}:
+\begin{align}
+\myvec{1 & -1\\ 1 & 1}\myvec{P\\ Q} = \myvec{1\\ 13}
+\end{align}
+Applying $R_2 \to R_2 - R_1$ on the augmented matrix:
+\begin{align}
+\myvec{1 & -1 & 1\\ 1 & 1 & 13} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & -1 & 1\\ 0 & 2 & 12} \implies Q = 6,\ P = 7
+\end{align}
+Therefore,
+\begin{align}
+PQ = 7\times 6 = 42
+\end{align}
+Hence, option (D) is correct.
+\codebox{codes/ce1/q10.py}
+
+% ----------------------------------------------------------- Q11
+\problem Matrix $\mathbf{P}$ is given as
+\begin{align}
+\mathbf{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
+\end{align}
+The TRUE option is \gate
+\begin{options}
+\item Trace of $\mathbf{P}$ is equal to the sum of the Eigen values of $\mathbf{P}$.
+\item $\mathbf{P}^\top\mathbf{P}$ is an identity matrix.
+\item $\mathbf{P}$ is a skew-symmetric matrix.
+\item Absolute magnitude of each Eigen value is 1.
+\end{options}
+\solution From \eqref{eq:charpoly}, expanding along the second row,
+\begin{align}
+\abs{\lambda\mathbf{I} - \mathbf{P}} &= \mydet{\lambda-1 & 0 & -1\\ 0 & \lambda-1 & 0\\ -1 & 0 & \lambda-1}\\
+&= \brak{\lambda-1}\sbrak{\brak{\lambda-1}^2 - 1} = \lambda\brak{\lambda-1}\brak{\lambda-2} = 0\\
+\implies \lambda_1 &= 0,\ \lambda_2 = 1,\ \lambda_3 = 2
+\end{align}
+From \eqref{eq:trace}:
+\begin{align}
+\text{tr}\brak{\mathbf{P}} = 1+1+1 = 3 = \lambda_1 + \lambda_2 + \lambda_3
+\end{align}
+so option (A) is true. The remaining options are false since
+\begin{align}
+\mathbf{P}^\top\mathbf{P} = \myvec{2 & 0 & 2\\ 0 & 1 & 0\\ 2 & 0 & 2} \neq \mathbf{I},\quad \mathbf{P}^\top = \mathbf{P} \neq -\mathbf{P},\quad \abs{\lambda_1} = 0 \neq 1
+\end{align}
+Hence, option (A) is correct.
+\codebox{codes/ce1/q11.py}
+
+% ----------------------------------------------------------- Q12
+\problem Given:
+\begin{align}
+\myvec{1 & 1 & 1\\ 1 & 0 & 2}\myvec{x_1\\ x_2\\ x_3} = \myvec{0\\ 0}
+\end{align}
+The above system of equations represents a \gate
+\begin{options}
+\item plane
+\item line
+\item volume
+\item point
+\end{options}
+\solution The augmented matrix is reduced as
+\begin{align}
+\myvec{1 & 1 & 1 & 0\\ 1 & 0 & 2 & 0} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & 1 & 1 & 0\\ 0 & -1 & 1 & 0}
+\end{align}
+Thus,
+\begin{align}
+\text{rank}\brak{\mathbf{A}} = \text{rank}\brak{\sbrak{\mathbf{A}\mid\mathbf{b}}} = 2 < n = 3
+\end{align}
+From \eqref{eq:rc}, the system is consistent with $n - r = 1$ free variable. From \eqref{eq:cross}, the solution is
+\begin{align}
+\mathbf{x} = \kappa\brak{\myvec{1\\ 1\\ 1}\times\myvec{1\\ 0\\ 2}} = \kappa\myvec{2\\ -1\\ -1},\quad \kappa\in\mathbb{R}
+\end{align}
+which is a line through the origin (the intersection of two planes).
+
+Hence, option (B) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q12.pdf}
+\caption{The two planes and their line of intersection}
+\end{figure}
+\codebox{codes/ce1/q12.py}
+\codebox{figs/q12.pdf}
+
+% ----------------------------------------------------------- Q26
+\problem Bag I contains 4 white and 6 black balls. Bag II contains 4 white and 3 black balls. One ball is drawn at random from any one of the two bags and it is found to be a black ball. The probability that the black ball was drawn from Bag I is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
+
+\solution Let $B_1$, $B_2$ denote choosing Bag I, Bag II and $E$ the event of drawing a black ball. The prior and likelihood vectors are
+\begin{align}
+\boldsymbol{\pi} = \myvec{\frac{1}{2}\\ \frac{1}{2}},\quad \boldsymbol{\ell} = \myvec{\frac{6}{10}\\ \frac{3}{7}}
+\end{align}
+From \eqref{eq:total},
+\begin{align}
+\pr{E} = \boldsymbol{\pi}^\top\boldsymbol{\ell} = \frac{1}{2}\brak{\frac{3}{5} + \frac{3}{7}} = \frac{18}{35}
+\end{align}
+From \eqref{eq:bayes},
+\begin{align}
+\pr{B_1\mid E} = \frac{\frac{1}{2}\times\frac{3}{5}}{\frac{18}{35}} = \frac{3}{10}\times\frac{35}{18} = \frac{7}{12} \approx 0.58
+\end{align}
+The answer is 0.58.
+\codebox{codes/ce1/q26.py}
+
+% ----------------------------------------------------------- Q27
+\problem A matrix is given as:
+\begin{align}
+\myvec{9 & 15\\ 15 & 50}
+\end{align}
+By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular matrix is \underline{\hspace{2cm}} (in integer). \gate
+
+\solution Comparing with \eqref{eq:chol2},
+\begin{align}
+l_{11}^2 &= 9 \implies l_{11} = 3\\
+l_{11}l_{21} &= 15 \implies l_{21} = 5\\
+l_{21}^2 + l_{22}^2 &= 50 \implies l_{22}^2 = 25 \implies \abs{l_{22}} = 5
+\end{align}
+Thus,
+\begin{align}
+\mathbf{L} = \myvec{3 & 0\\ 5 & 5},\quad \mathbf{L}\mathbf{L}^\top = \myvec{9 & 15\\ 15 & 50}
+\end{align}
+The answer is 5.
+\codebox{codes/ce1/q27.py}
+
+% ----------------------------------------------------------- Q28
+\problem It is given that $x$ and $y$ are integers in the following equation:
+\begin{align}
+\brak{x + y - 7}^2 + \brak{y + 3x - 13}^2 = 0
+\end{align}
+The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \gate
+
+\solution Let
+\begin{align}
+\mathbf{A} = \myvec{1 & 1\\ 3 & 1},\quad \mathbf{b} = \myvec{7\\ 13},\quad \mathbf{x} = \myvec{x\\ y}
+\end{align}
+The given equation is
+\begin{align}
+\norm{\mathbf{A}\mathbf{x} - \mathbf{b}}^2 = 0
+\end{align}
+From \eqref{eq:zeronorm},
+\begin{align}
+\mathbf{A}\mathbf{x} = \mathbf{b}
+\end{align}
+Reducing the augmented matrix:
+\begin{align}
+\myvec{1 & 1 & 7\\ 3 & 1 & 13} \xrightarrow{R_2\to R_2 - 3R_1} \myvec{1 & 1 & 7\\ 0 & -2 & -8} \implies y = 4,\ x = 3
+\end{align}
+Therefore,
+\begin{align}
+x^3 + y^3 = 27 + 64 = 91
+\end{align}
+The answer is 91.
+\codebox{codes/ce1/q28.py}
+
+% ----------------------------------------------------------- Q33
+\problem The travel times of three vehicles on a 2 km stretch of road are 4, 5, and 8 minutes. Assuming the speed of each vehicle to be constant in this stretch, the Space Mean Speed (in km/h) of the vehicles is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
+
+\solution The travel time vector (in hours) is
+\begin{align}
+\mathbf{t} = \frac{1}{60}\myvec{4\\ 5\\ 8},\quad \mathbf{1}^\top\mathbf{t} = \frac{17}{60}\text{ h}
+\end{align}
+From \eqref{eq:sms} with $n = 3$ and $d = 2$ km,
+\begin{align}
+v_s = \frac{nd}{\mathbf{1}^\top\mathbf{t}} = \frac{3\times 2}{\frac{17}{60}} = \frac{360}{17} \approx 21.18\text{ km/h}
+\end{align}
+Equivalently, the spot speeds are $\myvec{30 & 24 & 15}$ km/h and their harmonic mean is
+\begin{align}
+v_s = \frac{3}{\frac{1}{30} + \frac{1}{24} + \frac{1}{15}} = 21.18\text{ km/h}
+\end{align}
+The answer is 21.18 km/h.
+\codebox{codes/ce1/q33.py}
+
+% ----------------------------------------------------------- Q35
+\problem The height of the plane of collimation of a levelling instrument is 100.000 m from a datum. The levelling instrument measures a Back Sight of 1.500 m on a vertically held staff at a ground point $P$. The reduced level (in m) of the ground point $P$ with respect to the datum is \underline{\hspace{2cm}} (rounded off to three decimal places). \gate
+
+\solution From \eqref{eq:rl},
+\begin{align}
+\text{RL}_P = \text{HI} - h = 100.000 - 1.500 = 98.500\text{ m}
+\end{align}
+The answer is 98.500 m.
+\codebox{codes/ce1/q35.py}
+
+% ----------------------------------------------------------- Q36
+\problem Let $f\brak{x}$ be a continuous function defined in $\sbrak{0,2}\to\mathbb{R}$ and satisfying the equation
+\begin{align}
+\int_0^2 f\brak{x}\sbrak{x - f\brak{x}}dx = \frac{2}{3}
+\end{align}
+The value of $f\brak{1}$ is \gate
+\begin{options}
+\item 1
+\item 2
+\item $\frac{1}{2}$
+\item 0
+\end{options}
+\solution Using \eqref{eq:cts} with $a = x$ and $b = f\brak{x}$:
+\begin{align}
+f\brak{x}\sbrak{x - f\brak{x}} = \frac{x^2}{4} - \brak{f\brak{x} - \frac{x}{2}}^2
+\end{align}
+Integrating over $\sbrak{0,2}$:
+\begin{align}
+\int_0^2 f\brak{x}\sbrak{x - f\brak{x}}dx &= \int_0^2\frac{x^2}{4}dx - \int_0^2\brak{f\brak{x} - \frac{x}{2}}^2dx\\
+&= \frac{2}{3} - \int_0^2\brak{f\brak{x} - \frac{x}{2}}^2dx
+\end{align}
+Equating with the given value,
+\begin{align}
+\int_0^2\brak{f\brak{x} - \frac{x}{2}}^2dx = 0
+\end{align}
+Since the integrand is continuous and non-negative,
+\begin{align}
+f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
+\end{align}
+Hence, option (C) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q36.pdf}
+\caption{The integrand attains its upper bound $\frac{x^2}{4}$ only for $f\brak{x} = \frac{x}{2}$}
+\end{figure}
+\codebox{codes/ce1/q36.py}
+\codebox{figs/q36.pdf}
+
+% ----------------------------------------------------------- Q37
+\problem An ordinary differential equation is given below.
+\begin{align}
+x^2\frac{d^2y}{dx^2} = 6y
+\end{align}
+Considering $a$ and $b$ as arbitrary constants, the general solution of the equation is \gate
+\begin{options}
+\item $y\brak{x} = ax^3 + \frac{b}{x^2}$
+\item $y\brak{x} = ax^2 + \frac{b}{x^3}$
+\item $y\brak{x} = ax^2 + b\ln x$
+\item $y\brak{x} = ax^3 + b\ln x$
+\end{options}
+\solution Let $x = e^t$ $\brak{x > 0}$. Then
+\begin{align}
+x\frac{dy}{dx} = \frac{dy}{dt},\quad x^2\frac{d^2y}{dx^2} = \frac{d^2y}{dt^2} - \frac{dy}{dt}
+\end{align}
+and the equation becomes
+\begin{align}
+y'' - y' - 6y = 0
+\label{eq:q37t}
+\end{align}
+Taking the Laplace transform using \eqref{eq:lap1} and \eqref{eq:lap2}:
+\begin{align}
+s^2Y\brak{s} - sy\brak{0} - y'\brak{0} - \sbrak{sY\brak{s} - y\brak{0}} - 6Y\brak{s} &= 0\\
+Y\brak{s} = \frac{\brak{s-1}y\brak{0} + y'\brak{0}}{s^2 - s - 6} &= \frac{\brak{s-1}y\brak{0} + y'\brak{0}}{\brak{s-3}\brak{s+2}}
+\end{align}
+Decomposing into partial fractions and using \eqref{eq:lapexp},
+\begin{align}
+Y\brak{s} = \frac{a}{s-3} + \frac{b}{s+2} \implies y\brak{t} = ae^{3t} + be^{-2t}
+\end{align}
+Equivalently, from \eqref{eq:ss}, the exponents are the eigenvalues of
+\begin{align}
+\mathbf{A} = \myvec{0 & 1\\ 6 & 1},\quad \abs{\lambda\mathbf{I} - \mathbf{A}} = \lambda^2 - \lambda - 6 = 0 \implies \lambda = 3, -2
+\end{align}
+Substituting $e^t = x$:
+\begin{align}
+y\brak{x} = ax^3 + \frac{b}{x^2}
+\end{align}
+Hence, option (A) is correct.
+\codebox{codes/ce1/q37.py}
+
+% ----------------------------------------------------------- Q38
+\problem A plane truss consists of two linearly elastic, homogeneous, identical members, namely $PQ$ and $QR$. Both members have length $\brak{L}$, cross-sectional area $\brak{A}$, and modulus of elasticity $\brak{E}$. The members are inclined at $45^\circ$ as shown in the figure. The truss has hinge supports at $P$ and $R$. The translational degrees-of-freedom ($u$ and $v$) are shown at joint $Q$.
+
+After application of the boundary conditions, the stiffness matrix of the truss becomes: \gate
+\begin{options}
+\item $\frac{AE}{L}\myvec{1 & 1\\ 1 & 1}$
+\item $\frac{AE}{L}\myvec{1 & 0.5\\ 0.5 & 1}$
+\item $\frac{AE}{L}\myvec{1 & 0\\ 0 & 1}$
+\item $\frac{AE}{L}\myvec{1 & -1\\ -1 & 1}$
+\end{options}
+\solution The unit direction vectors of the members are
+\begin{align}
+\mathbf{m}_{PQ} = \frac{1}{\sqrt{2}}\myvec{1\\ 1},\quad \mathbf{m}_{QR} = \frac{1}{\sqrt{2}}\myvec{1\\ -1}
+\end{align}
+From \eqref{eq:kbar},
+\begin{align}
+\mathbf{k}_{PQ} &= \frac{AE}{L}\mathbf{m}_{PQ}\mathbf{m}_{PQ}^\top = \frac{AE}{L}\myvec{0.5 & 0.5\\ 0.5 & 0.5}\\
+\mathbf{k}_{QR} &= \frac{AE}{L}\mathbf{m}_{QR}\mathbf{m}_{QR}^\top = \frac{AE}{L}\myvec{0.5 & -0.5\\ -0.5 & 0.5}
+\end{align}
+After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak{u,v}$ block at $Q$ remains, which receives contributions from both members:
+\begin{align}
+\mathbf{K} = \mathbf{k}_{PQ} + \mathbf{k}_{QR} = \frac{AE}{L}\myvec{1 & 0\\ 0 & 1}
+\end{align}
+Hence, option (C) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q38.pdf}
+\caption{Two-member truss with degrees of freedom $u$, $v$ at $Q$}
+\end{figure}
+\codebox{codes/ce1/q38.py}
+\codebox{figs/q38.pdf}
+
+% ----------------------------------------------------------- Q39
+\problem The plane frame has a hinge and a roller support, and is loaded as shown in the figure. Both the columns have same height.
+
+What is the absolute value of the maximum bending moment (in kN-m) in the frame? \gate
+\begin{options}
+\item 165
+\item 150
+\item 240
+\item 195
+\end{options}
+\solution From the figure, the frame has a hinge at $A$, a roller at $B$, columns of height 3 m and a beam $CD$ of span 4 m. A horizontal load of 50 kN acts at $C$ and a vertical load of 90 kN acts at the mid-point $E$ of $CD$:
+\begin{align}
+\mathbf{A} = \myvec{0\\ 0},\ \mathbf{C} = \myvec{0\\ 3},\ \mathbf{E} = \myvec{2\\ 3},\ \mathbf{D} = \myvec{4\\ 3},\ \mathbf{B} = \myvec{4\\ 0},\quad \mathbf{F}_C = \myvec{50\\ 0},\ \mathbf{F}_E = \myvec{0\\ -90}
+\end{align}
+The reactions are $\mathbf{R}_A = \myvec{H_A & V_A}^\top$ and $\mathbf{R}_B = \myvec{0 & V_B}^\top$. From \eqref{eq:equil} with moments about $\mathbf{A}$,
+\begin{align}
+\brak{\mathbf{C}-\mathbf{A}}\times\mathbf{F}_C &= 0\times 0 - 3\times 50 = -150\\
+\brak{\mathbf{E}-\mathbf{A}}\times\mathbf{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
+\brak{\mathbf{B}-\mathbf{A}}\times\mathbf{R}_B &= 4V_B
+\end{align}
+In matrix form:
+\begin{align}
+\myvec{1 & 0 & 0\\ 0 & 1 & 1\\ 0 & 0 & 4}\myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 90\\ 330} \implies \myvec{H_A\\ V_A\\ V_B} = \myvec{-50\\ 7.5\\ 82.5}\text{ kN}
+\end{align}
+Using \eqref{eq:bm}, the bending moment in column $AC$ at height $y$ (forces below the section) is
+\begin{align}
+\abs{M} = \abs{\brak{\mathbf{A} - \myvec{0\\ y}}\times\mathbf{R}_A} = 50y \implies \abs{M_C} = 150\text{ kN m}
+\end{align}
+and in the beam at $E$ (forces to the right of the section) is
+\begin{align}
+\abs{M_E} = \abs{\brak{\mathbf{B} - \mathbf{E}}\times\mathbf{R}_B} = \abs{2\times 82.5 - \brak{-3}\times 0} = 165\text{ kN m}
+\end{align}
+In column $BD$, the roller reaction is vertical and along the column, so $M = 0$.
+The maximum bending moment is 165 kN m under the 90 kN load.
+
+Hence, option (A) is correct.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q39.pdf}
+\caption{Frame loading and bending moment diagram}
+\end{figure}
+\codebox{codes/ce1/q39.py}
+\codebox{figs/q39.pdf}
+
+% ----------------------------------------------------------- Q48
+\problem Starting with the first approximation as $x = 0.5$, the second approximation for the root of the following function by the Newton-Raphson method is \underline{\hspace{2cm}} (rounded off to two decimal places).
+\begin{align}
+f\brak{x} = e^{-x} - x
+\end{align}
+\gate
+
+\solution The function and its derivative are
+\begin{align}
+f\brak{x} &= e^{-x} - x\\
+f'\brak{x} &= -e^{-x} - 1
+\end{align}
+Substituting into \eqref{eq:nr}:
+\begin{align}
+x_{n+1} &= x_n + \frac{e^{-x_n} - x_n}{e^{-x_n} + 1}\\
+&= \frac{1 + x_n}{1 + e^{x_n}}
+\end{align}
+With the first approximation $x_0 = 0.5$, the second approximation is
+\begin{align}
+x_1 = \frac{1.5}{1 + e^{0.5}} = \frac{1.5}{2.64872} = 0.56631 \approx 0.57
+\end{align}
+Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
+
+The answer is 0.57.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q48.pdf}
+\caption{One Newton-Raphson step for $f\brak{x} = e^{-x} - x$ from $x_0 = 0.5$}
+\end{figure}
+\codebox{codes/ce1/q48.py}
+\codebox{figs/q48.pdf}
+
+% ----------------------------------------------------------- Q49
+\problem Values of $y$ for different values of $x$ are tabulated below.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x$ & $-2$ & 1 & 2\\ \hline
+$y$ & 28 & 4 & 16\\ \hline
+\end{tabular}
+\end{center}
+If a second-degree interpolating polynomial $P_2\brak{x}$ is used to represent $y$, the value of $P_2\brak{0}$ is \underline{\hspace{2cm}} (rounded off to the nearest integer). \gate
+
+\solution From \eqref{eq:vander},
+\begin{align}
+\myvec{1 & -2 & 4\\ 1 & 1 & 1\\ 1 & 2 & 4}\myvec{c_0\\ c_1\\ c_2} = \myvec{28\\ 4\\ 16}
+\end{align}
+Reducing the augmented matrix:
+\begin{align}
+\myvec{1 & -2 & 4 & 28\\ 1 & 1 & 1 & 4\\ 1 & 2 & 4 & 16}
+&\xrightarrow[R_3\to R_3 - R_1]{R_2\to R_2 - R_1}
+\myvec{1 & -2 & 4 & 28\\ 0 & 3 & -3 & -24\\ 0 & 4 & 0 & -12}\\
+&\implies c_1 = -3,\ c_2 = 5,\ c_0 = 2
+\end{align}
+Thus,
+\begin{align}
+P_2\brak{x} = 5x^2 - 3x + 2 \implies P_2\brak{0} = \myvec{1 & 0 & 0}\myvec{c_0\\ c_1\\ c_2} = 2
+\end{align}
+The answer is 2.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q49.pdf}
+\caption{Interpolating polynomial through the given points}
+\end{figure}
+\codebox{codes/ce1/q49.py}
+\codebox{figs/q49.pdf}
+
+% ----------------------------------------------------------- Q50
+\problem Two identical blocks $A$ and $B$ are connected by a rigid rod. The blocks rest against vertical and horizontal planes, as shown in the figure. The coefficient of static friction at the vertical and horizontal planes is the same. If the sliding impends when $\theta = 45^\circ$, the value of the coefficient of static friction is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
+
+\solution Let each block have weight $W$ and let the rod make angle $\theta$ with the horizontal, with $c = \cos\theta$, $s = \sin\theta$. The rod is a two-force member carrying compression $C$ along
+\begin{align}
+\mathbf{e} = \frac{\mathbf{A} - \mathbf{B}}{\norm{\mathbf{A} - \mathbf{B}}} = \myvec{-c\\ s}
+\end{align}
+When sliding impends, $A$ moves down and $B$ moves away from the wall, so the friction forces are $\mu N_A$ (upward on $A$) and $\mu N_B$ (towards the wall on $B$). From \eqref{eq:equil}:
+\begin{align}
+\text{Block }A:&\quad \myvec{N_A\\ \mu N_A} + \myvec{0\\ -W} + C\myvec{-c\\ s} = \mathbf{0}\\
+\text{Block }B:&\quad \myvec{-\mu N_B\\ N_B} + \myvec{0\\ -W} - C\myvec{-c\\ s} = \mathbf{0}
+\end{align}
+This gives four equations in three unknowns $\myvec{N_A & N_B & C}^\top$:
+\begin{align}
+\myvec{1 & 0 & -c\\ \mu & 0 & s\\ 0 & -\mu & c\\ 0 & 1 & -s}\myvec{N_A\\ N_B\\ C} = \myvec{0\\ W\\ 0\\ W}
+\end{align}
+From \eqref{eq:augdet}, the system is consistent only if
+\begin{align}
+\mydet{1 & 0 & -c & 0\\ \mu & 0 & s & W\\ 0 & -\mu & c & 0\\ 0 & 1 & -s & W} = 0
+\end{align}
+Expanding along the second column,
+\begin{align}
+\mu\mydet{1 & -c & 0\\ \mu & s & W\\ 0 & -s & W} + \mydet{1 & -c & 0\\ \mu & s & W\\ 0 & c & 0} &= 0\\
+\mu W\brak{2s + \mu c} - Wc &= 0\\
+\implies \tan\theta &= \frac{1 - \mu^2}{2\mu}
+\end{align}
+For $\theta = 45^\circ$:
+\begin{align}
+\mu^2 + 2\mu - 1 = 0 \implies \mu = -1 + \sqrt{2} = 0.414
+\end{align}
+taking the positive root. The answer is 0.41.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q50.pdf}
+\caption{Blocks $A$ and $B$ connected by a rigid rod at $\theta = 45^\circ$}
+\end{figure}
+\codebox{codes/ce1/q50.py}
+\codebox{figs/q50.pdf}
+
+% ----------------------------------------------------------- Q51
+\problem A homogenous, linearly elastic rod $AB$ is connected to a linearly elastic spring $BC$ in between the fixed supports at $A$ and $C$, as shown in the figure. The cross-sectional area, modulus of elasticity, and the coefficient of thermal expansion of the rod $AB$ are 500 mm$^2$, $60\times 10^3$ MPa, and $12\times 10^{-6}$ per $^\circ$C, respectively. The stiffness $\brak{k}$ of spring $BC$ is 2500 N/mm.
+
+The internal force (in kN) that will develop in the spring $BC$ when the temperature of rod $AB$ is increased by $100^\circ$C is \underline{\hspace{2cm}} (rounded off to one decimal place). \gate
+
+\solution From the figure, the length of rod $AB$ is $L = 3$ m $= 3000$ mm. The rod stiffness is
+\begin{align}
+k_r = \frac{AE}{L} = \frac{500\times 60\times 10^3}{3000} = 10^4\text{ N/mm}
+\end{align}
+The equivalent thermal load is
+\begin{align}
+F_{th} = AE\alpha\Delta T = 500\times 60\times 10^3\times 12\times 10^{-6}\times 100 = 36000\text{ N}
+\end{align}
+Assembling \eqref{eq:kuf} for nodes $A$, $B$, $C$:
+\begin{align}
+\myvec{k_r & -k_r & 0\\ -k_r & k_r + k & -k\\ 0 & -k & k}\myvec{u_A\\ u_B\\ u_C} = \myvec{-F_{th} + R_A\\ F_{th}\\ R_C}
+\end{align}
+With $u_A = u_C = 0$, deleting the first and third rows and columns:
+\begin{align}
+\brak{k_r + k}u_B = F_{th} \implies u_B = \frac{36000}{10^4 + 2500} = 2.88\text{ mm}
+\end{align}
+The force in the spring is
+\begin{align}
+F_{BC} = ku_B = 2500\times 2.88 = 7200\text{ N} = 7.2\text{ kN}
+\end{align}
+The answer is 7.2 kN.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q51.pdf}
+\caption{Force in spring $BC$ versus temperature rise of rod $AB$}
+\end{figure}
+\codebox{  /ce1/q51.py}
+\codebox{figs/q51.pdf}
+
+\end{enumerate}
+\end{document}
+
