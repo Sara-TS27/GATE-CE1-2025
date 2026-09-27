@@ -1,0 +1,212 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi,itemsep=0pt]
+
+\item Intersection of Conics and Common Chord
+\begin{itemize}
+\item Conic in Vector Form:
+Every second-degree curve $ax^2 + 2bxy + cy^2 + 2dx + 2ey + f = 0$ can be written in matrix-vector form as[cite: 1]:
+\begin{align}
+\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0, \quad \vec{V} = \myvec{a & b \\ b & c} = \vec{V}^\top, \quad \vec{u} = \myvec{d \\ e}
+\end{align}
+The conic is a parabola if $\abs{\vec{V}} = 0$, an ellipse if $\abs{\vec{V}} > 0$, and a hyperbola if $\abs{\vec{V}} < 0$[cite: 1]. For a circle with centre $\vec{c}$ and radius $r$, $\norm{\vec{x} - \vec{c}}^2 = r^2$ gives $\vec{V} = \vec{I}$, $\vec{u} = -\vec{c}$, and $f = \norm{\vec{c}}^2 - r^2$[cite: 1].
+
+\item Line-Conic Intersection:
+The points of intersection of a line $L: \vec{x} = \vec{h} + \kappa \vec{m}$ ($\kappa \in \mathbb{R}$) with a conic section $\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0$ are given by[cite: 1]:
+\begin{align}
+\vec{x}_i = \vec{h} + \kappa_i \vec{m}
+\end{align}
+where the parameter values $\kappa_i$ are[cite: 1]:
+\begin{align}
+\kappa_i = \frac{-\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}} \pm \sqrt{\sbrak{\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top \vec{V} \vec{m}}}}{\vec{m}^\top \vec{V} \vec{m}}
+\end{align}
+with $g\brak{\vec{h}} = \vec{h}^\top \vec{V} \vec{h} + 2\vec{u}^\top \vec{h} + f$[cite: 1]. The line meets the conic at two, one, or no real points according as the discriminant $\Delta = \sbrak{\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top \vec{V} \vec{m}}$ is positive, zero, or negative[cite: 1].
+
+\item Derivation of the Intersection Parameter:
+Substituting $\vec{x} = \vec{h} + \kappa \vec{m}$ into the conic equation and using symmetry $\vec{V} = \vec{V}^\top$[cite: 1]:
+\begin{align}
+\brak{\vec{h} + \kappa \vec{m}}^\top \vec{V} \brak{\vec{h} + \kappa \vec{m}} + 2\vec{u}^\top \brak{\vec{h} + \kappa \vec{m}} + f &= 0 \\
+\kappa^2 \brak{\vec{m}^\top \vec{V} \vec{m}} + 2\kappa \vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}} + g\brak{\vec{h}} &= 0
+\end{align}
+When $\Delta = 0$, the two roots coincide and the line is tangent to the conic[cite: 1].
+
+\item Pencil of Conics:
+The intersection of two conics with parameters $\brak{\vec{V}_1, \vec{u}_1, f_1}$ and $\brak{\vec{V}_2, \vec{u}_2, f_2}$ lies on every member of the pencil[cite: 1]:
+\begin{align}
+\vec{x}^\top \brak{\vec{V}_1 + \mu \vec{V}_2}\vec{x} + 2\brak{\vec{u}_1 + \mu \vec{u}_2}^\top \vec{x} + \brak{f_1 + \mu f_2} = 0
+\end{align}
+
+\item Degenerate Conic and Common Chord:
+The pencil represents a pair of straight lines (a degenerate conic) if and only if[cite: 1]:
+\begin{align}
+\mydet{\vec{V}_1 + \mu \vec{V}_2 & \vec{u}_1 + \mu \vec{u}_2 \\ \brak{\vec{u}_1 + \mu \vec{u}_2}^\top & f_1 + \mu f_2} = 0
+\end{align}
+If $\vec{V}_1 = \vec{V}_2$ (e.g., two circles), choosing $\mu = -1$ removes the second-degree terms, leaving the common chord (radical axis)[cite: 1]:
+\begin{align}
+2\brak{\vec{u}_1 - \vec{u}_2}^\top \vec{x} + \brak{f_1 - f_2} = 0
+\end{align}
+\end{itemize}
+
+\item Line Intersection and Angle Between Vectors
+\begin{itemize}
+\item Forms of a Line:
+A line through point $\vec{A}$ with direction vector $\vec{m}$ can be written in parametric form or normal form using normal vector $\vec{n}$ ($\vec{n}^\top \vec{m} = 0$)[cite: 1]:
+\begin{align}
+\vec{x} = \vec{A} + \kappa \vec{m}, \quad \vec{n}^\top \brak{\vec{x} - \vec{A}} = 0
+\end{align}
+In 2D, if $\vec{m} = \myvec{m_1 \\ m_2}$, then $\vec{n} = \myvec{-m_2 \\ m_1}$[cite: 1].
+
+\item Line Intersection and Solvability:
+The lines $\vec{x} = \vec{A} + \kappa_1 \vec{m}_1$ and $\vec{x} = \vec{B} + \kappa_2 \vec{m}_2$ meet where[cite: 1]:
+\begin{align}
+\myvec{\vec{m}_1 & -\vec{m}_2} \myvec{\kappa_1 \\ \kappa_2} = \vec{B} - \vec{A}
+\end{align}
+This system has a unique solution if and only if $\mydet{\vec{m}_1 & \vec{m}_2} \ne 0$[cite: 1]. If the determinant is zero, the lines are parallel or coincident[cite: 1].
+
+\item Angle Between Vectors:
+The angle $\theta$ between two vectors $\vec{a}$ and $\vec{b}$ is given by[cite: 1]:
+\begin{align}
+\cos\theta = \frac{\vec{a}^\top \vec{b}}{\norm{\vec{a}}\norm{\vec{b}}}
+\end{align}
+Two vectors are orthogonal if and only if $\vec{a}^\top \vec{b} = 0$[cite: 1].
+
+\item Circle Representation and Chords:
+A point on a circle of radius $r$ centered at the origin is $\vec{x} = r \myvec{\cos\alpha \\ \sin\alpha}$ with $\vec{e}_\alpha \triangleq \myvec{\cos\alpha \\ \sin\alpha}$[cite: 1]. The chord length between $\vec{x}_\alpha = r\vec{e}_\alpha$ and $\vec{x}_\beta = r\vec{e}_\beta$ satisfies[cite: 1]:
+\begin{align}
+\norm{\vec{x}_\alpha - \vec{x}_\beta}^2 = 2r^2 \brak{1 - \vec{e}_\alpha^\top \vec{e}_\beta} = 4r^2 \sin^2 \frac{\alpha - \beta}{2}
+\end{align}
+\end{itemize}
+
+\item System of Linear Equations and Rouch\'{e}--Capelli Theorem
+\begin{itemize}
+\item Consistency and Solvability:
+A system $\vec{A}\vec{x} = \vec{b}$ with $\vec{A} \in \mathbb{R}^{m \times n}$ is consistent if and only if[cite: 1]:
+\begin{align}
+\text{rank}\brak{\vec{A}} = \text{rank}\brak{\sbrak{\vec{A} \mid \vec{b}}} = r
+\end{align}
+If $r = n$, the solution is unique; if $r < n$, there exist infinitely many solutions with $n - r$ free variables[cite: 1]. If $\vec{A} \in \mathbb{R}^{n \times \brak{n-1}}$, the system is consistent only if $\mydet{\vec{A} & \vec{b}} = 0$[cite: 1].
+
+\item Homogeneous System and Zero Norm Property:
+For $\vec{A} \in \mathbb{R}^{2 \times 3}$ with rank 2, the solution of $\vec{A}\vec{x} = \vec{0}$ is given by the cross product of its rows[cite: 1]:
+\begin{align}
+\vec{x} = \kappa \brak{\vec{a}_1 \times \vec{a}_2}
+\end{align}
+For any vector $\vec{v} \in \mathbb{R}^n$, $\norm{\vec{v}}^2 = \vec{v}^\top \vec{v} = \sum_i v_i^2 = 0 \iff \vec{v} = \vec{0}$[cite: 1].
+\end{itemize}
+
+\item Relation Between Eigenvalues and Trace of a Matrix
+\begin{itemize}
+\item Characteristic Polynomial and Trace Relation:
+The characteristic polynomial of $\vec{A} \in \mathbb{R}^{n \times n}$ is $P\brak{\lambda} = \mydet{\lambda \vec{I} - \vec{A}}$[cite: 1]. The sum of all eigenvalues equals the trace of the matrix[cite: 1]:
+\begin{align}
+\sum_{i=1}^n \lambda_i = \sum_{i=1}^n a_{ii} = \operatorname{tr}\brak{\vec{A}}
+\end{align}
+A matrix is symmetric if $\vec{A}^\top = \vec{A}$ and skew-symmetric if $\vec{A}^\top = -\vec{A}$[cite: 1].
+\end{itemize}
+
+\item Cholesky Decomposition
+\begin{itemize}
+\item Factorization:
+A symmetric positive definite matrix $\vec{A}$ can be factorized as $\vec{A} = \vec{L}\vec{L}^\top$ where $\vec{L}$ is lower triangular[cite: 1].
+\item $2 \times 2$ Decomposition Form:
+\begin{align}
+\myvec{a_{11} & a_{12} \\ a_{12} & a_{22}} = \myvec{l_{11} & 0 \\ l_{21} & l_{22}} \myvec{l_{11} & l_{21} \\ 0 & l_{22}} = \myvec{l_{11}^2 & l_{11}l_{21} \\ l_{11}l_{21} & l_{21}^2 + l_{22}^2}
+\end{align}
+\end{itemize}
+
+\item Bayes' Theorem in Vector Form
+\begin{itemize}
+\item Vector Formulation:
+Given prior vector $\vec{\pi} = \myvec{\Pr\brak{B_1} & \dots & \Pr\brak{B_n}}^\top$ and likelihood vector $\vec{l} = \myvec{\Pr\brak{E \mid B_1} & \dots & \Pr\brak{E \mid B_n}}^\top$[cite: 1]:
+\begin{align}
+\Pr\brak{E} &= \vec{\pi}^\top \vec{l} \\
+\Pr\brak{B_i \mid E} &= \frac{\pi_i l_i}{\vec{\pi}^\top \vec{l}}
+\end{align}
+\end{itemize}
+
+\item Minimization via Completing the Square
+\begin{itemize}
+\item Inequality and Equality Condition:
+For real $a$ and $b$[cite: 1]:
+\begin{align}
+a b - b^2 = \frac{a^2}{4} - \brak{b - \frac{a}{2}}^2 \le \frac{a^2}{4}
+\end{align}
+with equality holding if and only if $b = \frac{a}{2}$[cite: 1].
+\item Zero Integral Property:
+If $g\brak{x} \ge 0$ is continuous on $\sbrak{a,b}$ and $\int_{a}^{b} g\brak{x} dx = 0$, then $g\brak{x} = 0$ on $\sbrak{a,b}$[cite: 1].
+\end{itemize}
+
+\item Laplace Transform and State-Space Form
+\begin{itemize}
+\item Transform Operational Properties:
+\begin{align}
+y'\brak{t} &\system{L} s Y\brak{s} - y\brak{0} \\
+y''\brak{t} &\system{L} s^2 Y\brak{s} - s y\brak{0} - y'\brak{0} \\
+e^{at} u\brak{t} &\system{L} \frac{1}{s - a}
+\end{align}
+\item State-Space Representation:
+Writing $\vec{z} = \myvec{y \\ y'}^\top$, the ODE $y'' + p y' + q y = 0$ becomes $\vec{z}' = \vec{A}\vec{z}$ where[cite: 1]:
+\begin{align}
+\vec{A} = \myvec{0 & 1 \\ -q & -p}
+\end{align}
+The exponents of the solution are the eigenvalues of $\vec{A}$[cite: 1].
+\end{itemize}
+
+\item Newton-Raphson Method
+\begin{itemize}
+\item First-Order Recurrence:
+For a differentiable function $f\brak{x}$, the root is iteratively approximated by[cite: 1]:
+\begin{align}
+x_{n+1} = x_n - \frac{f\brak{x_n}}{f'\brak{x_n}}
+\end{align}
+\end{itemize}
+
+\item Polynomial Interpolation (Vandermonde Matrix)
+\begin{itemize}
+\item Matrix Form:
+The polynomial $P_2\brak{x} = c_0 + c_1 x + c_2 x^2$ through points $\brak{x_i, y_i}$ for $i=1,2,3$ satisfies[cite: 1]:
+\begin{align}
+\myvec{1 & x_1 & x_1^2 \\ 1 & x_2 & x_2^2 \\ 1 & x_3 & x_3^2} \myvec{c_0 \\ c_1 \\ c_2} = \myvec{y_1 \\ y_2 \\ y_3}
+\end{align}
+\end{itemize}
+
+\item Equilibrium of Rigid Bodies in Vector Form
+\begin{itemize}
+\item Force and Moment Equilibrium:
+For a body in equilibrium under forces $\vec{F}_i$ acting at points $\vec{r}_i$[cite: 1]:
+\begin{align}
+\sum_i \vec{F}_i = \vec{0}, \quad \sum_i \brak{\vec{r}_i - \vec{O}} \times \vec{F}_i = \vec{0}
+\end{align}
+where in the 2D plane, $\vec{r} \times \vec{F} = r_x F_y - r_y F_x$[cite: 1].
+\item Bending Moment and Friction:
+The bending moment at section $P$ is $M\brak{P} = \sum_{\text{one side}} \brak{\vec{r}_i - \vec{P}} \times \vec{F}_i$[cite: 1]. Limiting friction force is $F = \mu N$[cite: 1].
+\end{itemize}
+
+\item Direct Stiffness Method
+\begin{itemize}
+\item Member and Global Stiffness Formulation:
+For an axial member of length $L$, area $A$, modulus $E$, and direction vector $\vec{m}$, the nodal stiffness is $\vec{k} = \frac{AE}{L}\vec{m}\vec{m}^\top$ and member stiffness matrix is $\myvec{\vec{k} & -\vec{k} \\ -\vec{k} & \vec{k}}$[cite: 1]. The global system is $\vec{K}\vec{u} = \vec{F}$[cite: 1].
+\item Thermal Load Equivalence:
+A temperature rise $\Delta T$ with expansion coefficient $\alpha$ produces equivalent nodal loads of $AE\alpha\Delta T$ at member ends directed outward[cite: 1].
+\end{itemize}
+
+\item Cellular Update Rule in Matrix Form
+\begin{itemize}
+\item Matrix Formulation:
+For $N$ bulbs in a line with state vector $\vec{x}_k \in \{0, 1\}^N$, the number of ON neighbours is given by $\vec{s}_k = \vec{A}\vec{x}_k$ with[cite: 1]:
+\begin{align}
+a_{ij} = \begin{cases} 1, & \abs{i - j} = 1 \\ 0, & \text{otherwise} \end{cases}
+\end{align}
+\end{itemize}
+
+\item Surveying and Traffic Relations
+\begin{itemize}
+\item Reduced Level:
+With height of instrument $HI$ and staff reading $h$, $RL = HI - h$[cite: 1].
+\item Space Mean Speed:
+For $n$ vehicles covering distance $d$ in times $\vec{t} = \myvec{t_1 & \dots & t_n}^\top$[cite: 1]:
+\begin{align}
+v_s = \frac{nd}{\vec{1}^\top \vec{t}} = \frac{n}{\sum_i \frac{1}{v_i}}
+\end{align}
+which is the harmonic mean of the spot speeds $v_i = d / t_i$[cite: 1].
+\end{itemize}
+
+\end{enumerate}
