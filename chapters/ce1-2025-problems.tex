@@ -70,6 +70,15 @@ In this edition, some incorrect solutions were removed. All figures redrawn. Mor
 \formula{Intersection of Conics and Common Chord}
 \begin{itemize}
 
+\item Conic in Vector Form: Every second-degree curve $ax^2+2bxy+cy^2+2dx+2ey+f=0$ can be written as
+\begin{align}
+\mathbf{x}^\top\mathbf{V}\mathbf{x} + 2\mathbf{u}^\top\mathbf{x} + f = 0, \quad \mathbf{V} = \myvec{a & b\\ b & c} = \mathbf{V}^\top,\ \mathbf{u} = \myvec{d\\ e}
+\end{align}
+The conic is a parabola if $\mydet{\mathbf{V}} = 0$, an ellipse if $\mydet{\mathbf{V}} > 0$ and a hyperbola if $\mydet{\mathbf{V}} < 0$. For a circle with centre $\mathbf{c}$ and radius $r$, $\norm{\mathbf{x}-\mathbf{c}}^2 = r^2$ gives
+\begin{align}
+\mathbf{V} = \mathbf{I}, \quad \mathbf{u} = -\mathbf{c}, \quad f = \norm{\mathbf{c}}^2 - r^2
+\end{align}
+
 \item Line-Conic Intersection: The points of intersection of a line $L: \mathbf{x} = \mathbf{h} + \kappa\mathbf{m}$ $\brak{\kappa\in\mathbb{R}}$ with a conic section $\mathbf{x}^\top\mathbf{V}\mathbf{x} + 2\mathbf{u}^\top\mathbf{x} + f = 0$ are given by
 \begin{align}
 \mathbf{x}_i = \mathbf{h} + \kappa_i\mathbf{m}
@@ -86,33 +95,65 @@ with $g\brak{\mathbf{h}} = \mathbf{h}^\top\mathbf{V}\mathbf{h} + 2\mathbf{u}^\to
 \label{eq:disc}
 \end{align}
 is positive, zero or negative.
+\item Derivation of the Intersection Parameter: Substituting $\mathbf{x} = \mathbf{h} + \kappa\mathbf{m}$ into the conic and using $\mathbf{V} = \mathbf{V}^\top$,
+\begin{align}
+\brak{\mathbf{h}+\kappa\mathbf{m}}^\top\mathbf{V}\brak{\mathbf{h}+\kappa\mathbf{m}} + 2\mathbf{u}^\top\brak{\mathbf{h}+\kappa\mathbf{m}} + f &= 0\\
+\kappa^2\brak{\mathbf{m}^\top\mathbf{V}\mathbf{m}} + 2\kappa\,\mathbf{m}^\top\brak{\mathbf{V}\mathbf{h}+\mathbf{u}} + g\brak{\mathbf{h}} &= 0
+\end{align}
+This is a quadratic in $\kappa$, and the quadratic formula gives \eqref{eq:kappa}. Each real root $\kappa_i$ gives one point of intersection through \eqref{eq:lc}. When $\Delta = 0$ the two roots coincide and the line is a tangent to the conic.
+
 \item Pencil of Conics: The intersection of two conics with parameters $\brak{\mathbf{V}_1,\mathbf{u}_1,f_1}$ and $\brak{\mathbf{V}_2,\mathbf{u}_2,f_2}$ lies on every member of the pencil
 \begin{align}
 \mathbf{x}^\top\brak{\mathbf{V}_1+\mu\mathbf{V}_2}\mathbf{x} + 2\brak{\mathbf{u}_1+\mu\mathbf{u}_2}^\top\mathbf{x} + \brak{f_1+\mu f_2} = 0
 \label{eq:pencil}
 \end{align}
+\item Degenerate Conic and Common Chord: The pencil \eqref{eq:pencil} is a pair of straight lines (a degenerate conic) if and only if
+\begin{align}
+\mydet{\mathbf{V}_1+\mu\mathbf{V}_2 & \mathbf{u}_1+\mu\mathbf{u}_2\\ \brak{\mathbf{u}_1+\mu\mathbf{u}_2}^\top & f_1+\mu f_2} = 0
+\end{align}
+Every point common to both conics lies on every member of the pencil, so the common points lie on these lines. If $\mathbf{V}_1 = \mathbf{V}_2$ (for example, two circles), choosing $\mu = -1$ removes the second-degree terms and leaves the common chord (radical axis)
+\begin{align}
+2\brak{\mathbf{u}_1-\mathbf{u}_2}^\top\mathbf{x} + \brak{f_1-f_2} = 0
+\end{align}
+
 \end{itemize}
 
 % =============================================================
 \formula{Line Intersection and Angle Between Vectors}
 \begin{itemize}
 
+\item Forms of a Line: A line through the point $\mathbf{A}$ with direction vector $\mathbf{m}$ can be written in parametric form or, using a normal vector $\mathbf{n}$ with $\mathbf{n}^\top\mathbf{m} = 0$, in normal form:
+\begin{align}
+\mathbf{x} = \mathbf{A} + \kappa\mathbf{m}, \qquad \mathbf{n}^\top\brak{\mathbf{x}-\mathbf{A}} = 0
+\end{align}
+In two dimensions, if $\mathbf{m} = \myvec{m_1\\ m_2}$ then $\mathbf{n} = \myvec{-m_2\\ m_1}$.
+
 \item The lines $\mathbf{x} = \mathbf{A} + \kappa_1\mathbf{m}_1$ and $\mathbf{x} = \mathbf{B} + \kappa_2\mathbf{m}_2$ meet where
 \begin{align}
 \myvec{\mathbf{m}_1 & -\mathbf{m}_2}\myvec{\kappa_1\\ \kappa_2} = \mathbf{B} - \mathbf{A}
 \label{eq:lineint}
 \end{align}
+\item Solvability: Equating the two parametric forms gives $\kappa_1\mathbf{m}_1 - \kappa_2\mathbf{m}_2 = \mathbf{B}-\mathbf{A}$, which is the matrix equation above. It has a unique solution if and only if $\mydet{\mathbf{m}_1 & \mathbf{m}_2} \neq 0$, that is, the direction vectors are linearly independent. If the determinant is zero, the lines are parallel (no intersection) or coincident (infinitely many common points).
+
 \item The angle $\theta$ between two vectors $\mathbf{a}$ and $\mathbf{b}$ is given by
 \begin{align}
 \cos\theta = \frac{\mathbf{a}^\top\mathbf{b}}{\norm{\mathbf{a}}\norm{\mathbf{b}}}
 \label{eq:angle}
 \end{align}
 
+\item Dot Product Properties: The relation above follows from the law of cosines, $\norm{\mathbf{a}-\mathbf{b}}^2 = \norm{\mathbf{a}}^2 + \norm{\mathbf{b}}^2 - 2\norm{\mathbf{a}}\norm{\mathbf{b}}\cos\theta$, since $\norm{\mathbf{a}-\mathbf{b}}^2 = \norm{\mathbf{a}}^2 + \norm{\mathbf{b}}^2 - 2\mathbf{a}^\top\mathbf{b}$. Two vectors are orthogonal if and only if $\mathbf{a}^\top\mathbf{b} = 0$. The angle between two lines is the angle between their direction vectors.
+
 \item A point on a circle of radius $r$ centred at the origin is $\mathbf{x} = r\myvec{\cos\alpha\\ \sin\alpha}$, and
 \begin{align}
 \mathbf{e}_\alpha^\top\mathbf{e}_\beta = \cos\alpha\cos\beta + \sin\alpha\sin\beta = \cos\brak{\alpha-\beta},\quad \mathbf{e}_\alpha \triangleq \myvec{\cos\alpha\\ \sin\alpha}
 \label{eq:cosdiff}
 \end{align}
+\item Chords and Central Angles: For points $\mathbf{x}_\alpha = r\mathbf{e}_\alpha$ and $\mathbf{x}_\beta = r\mathbf{e}_\beta$ on the circle, the angle subtended at the centre is $\alpha-\beta$, and expanding the norm gives the chord length:
+\begin{align}
+\norm{\mathbf{x}_\alpha - \mathbf{x}_\beta}^2 = 2r^2\brak{1 - \mathbf{e}_\alpha^\top\mathbf{e}_\beta} = 4r^2\sin^2\frac{\alpha-\beta}{2}
+\end{align}
+The angle subtended by a chord at any point on the remaining arc is half the central angle.
+
 \end{itemize}
 
 % =============================================================
@@ -352,8 +393,6 @@ g\brak{\mathbf{h}} &= \mathbf{h}^\top\mathbf{V}_1\mathbf{h} + 2\mathbf{u}_1^\top
 \end{align}
 Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and the curves do not meet in the real plane.
 
-Hence, option (A) is correct.
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q03.pdf}
@@ -395,8 +434,6 @@ For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$. F
 \myvec{\mathbf{R}-\mathbf{P} & -\brak{\mathbf{S}-\mathbf{Q}}}\myvec{\kappa_1\\ \kappa_2} = \mathbf{Q} - \mathbf{P} \implies \mathbf{T} = \myvec{0\\ 2.1445}
 \end{align}
 and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
-
-Hence, option (B) is correct.
 
 \begin{figure}[H]
 \centering
@@ -441,7 +478,6 @@ The number of ON bulbs after Step 8 is
 \begin{align}
 \mathbf{1}^\top\mathbf{x}_8 = 4
 \end{align}
-Hence, option (B) is correct.
 
 \begin{figure}[H]
 \centering
@@ -480,7 +516,6 @@ Therefore,
 \begin{align}
 PQ = 7\times 6 = 42
 \end{align}
-Hence, option (D) is correct.
 \codebox{codes/ce1/q10.py}
 
 % ----------------------------------------------------------- Q11
@@ -509,7 +544,6 @@ so option (A) is true. The remaining options are false since
 \begin{align}
 \mathbf{P}^\top\mathbf{P} = \myvec{2 & 0 & 2\\ 0 & 1 & 0\\ 2 & 0 & 2} \neq \mathbf{I},\quad \mathbf{P}^\top = \mathbf{P} \neq -\mathbf{P},\quad \abs{\lambda_1} = 0 \neq 1
 \end{align}
-Hence, option (A) is correct.
 \codebox{codes/ce1/q11.py}
 
 % ----------------------------------------------------------- Q12
@@ -538,8 +572,6 @@ From \eqref{eq:rc}, the system is consistent with $n - r = 1$ free variable. Fro
 \end{align}
 which is a line through the origin (the intersection of two planes).
 
-Hence, option (B) is correct.
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q12.pdf}
@@ -563,7 +595,6 @@ From \eqref{eq:bayes},
 \begin{align}
 \pr{B_1\mid E} = \frac{\frac{1}{2}\times\frac{3}{5}}{\frac{18}{35}} = \frac{3}{10}\times\frac{35}{18} = \frac{7}{12} \approx 0.58
 \end{align}
-The answer is 0.58.
 \codebox{codes/ce1/q26.py}
 
 % ----------------------------------------------------------- Q27
@@ -583,7 +614,6 @@ Thus,
 \begin{align}
 \mathbf{L} = \myvec{3 & 0\\ 5 & 5},\quad \mathbf{L}\mathbf{L}^\top = \myvec{9 & 15\\ 15 & 50}
 \end{align}
-The answer is 5.
 \codebox{codes/ce1/q27.py}
 
 % ----------------------------------------------------------- Q28
@@ -613,7 +643,6 @@ Therefore,
 \begin{align}
 x^3 + y^3 = 27 + 64 = 91
 \end{align}
-The answer is 91.
 \codebox{codes/ce1/q28.py}
 
 % ----------------------------------------------------------- Q33
@@ -631,7 +660,6 @@ Equivalently, the spot speeds are $\myvec{30 & 24 & 15}$ km/h and their harmonic
 \begin{align}
 v_s = \frac{3}{\frac{1}{30} + \frac{1}{24} + \frac{1}{15}} = 21.18\text{ km/h}
 \end{align}
-The answer is 21.18 km/h.
 \codebox{codes/ce1/q33.py}
 
 % ----------------------------------------------------------- Q35
@@ -641,7 +669,6 @@ The answer is 21.18 km/h.
 \begin{align}
 \text{RL}_P = \text{HI} - h = 100.000 - 1.500 = 98.500\text{ m}
 \end{align}
-The answer is 98.500 m.
 \codebox{codes/ce1/q35.py}
 
 % ----------------------------------------------------------- Q36
@@ -673,7 +700,6 @@ Since the integrand is continuous and non-negative,
 \begin{align}
 f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
 \end{align}
-Hence, option (C) is correct.
 
 \begin{figure}[H]
 \centering
@@ -721,7 +747,6 @@ Substituting $e^t = x$:
 \begin{align}
 y\brak{x} = ax^3 + \frac{b}{x^2}
 \end{align}
-Hence, option (A) is correct.
 \codebox{codes/ce1/q37.py}
 
 % ----------------------------------------------------------- Q38
@@ -747,7 +772,6 @@ After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak
 \begin{align}
 \mathbf{K} = \mathbf{k}_{PQ} + \mathbf{k}_{QR} = \frac{AE}{L}\myvec{1 & 0\\ 0 & 1}
 \end{align}
-Hence, option (C) is correct.
 
 \begin{figure}[H]
 \centering
@@ -792,8 +816,6 @@ and in the beam at $E$ (forces to the right of the section) is
 In column $BD$, the roller reaction is vertical and along the column, so $M = 0$.
 The maximum bending moment is 165 kN m under the 90 kN load.
 
-Hence, option (A) is correct.
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q39.pdf}
@@ -824,8 +846,6 @@ With the first approximation $x_0 = 0.5$, the second approximation is
 x_1 = \frac{1.5}{1 + e^{0.5}} = \frac{1.5}{2.64872} = 0.56631 \approx 0.57
 \end{align}
 Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
-
-The answer is 0.57.
 
 \begin{figure}[H]
 \centering
@@ -861,7 +881,6 @@ Thus,
 \begin{align}
 P_2\brak{x} = 5x^2 - 3x + 2 \implies P_2\brak{0} = \myvec{1 & 0 & 0}\myvec{c_0\\ c_1\\ c_2} = 2
 \end{align}
-The answer is 2.
 
 \begin{figure}[H]
 \centering
@@ -901,7 +920,7 @@ For $\theta = 45^\circ$:
 \begin{align}
 \mu^2 + 2\mu - 1 = 0 \implies \mu = -1 + \sqrt{2} = 0.414
 \end{align}
-taking the positive root. The answer is 0.41.
+taking the positive root.
 
 \begin{figure}[H]
 \centering
@@ -936,7 +955,6 @@ The force in the spring is
 \begin{align}
 F_{BC} = ku_B = 2500\times 2.88 = 7200\text{ N} = 7.2\text{ kN}
 \end{align}
-The answer is 7.2 kN.
 
 \begin{figure}[H]
 \centering
