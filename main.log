@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  30 SEP 2026 01:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  30 SEP 2026 01:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,26 +874,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.9}
                    \relax 
 l.435 \end{align}
                  
-
-LaTeX Warning: File `figs/q07.pdf' not found on input line 440.
-
-
-! Package pdftex.def Error: File `figs/q07.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 ...textheight,keepaspectratio]{figs/q07.pdf}
-                                                  
-? r
-OK, entering \nonstopmode...
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
-40.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [8 <./figs/q03.pdf>]
+<figs/q07.pdf, id=109, 433.62pt x 433.62pt>
+File: figs/q07.pdf Graphic file (type pdf)
+<use figs/q07.pdf>
+Package pdftex.def Info: figs/q07.pdf  used on input line 440.
+(pdftex.def)             Requested size: 153.11903pt x 153.11903pt.
+ [8 <./figs/q03.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -941,7 +927,7 @@ s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.472 \end{align}
-                 ]
+                  <./figs/q07.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.8}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -954,22 +940,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.9}
                    \relax 
 l.480 \end{align}
                  
-
-LaTeX Warning: File `figs/q09.pdf' not found on input line 484.
-
-
-! Package pdftex.def Error: File `figs/q09.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.484 ...textheight,keepaspectratio]{figs/q09.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q09.pdf, id=214, 578.16pt x 361.35pt>
+File: figs/q09.pdf Graphic file (type pdf)
+<use figs/q09.pdf>
+Package pdftex.def Info: figs/q09.pdf  used on input line 484.
+(pdftex.def)             Requested size: 244.99576pt x 153.12234pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
@@ -1000,7 +975,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}
 <to be read again> 
                    \relax 
 l.514 \end{align}
-                  [10]
+                  [10 <./figs/q09.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.5}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1067,22 +1042,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}
                    \relax 
 l.572 \end{align}
                  
-
-LaTeX Warning: File `figs/q12.pdf' not found on input line 577.
-
-
-! Package pdftex.def Error: File `figs/q12.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.577 ...textheight,keepaspectratio]{figs/q12.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q12.pdf, id=286, 505.89pt x 433.62pt>
+File: figs/q12.pdf Graphic file (type pdf)
+<use figs/q12.pdf>
+Package pdftex.def Info: figs/q12.pdf  used on input line 577.
+(pdftex.def)             Requested size: 178.63887pt x 153.11903pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
@@ -1107,7 +1071,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3}
 <to be read again> 
                    \relax 
 l.597 \end{align}
-                  [12]
+                  [12 <./figs/q12.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1234,22 +1198,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.6}
                    \relax 
 l.702 \end{align}
                   [14]
-
-LaTeX Warning: File `figs/q36.pdf' not found on input line 706.
-
-
-! Package pdftex.def Error: File `figs/q36.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.706 ...textheight,keepaspectratio]{figs/q36.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q36.pdf, id=358, 433.62pt x 289.08pt>
+File: figs/q36.pdf Graphic file (type pdf)
+<use figs/q36.pdf>
+Package pdftex.def Info: figs/q36.pdf  used on input line 706.
+(pdftex.def)             Requested size: 229.67856pt x 153.11903pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
@@ -1298,7 +1251,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.7}
 <to be read again> 
                    \relax 
 l.745 \end{align}
-                  [15]
+                  [15 <./figs/q36.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.8}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1329,22 +1282,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}
                    \relax 
 l.774 \end{align}
                  
-
-LaTeX Warning: File `figs/q38.pdf' not found on input line 778.
-
-
-! Package pdftex.def Error: File `figs/q38.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.778 ...textheight,keepaspectratio]{figs/q38.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q38.pdf, id=419, 433.62pt x 289.08pt>
+File: figs/q38.pdf Graphic file (type pdf)
+<use figs/q38.pdf>
+Package pdftex.def Info: figs/q38.pdf  used on input line 778.
+(pdftex.def)             Requested size: 229.67856pt x 153.11903pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
@@ -1394,29 +1336,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.7}
                    \relax 
 l.815 \end{align}
                  
-
-LaTeX Warning: File `figs/q39.pdf' not found on input line 821.
-
-
-! Package pdftex.def Error: File `figs/q39.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.821 ...textheight,keepaspectratio]{figs/q39.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q39.pdf, id=432, 505.89pt x 361.35pt>
+File: figs/q39.pdf Graphic file (type pdf)
+<use figs/q39.pdf>
+Package pdftex.def Info: figs/q39.pdf  used on input line 821.
+(pdftex.def)             Requested size: 214.37128pt x 153.12234pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.822 ...Frame loading and bending moment diagram}
-                                                   [17]
+                                                   [17 <./figs/q38.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1453,29 +1384,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.6}
                    \relax 
 l.847 \end{align}
                  
-
-LaTeX Warning: File `figs/q48.pdf' not found on input line 852.
-
-
-! Package pdftex.def Error: File `figs/q48.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.852 ...textheight,keepaspectratio]{figs/q48.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q48.pdf, id=492, 433.62pt x 325.215pt>
+File: figs/q48.pdf Graphic file (type pdf)
+<use figs/q48.pdf>
+Package pdftex.def Info: figs/q48.pdf  used on input line 852.
+(pdftex.def)             Requested size: 204.16533pt x 153.124pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.853 ...f\brak{x} = e^{-x} - x$ from $x_0 = 0.5$}
-                                                   [18]
+                                                   [18 <./figs/q39.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1500,29 +1420,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}
                    \relax 
 l.883 \end{align}
                  
-
-LaTeX Warning: File `figs/q49.pdf' not found on input line 887.
-
-
-! Package pdftex.def Error: File `figs/q49.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.887 ...textheight,keepaspectratio]{figs/q49.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q49.pdf, id=543, 433.62pt x 325.215pt>
+File: figs/q49.pdf Graphic file (type pdf)
+<use figs/q49.pdf>
+Package pdftex.def Info: figs/q49.pdf  used on input line 887.
+(pdftex.def)             Requested size: 204.16533pt x 153.124pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.888 ...ting polynomial through the given points}
-                                                   [19]
+                                                   [19 <./figs/q48.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1570,29 +1479,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.8}
 <to be read again> 
                    \relax 
 l.918 \end{align}
-                  [20]
+                  [20 <./figs/q49.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.9}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.922 \end{align}
                  
-
-LaTeX Warning: File `figs/q50.pdf' not found on input line 927.
-
-
-! Package pdftex.def Error: File `figs/q50.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.927 ...textheight,keepaspectratio]{figs/q50.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/q50.pdf, id=650, 361.35pt x 361.35pt>
+File: figs/q50.pdf Graphic file (type pdf)
+<use figs/q50.pdf>
+Package pdftex.def Info: figs/q50.pdf  used on input line 927.
+(pdftex.def)             Requested size: 153.12234pt x 153.12234pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
@@ -1629,30 +1527,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.5}
 <to be read again> 
                    \relax 
 l.957 \end{align}
-                  [21]
-
-LaTeX Warning: File `figs/q51.pdf' not found on input line 961.
-
-
-! Package pdftex.def Error: File `figs/q51.pdf' not found: using draft setting.
-
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.961 ...textheight,keepaspectratio]{figs/q51.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+                  [21 <./figs/q50.pdf>]
+<figs/q51.pdf, id=697, 433.62pt x 289.08pt>
+File: figs/q51.pdf Graphic file (type pdf)
+<use figs/q51.pdf>
+Package pdftex.def Info: figs/q51.pdf  used on input line 961.
+(pdftex.def)             Requested size: 229.67856pt x 153.11903pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.962 ...$BC$ versus temperature rise of rod $AB$}
-                                                   [22] (./main.aux)
+                                                   [22 <./figs/q51.pdf>]
+(./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1661,11 +1549,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 33DE6906185404466302B0A5AB67EB68;342.
  ) 
 Here is how much of TeX's memory you used:
- 13401 strings out of 474222
- 207330 string characters out of 5748734
+ 13133 strings out of 474222
+ 201699 string characters out of 5748734
  1949975 words of memory out of 5000000
- 35350 multiletter control sequences out of 15000+600000
- 594969 words of font info for 119 fonts, out of 8000000 for 9000
+ 35087 multiletter control sequences out of 15000+600000
+ 594454 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,18n,79p,541b,640s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -1685,13 +1573,13 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (22 pages, 305700 bytes).
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on main.pdf (22 pages, 438605 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
+ 874 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
  131 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
