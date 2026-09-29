@@ -11,7 +11,7 @@ y2 = -x**2 - 2*x - 1
 # Pencil line: x + y = -0.5  =>  y = -x - 0.5
 y_line = -x - 0.5
 
-plt.figure(figsize=(6, 5))
+plt.figure(figsize=(10, 8))
 plt.plot(x, y1, label=r'$y = x^2$', color='blue')
 plt.plot(x, y2, label=r'$y = -x^2 - 2x - 1$', color='red')
 plt.plot(x, y_line, '--', label=r'$x + y = -1/2$', color='green')
