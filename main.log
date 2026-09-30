@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  1 OCT 2026 03:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  1 OCT 2026 03:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1450,14 +1450,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \problem
+l.4 \problem
              At how many points will the curves $y = x^2$ and $y = -x^2 - 2x...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.6 ...rsect in the real $\brak{x,y}$ plane? \gate
+l.4 ...rsect in the real $\brak{x,y}$ plane? \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1465,13 +1465,29 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q03.pdf, id=136, 722.7pt x 578.16pt>
+
+LaTeX Warning: Reference `eq:pencil' on page 8 undefined on input line 16.
+
+
+Underfull \hbox (badness 1596) in paragraph at lines 15--17
+\OT1/ptm/m/it/10 Choosing $\OML/cmm/m/it/10 ^^V \OT1/cmr/m/n/10 = \OMS/cmsy/m/n
+/10 ^^@\OT1/cmr/m/n/10 1$ \OT1/ptm/m/it/10 in the pen-cil [] elim-i-nates the s
+econd-degree terms
+ []
+
+
+LaTeX Warning: Reference `eq:disc' on page 8 undefined on input line 25.
+
+
+LaTeX Warning: Reference `eq:kappa' on page 8 undefined on input line 33.
+
+<figs/q03.pdf, id=133, 722.7pt x 578.16pt>
 File: figs/q03.pdf Graphic file (type pdf)
 <use figs/q03.pdf>
-Package pdftex.def Info: figs/q03.pdf  used on input line 39.
+Package pdftex.def Info: figs/q03.pdf  used on input line 37.
 (pdftex.def)             Requested size: 148.66171pt x 118.92937pt.
 ! Undefined control sequence.
-l.42 \codebox
+l.40 \codebox
              {codes/ce1/q03.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1481,7 +1497,7 @@ and I'll forget about whatever was undefined.
 
 [8]
 ! Undefined control sequence.
-l.43 \codebox
+l.41 \codebox
              {figs/q03.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1490,7 +1506,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.46 ...gle RTS$ is \underline{\hspace{2cm}} \gate
+l.44 ...gle RTS$ is \underline{\hspace{2cm}} \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1498,15 +1514,26 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:cosdiff' on page 9 undefined on input line 55.
+
+
+LaTeX Warning: Reference `eq:angle' on page 9 undefined on input line 64.
+
+
+LaTeX Warning: Reference `eq:lineint' on page 9 undefined on input line 71.
+
 [9 <./figs/q03.pdf>]
-<figs/q07.pdf, id=220, 433.62pt x 433.62pt>
+
+LaTeX Warning: Reference `eq:angle' on page 10 undefined on input line 75.
+
+<figs/q07.pdf, id=212, 433.62pt x 433.62pt>
 File: figs/q07.pdf Graphic file (type pdf)
 <use figs/q07.pdf>
-Package pdftex.def Info: figs/q07.pdf  used on input line 81.
+Package pdftex.def Info: figs/q07.pdf  used on input line 79.
 (pdftex.def)             Requested size: 118.93158pt x 118.93158pt.
-
 ! Undefined control sequence.
-l.84 \codebox
+l.82 \codebox
              {codes/ce1/q07.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1515,7 +1542,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.85 \codebox
+l.83 \codebox
              {figs/q07.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1524,7 +1551,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.90 ...f Step 8 is \underline{\hspace{2cm}} \gate
+l.88 ...f Step 8 is \underline{\hspace{2cm}} \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1535,7 +1562,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    (
-l.91 \begin{multicols}(
+l.89 \begin{multicols}(
                        2)
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1543,17 +1570,20 @@ look up `weird error' in the index to The TeXbook.)
 
 
 Package multicol Warning: Using `0' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 91.
+ I therefore use two columns instead on input line 89.
+
+
+LaTeX Warning: Reference `eq:adj' on page 10 undefined on input line 95.
 
 [10 <./figs/q07.pdf>]
-<figs/q09.pdf, id=266, 578.16pt x 361.35pt>
+<figs/q09.pdf, id=258, 578.16pt x 361.35pt>
 File: figs/q09.pdf Graphic file (type pdf)
 <use figs/q09.pdf>
-Package pdftex.def Info: figs/q09.pdf  used on input line 125.
+Package pdftex.def Info: figs/q09.pdf  used on input line 123.
 (pdftex.def)             Requested size: 182.0949pt x 113.80931pt.
 
 ! Undefined control sequence.
-l.128 \codebox
+l.126 \codebox
               {codes/ce1/q09.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1562,7 +1592,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.129 \codebox
+l.127 \codebox
               {figs/q09plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1571,7 +1601,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.132 ...and $Q$ is \underline{\hspace{2cm}} \gate
+l.130 ...and $Q$ is \underline{\hspace{2cm}} \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1579,9 +1609,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:axb' on page 11 undefined on input line 146.
+
 [11 <./figs/q09.pdf>]
 ! Undefined control sequence.
-l.160 \codebox
+l.158 \codebox
               {codes/ce1/q10plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1590,7 +1623,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.167 The TRUE option is \gate
+l.165 The TRUE option is \gate
                               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1598,8 +1631,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:charpoly' on page 12 undefined on input line 172.
+
+
+LaTeX Warning: Reference `eq:trace' on page 12 undefined on input line 178.
+
 ! Undefined control sequence.
-l.188 \codebox
+l.186 \codebox
               {codes/ce1/q11.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1607,9 +1646,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[12]
 ! Undefined control sequence.
-l.195 ...ve system of equations represents a \gate
+l.193 ...ve system of equations represents a \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1620,23 +1658,30 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.197 \item
+l.195 \item
             plane
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
+[12]
 
 Package multicol Warning: Using `0' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 197.
+ I therefore use two columns instead on input line 195.
 
-<figs/q12.pdf, id=347, 505.89pt x 433.62pt>
+
+LaTeX Warning: Reference `eq:rc' on page 13 undefined on input line 208.
+
+
+LaTeX Warning: Reference `eq:cross' on page 13 undefined on input line 208.
+
+<figs/q12.pdf, id=335, 505.89pt x 433.62pt>
 File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
-Package pdftex.def Info: figs/q12.pdf  used on input line 218.
+Package pdftex.def Info: figs/q12.pdf  used on input line 216.
 (pdftex.def)             Requested size: 138.75351pt x 118.93158pt.
 ! Undefined control sequence.
-l.221 \codebox
+l.219 \codebox
               {codes/ce1/q12.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1645,7 +1690,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.222 \codebox
+l.220 \codebox
               {figs/q12plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1654,7 +1699,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.225 ...rounded off to two decimal places). \gate
+l.223 ...rounded off to two decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1662,9 +1707,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:total' on page 13 undefined on input line 229.
+
 [13 <./figs/q12.pdf>]
+
+LaTeX Warning: Reference `eq:bayes' on page 14 undefined on input line 233.
+
 ! Undefined control sequence.
-l.239 \codebox
+l.237 \codebox
               {codes/ce1/q26.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1673,7 +1724,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.246 ...derline{\hspace{2cm}} (in integer). \gate
+l.244 ...derline{\hspace{2cm}} (in integer). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1681,8 +1732,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:chol2' on page 14 undefined on input line 246.
+
 ! Undefined control sequence.
-l.258 \codebox
+l.256 \codebox
               {codes/ce1/q27.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1691,7 +1745,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.265 ...derline{\hspace{2cm}} (in integer). \gate
+l.263 ...derline{\hspace{2cm}} (in integer). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1699,9 +1753,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:zeronorm' on page 14 undefined on input line 273.
+
 [14]
 ! Undefined control sequence.
-l.287 \codebox
+l.285 \codebox
               {codes/ce1/q28.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1710,7 +1767,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.290 ...rounded off to two decimal places). \gate
+l.288 ...rounded off to two decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1718,8 +1775,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:sms' on page 15 undefined on input line 294.
+
 ! Undefined control sequence.
-l.304 \codebox
+l.302 \codebox
               {codes/ce1/q33.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1728,7 +1788,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.307 ...unded off to three decimal places). \gate
+l.305 ...unded off to three decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1736,8 +1796,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:rl' on page 15 undefined on input line 307.
+
 ! Undefined control sequence.
-l.313 \codebox
+l.311 \codebox
               {codes/ce1/q35.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1746,7 +1809,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.320 The value of $f\brak{1}$ is \gate
+l.318 The value of $f\brak{1}$ is \gate
                                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1754,15 +1817,18 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:cts' on page 15 undefined on input line 325.
+
 [15]
-<figs/q36.pdf, id=432, 433.62pt x 289.08pt>
+<figs/q36.pdf, id=412, 433.62pt x 289.08pt>
 File: figs/q36.pdf Graphic file (type pdf)
 <use figs/q36.pdf>
-Package pdftex.def Info: figs/q36.pdf  used on input line 347.
+Package pdftex.def Info: figs/q36.pdf  used on input line 345.
 (pdftex.def)             Requested size: 178.39406pt x 118.92937pt.
 
 ! Undefined control sequence.
-l.350 \codebox
+l.348 \codebox
               {codes/ce1/q36.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1771,7 +1837,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.351 \codebox
+l.349 \codebox
               {figs/q36plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1780,7 +1846,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.358 ...general solution of the equation is \gate
+l.356 ...general solution of the equation is \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1788,9 +1854,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:lap1' on page 16 undefined on input line 372.
+
+
+LaTeX Warning: Reference `eq:lap2' on page 16 undefined on input line 372.
+
 [16 <./figs/q36.pdf>]
+
+LaTeX Warning: Reference `eq:lapexp' on page 17 undefined on input line 377.
+
+
+LaTeX Warning: Reference `eq:ss' on page 17 undefined on input line 381.
+
 ! Undefined control sequence.
-l.391 \codebox
+l.389 \codebox
               {codes/ce1/q37.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1799,7 +1877,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.396 ...ffness matrix of the truss becomes: \gate
+l.394 ...ffness matrix of the truss becomes: \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1807,15 +1885,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[17]
-<figs/q38.pdf, id=506, 433.62pt x 289.08pt>
+
+LaTeX Warning: Reference `eq:kbar' on page 17 undefined on input line 405.
+
+<figs/q38.pdf, id=470, 433.62pt x 289.08pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
-Package pdftex.def Info: figs/q38.pdf  used on input line 419.
+Package pdftex.def Info: figs/q38.pdf  used on input line 417.
 (pdftex.def)             Requested size: 178.39406pt x 118.92937pt.
-
 ! Undefined control sequence.
-l.422 \codebox
+l.420 \codebox
               {codes/ce1/q38.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1823,8 +1902,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[17]
 ! Undefined control sequence.
-l.423 \codebox
+l.421 \codebox
               {figs/q38plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1833,7 +1913,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.428 ...ding moment (in kN-m) in the frame? \gate
+l.426 ...ding moment (in kN-m) in the frame? \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1842,19 +1922,25 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (46.64691pt too wide) detected at line 438
+Overfull \hbox (38.64688pt too wide) detected at line 436
 []
  []
 
+
+LaTeX Warning: Reference `eq:equil' on page 18 undefined on input line 437.
+
+
+LaTeX Warning: Reference `eq:bm' on page 18 undefined on input line 447.
+
 [18 <./figs/q38.pdf>]
-<figs/q39.pdf, id=568, 505.89pt x 361.35pt>
+<figs/q39.pdf, id=545, 505.89pt x 361.35pt>
 File: figs/q39.pdf Graphic file (type pdf)
 <use figs/q39.pdf>
-Package pdftex.def Info: figs/q39.pdf  used on input line 462.
+Package pdftex.def Info: figs/q39.pdf  used on input line 460.
 (pdftex.def)             Requested size: 166.50421pt x 118.93158pt.
 
 ! Undefined control sequence.
-l.465 \codebox
+l.463 \codebox
               {codes/ce1/q39.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1863,7 +1949,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.466 \codebox
+l.464 \codebox
               {figs/q39plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1872,7 +1958,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.473 \gate
+l.471 \gate
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1880,15 +1966,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[19 <./figs/q39.pdf>]
-<figs/q48.pdf, id=628, 433.62pt x 325.215pt>
+
+LaTeX Warning: Reference `eq:nr' on page 19 undefined on input line 478.
+
+<figs/q48.pdf, id=546, 433.62pt x 325.215pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
-Package pdftex.def Info: figs/q48.pdf  used on input line 493.
+Package pdftex.def Info: figs/q48.pdf  used on input line 491.
 (pdftex.def)             Requested size: 158.57765pt x 118.93323pt.
-
 ! Undefined control sequence.
-l.496 \codebox
+l.494 \codebox
               {codes/ce1/q48.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1896,8 +1983,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[19 <./figs/q39.pdf>]
 ! Undefined control sequence.
-l.497 \codebox
+l.495 \codebox
               {figs/q48plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1906,7 +1994,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.508 ...ounded off to the nearest integer). \gate
+l.506 ...ounded off to the nearest integer). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1914,15 +2002,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[20 <./figs/q48.pdf>]
-<figs/q49.pdf, id=690, 433.62pt x 325.215pt>
+
+LaTeX Warning: Reference `eq:vander' on page 20 undefined on input line 508.
+
+<figs/q49.pdf, id=604, 433.62pt x 325.215pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
-Package pdftex.def Info: figs/q49.pdf  used on input line 528.
+Package pdftex.def Info: figs/q49.pdf  used on input line 526.
 (pdftex.def)             Requested size: 158.57765pt x 118.93323pt.
-
 ! Undefined control sequence.
-l.531 \codebox
+l.529 \codebox
               {codes/ce1/q49.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1930,8 +2019,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[20 <./figs/q48.pdf>]
 ! Undefined control sequence.
-l.532 \codebox
+l.530 \codebox
               {figs/q49plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1940,7 +2030,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.535 ...rounded off to two decimal places). \gate
+l.533 ...rounded off to two decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1948,15 +2038,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:equil' on page 21 undefined on input line 539.
+
+
+LaTeX Warning: Reference `eq:augdet' on page 21 undefined on input line 548.
+
 [21 <./figs/q49.pdf>]
-<figs/q50.pdf, id=749, 361.35pt x 361.35pt>
+<figs/q50.pdf, id=718, 361.35pt x 361.35pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
-Package pdftex.def Info: figs/q50.pdf  used on input line 568.
+Package pdftex.def Info: figs/q50.pdf  used on input line 566.
 (pdftex.def)             Requested size: 118.93158pt x 118.93158pt.
 
 ! Undefined control sequence.
-l.571 \codebox
+l.569 \codebox
               {codes/ce1/q50.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1965,7 +2061,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.572 \codebox
+l.570 \codebox
               {figs/q50plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1974,7 +2070,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.577 ...(rounded off to one decimal place). \gate
+l.575 ...(rounded off to one decimal place). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1982,15 +2078,18 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+LaTeX Warning: Reference `eq:kuf' on page 22 undefined on input line 585.
+
 [22 <./figs/q50.pdf>]
-<figs/q51.pdf, id=801, 433.62pt x 289.08pt>
+<figs/q51.pdf, id=770, 433.62pt x 289.08pt>
 File: figs/q51.pdf Graphic file (type pdf)
 <use figs/q51.pdf>
-Package pdftex.def Info: figs/q51.pdf  used on input line 602.
+Package pdftex.def Info: figs/q51.pdf  used on input line 600.
 (pdftex.def)             Requested size: 178.39406pt x 118.92937pt.
 
 ! Undefined control sequence.
-l.605 \codebox
+l.603 \codebox
               {  /ce1/q51.py}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1999,7 +2098,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.606 \codebox
+l.604 \codebox
               {figs/q51plot.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2014,25 +2113,19 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 33DE6906185404466302B0A5AB67EB68;342
-(rerunfilecheck)             After:  E7C9E2DC1B9C88D504DC12EA8D828F96;410.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) ) 
 Here is how much of TeX's memory you used:
- 50336 strings out of 474222
- 1212017 string characters out of 5748734
+ 50330 strings out of 474222
+ 1211910 string characters out of 5748734
  1947975 words of memory out of 5000000
- 71621 multiletter control sequences out of 15000+600000
+ 71616 multiletter control sequences out of 15000+600000
  596587 words of font info for 123 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,109p,1194b,1247s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,109p,1194b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
@@ -2055,10 +2148,10 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (23 pages, 478278 bytes).
+Output written on main.pdf (23 pages, 477023 bytes).
 PDF statistics:
- 1012 PDF objects out of 1200 (max. 8388607)
- 520 compressed objects within 6 object streams
- 212 named destinations out of 1000 (max. 500000)
+ 978 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 211 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 
