@@ -15,7 +15,6 @@ x_val, y_val = solution[0], solution[1]
 # Calculate x^3 + y^3
 result = x_val**3 + y_val**3
 
-
 # --- Plotting to verify line intersection ---
 # Generate x values for plotting
 x = np.linspace(0, 6, 100)
@@ -47,6 +46,6 @@ ax.legend()
 ax.set_xlim(0, 6)
 ax.set_ylim(0, 10)
 
-# Save the figure to file instead of showing it
-plt.savefig('q28_figure.png', bbox_inches='tight')
+# Save the figure directly to PDF format
+plt.savefig('figs/q28.pdf', bbox_inches='tight')
 plt.close(fig)
