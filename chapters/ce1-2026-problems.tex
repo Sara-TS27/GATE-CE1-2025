@@ -19,26 +19,26 @@
 \item 3
 \end{enumerate}
 \end{multicols}
-\solution The given curves can be written in the form $\mathbf{x}^\top\mathbf{V}\mathbf{x} + 2\mathbf{u}^\top\mathbf{x} + f = 0$:
+\solution The given curves can be written in the form $\vec{x}^\top\vec{V}\vec{x} + 2\vec{u}^\top\vec{x} + f = 0$:
 \begin{align}
-x^2 - y = 0 &\implies \mathbf{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \mathbf{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
-x^2 + 2x + y + 1 = 0 &\implies \mathbf{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \mathbf{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
+x^2 - y = 0 &\implies \vec{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
+x^2 + 2x + y + 1 = 0 &\implies \vec{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
 \end{align}
-Choosing $\mu = -1$ in the pencil \eqref{eq:pencil} eliminates the second-degree terms $\brak{\mathbf{V}_1 - \mathbf{V}_2 = \mathbf{0}}$:
+Choosing $\mu = -1$ in the pencil \eqref{eq:pencil} eliminates the second-degree terms $\brak{\vec{V}_1 - \vec{V}_2 = \vec{0}}$:
 \begin{align}
-2\brak{\mathbf{u}_1 - \mathbf{u}_2}^\top\mathbf{x} + \brak{f_1 - f_2} &= 0\\
-2\myvec{-1 & -1}\mathbf{x} - 1 = 0 \implies \myvec{1 & 1}\mathbf{x} &= -\frac{1}{2}
+2\brak{\vec{u}_1 - \vec{u}_2}^\top\vec{x} + \brak{f_1 - f_2} &= 0\\
+2\myvec{-1 & -1}\vec{x} - 1 = 0 \implies \myvec{1 & 1}\vec{x} &= -\frac{1}{2}
 \end{align}
 All common points of the two curves lie on this line. A point on the line and its direction vector are
 \begin{align}
-\mathbf{h} = \myvec{0\\ -\frac{1}{2}},\quad \mathbf{m} = \myvec{1\\ -1}
+\vec{h} = \myvec{0\\ -\frac{1}{2}},\quad \vec{m} = \myvec{1\\ -1}
 \end{align}
 Substituting into \eqref{eq:disc} for the first curve:
 \begin{align}
-\mathbf{m}^\top\mathbf{V}_1\mathbf{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
-\mathbf{V}_1\mathbf{h} + \mathbf{u}_1 &= \myvec{0\\ 0} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
-\mathbf{m}^\top\brak{\mathbf{V}_1\mathbf{h} + \mathbf{u}_1} &= \myvec{1 & -1}\myvec{0\\ -\frac{1}{2}} = \frac{1}{2}\\
-g\brak{\mathbf{h}} &= \mathbf{h}^\top\mathbf{V}_1\mathbf{h} + 2\mathbf{u}_1^\top\mathbf{h} + f_1 = 0 + \frac{1}{2} + 0 = \frac{1}{2}\\
+\vec{m}^\top\vec{V}_1\vec{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
+\vec{V}_1\vec{h} + \vec{u}_1 &= \myvec{0\\ 0} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
+\vec{m}^\top\brak{\vec{V}_1\vec{h} + \vec{u}_1} &= \myvec{1 & -1}\myvec{0\\ -\frac{1}{2}} = \frac{1}{2}\\
+g\brak{\vec{h}} &= \vec{h}^\top\vec{V}_1\vec{h} + 2\vec{u}_1^\top\vec{h} + f_1 = 0 + \frac{1}{2} + 0 = \frac{1}{2}\\
 \Delta &= \brak{\frac{1}{2}}^2 - \frac{1}{2}\brak{1} = -\frac{1}{4} < 0
 \end{align}
 Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and the curves do not meet in the real plane.
@@ -63,18 +63,18 @@ Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and
 \end{multicols}
 \solution Let $O$ be the origin and the radius be $r$. Then
 \begin{align}
-\mathbf{P} = r\mathbf{e}_{180^\circ} = -r\mathbf{e}_{0},\quad \mathbf{Q} = r\mathbf{e}_{0},\quad \mathbf{R} = r\mathbf{e}_\alpha,\quad \mathbf{S} = r\mathbf{e}_\beta
+\vec{P} = r\vec{e}_{180^\circ} = -r\vec{e}_{0},\quad \vec{Q} = r\vec{e}_{0},\quad \vec{R} = r\vec{e}_\alpha,\quad \vec{S} = r\vec{e}_\beta
 \end{align}
 with $0 < \beta < \alpha < 180^\circ$ and, from \eqref{eq:cosdiff},
 \begin{align}
-\cos\angle ROS = \mathbf{e}_\alpha^\top\mathbf{e}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
+\cos\angle ROS = \vec{e}_\alpha^\top\vec{e}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
 \end{align}
 The direction vectors of the lines $PR$ and $QS$ are
 \begin{align}
-\mathbf{R} - \mathbf{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
-\mathbf{S} - \mathbf{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
+\vec{R} - \vec{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
+\vec{S} - \vec{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
 \end{align}
-The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrightarrow{TR}$ is along $\mathbf{P} - \mathbf{R}$ and $\overrightarrow{TS}$ is along $\mathbf{Q} - \mathbf{S}$. Using \eqref{eq:angle},
+The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrightarrow{TR}$ is along $\vec{P} - \vec{R}$ and $\overrightarrow{TS}$ is along $\vec{Q} - \vec{S}$. Using \eqref{eq:angle},
 \begin{align}
 \cos\angle RTS &= \myvec{\cos\frac{\alpha}{2} & \sin\frac{\alpha}{2}}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}\\
 &= \sin\frac{\alpha}{2}\cos\frac{\beta}{2} - \cos\frac{\alpha}{2}\sin\frac{\beta}{2} = \sin\frac{\alpha-\beta}{2}\\
@@ -83,7 +83,7 @@ The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrighta
 \end{align}
 For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$ so that $\alpha - \beta = 80^\circ$. From \eqref{eq:lineint},
 \begin{align}
-\myvec{\mathbf{R}-\mathbf{P} & -\brak{\mathbf{S}-\mathbf{Q}}}\myvec{\kappa_1\\ \kappa_2} = \mathbf{Q} - \mathbf{P} \implies \mathbf{T} = \myvec{0\\ 2.1445}
+\myvec{\vec{R}-\vec{P} & -\brak{\vec{S}-\vec{Q}}}\myvec{\kappa_1\\ \kappa_2} = \vec{Q} - \vec{P} \implies \vec{T} = \myvec{0\\ 2.1445}
 \end{align}
 and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
@@ -107,30 +107,30 @@ The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure.
 \item 0
 \end{enumerate}
 \end{multicols}
-\solution Let $\mathbf{x}_k\in\cbrak{0,1}^7$ be the state vector after Step $k$ and $\mathbf{s}_k = \mathbf{A}\mathbf{x}_k$ from \eqref{eq:adj}, where
+\solution Let $\vec{x}_k\in\cbrak{0,1}^7$ be the state vector after Step $k$ and $\vec{s}_k = \vec{A}\vec{x}_k$ from \eqref{eq:adj}, where
 \begin{align}
-\mathbf{A} = \myvec{0&1&0&0&0&0&0\\ 1&0&1&0&0&0&0\\ 0&1&0&1&0&0&0\\ 0&0&1&0&1&0&0\\ 0&0&0&1&0&1&0\\ 0&0&0&0&1&0&1\\ 0&0&0&0&0&1&0}
+\vec{A} = \myvec{0&1&0&0&0&0&0\\ 1&0&1&0&0&0&0\\ 0&1&0&1&0&0&0\\ 0&0&1&0&1&0&0\\ 0&0&0&1&0&1&0\\ 0&0&0&0&1&0&1\\ 0&0&0&0&0&1&0}
 \end{align}
 The rules give the update
 \begin{align}
-\mathbf{x}_{k+1} = \mathbf{x}_k + \brak{\mathbf{1} - \mathbf{x}_k}\odot\sbrak{\mathbf{s}_k = 1} - \mathbf{x}_k\odot\sbrak{\mathbf{s}_k = 2}
+\vec{x}_{k+1} = \vec{x}_k + \brak{\vec{1} - \vec{x}_k}\odot\sbrak{\vec{s}_k = 1} - \vec{x}_k\odot\sbrak{\vec{s}_k = 2}
 \label{eq:bulbupdate}
 \end{align}
 where $\odot$ is the element-wise product and $\sbrak{\cdot}$ is 1 when the condition holds. The initial configuration has only the middle bulb ON:
 \begin{align}
-\mathbf{x}_0 &= \myvec{0&0&0&1&0&0&0}^\top, & \mathbf{s}_0 &= \myvec{0&0&1&0&1&0&0}^\top\\
-\mathbf{x}_1 &= \myvec{0&0&1&1&1&0&0}^\top, & \mathbf{s}_1 &= \myvec{0&1&1&2&1&1&0}^\top\\
-\mathbf{x}_2 &= \myvec{0&1&1&0&1&1&0}^\top, & \mathbf{s}_2 &= \myvec{1&1&1&2&1&1&1}^\top\\
-\mathbf{x}_3 &= \myvec{1&1&1&0&1&1&1}^\top, & \mathbf{s}_3 &= \myvec{1&2&1&2&1&2&1}^\top\\
-\mathbf{x}_4 &= \myvec{1&0&1&0&1&0&1}^\top, & \mathbf{s}_4 &= \myvec{0&2&0&2&0&2&0}^\top
+\vec{x}_0 &= \myvec{0&0&0&1&0&0&0}^\top, & \vec{s}_0 &= \myvec{0&0&1&0&1&0&0}^\top\\
+\vec{x}_1 &= \myvec{0&0&1&1&1&0&0}^\top, & \vec{s}_1 &= \myvec{0&1&1&2&1&1&0}^\top\\
+\vec{x}_2 &= \myvec{0&1&1&0&1&1&0}^\top, & \vec{s}_2 &= \myvec{1&1&1&2&1&1&1}^\top\\
+\vec{x}_3 &= \myvec{1&1&1&0&1&1&1}^\top, & \vec{s}_3 &= \myvec{1&2&1&2&1&2&1}^\top\\
+\vec{x}_4 &= \myvec{1&0&1&0&1&0&1}^\top, & \vec{s}_4 &= \myvec{0&2&0&2&0&2&0}^\top
 \end{align}
-$\mathbf{x}_1$ and $\mathbf{x}_2$ agree with Step 1 and Step 2 in the figure. In $\mathbf{x}_4$, every OFF bulb has two ON neighbours and every ON bulb has none, so \eqref{eq:bulbupdate} gives
+$\vec{x}_1$ and $\vec{x}_2$ agree with Step 1 and Step 2 in the figure. In $\vec{x}_4$, every OFF bulb has two ON neighbours and every ON bulb has none, so \eqref{eq:bulbupdate} gives
 \begin{align}
-\mathbf{x}_5 = \mathbf{x}_4 \implies \mathbf{x}_8 = \mathbf{x}_4 = \myvec{1&0&1&0&1&0&1}^\top
+\vec{x}_5 = \vec{x}_4 \implies \vec{x}_8 = \vec{x}_4 = \myvec{1&0&1&0&1&0&1}^\top
 \end{align}
 The number of ON bulbs after Step 8 is
 \begin{align}
-\mathbf{1}^\top\mathbf{x}_8 = 4
+\vec{1}^\top\vec{x}_8 = 4
 \end{align}
 
 \begin{figure}[H]
@@ -175,32 +175,32 @@ PQ = 7\times 6 = 42
 \codebox{codes/ce1/q10.py}
 
 % ----------------------------------------------------------- Q11
-\item Matrix $\mathbf{P}$ is given as
+\item Matrix $\vec{P}$ is given as
 \begin{align}
-\mathbf{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
+\vec{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
 \end{align}
 The TRUE option is \gate
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
-\item Trace of $\mathbf{P}$ is equal to the sum of the Eigen values of $\mathbf{P}$.
-\item $\mathbf{P}^\top\mathbf{P}$ is an identity matrix.
-\item $\mathbf{P}$ is a skew-symmetric matrix.
+\item Trace of $\vec{P}$ is equal to the sum of the Eigen values of $\vec{P}$.
+\item $\vec{P}^\top\vec{P}$ is an identity matrix.
+\item $\vec{P}$ is a skew-symmetric matrix.
 \item Absolute magnitude of each Eigen value is 1.
 \end{enumerate}
 \end{multicols}
 \solution From \eqref{eq:charpoly}, expanding along the second row,
 \begin{align}
-\abs{\lambda\mathbf{I} - \mathbf{P}} &= \mydet{\lambda-1 & 0 & -1\\ 0 & \lambda-1 & 0\\ -1 & 0 & \lambda-1}\\
+\abs{\lambda\vec{I} - \vec{P}} &= \mydet{\lambda-1 & 0 & -1\\ 0 & \lambda-1 & 0\\ -1 & 0 & \lambda-1}\\
 &= \brak{\lambda-1}\sbrak{\brak{\lambda-1}^2 - 1} = \lambda\brak{\lambda-1}\brak{\lambda-2} = 0\\
 \implies \lambda_1 &= 0,\ \lambda_2 = 1,\ \lambda_3 = 2
 \end{align}
 From \eqref{eq:trace}:
 \begin{align}
-\text{tr}\brak{\mathbf{P}} = 1+1+1 = 3 = \lambda_1 + \lambda_2 + \lambda_3
+\text{tr}\brak{\vec{P}} = 1+1+1 = 3 = \lambda_1 + \lambda_2 + \lambda_3
 \end{align}
 so option (A) is true. The remaining options are false since
 \begin{align}
-\mathbf{P}^\top\mathbf{P} = \myvec{2 & 0 & 2\\ 0 & 1 & 0\\ 2 & 0 & 2} \neq \mathbf{I},\quad \mathbf{P}^\top = \mathbf{P} \neq -\mathbf{P},\quad \abs{\lambda_1} = 0 \neq 1
+\vec{P}^\top\vec{P} = \myvec{2 & 0 & 2\\ 0 & 1 & 0\\ 2 & 0 & 2} \neq \vec{I},\quad \vec{P}^\top = \vec{P} \neq -\vec{P},\quad \abs{\lambda_1} = 0 \neq 1
 \end{align}
 \codebox{codes/ce1/q11.py}
 
@@ -224,11 +224,11 @@ The above system of equations represents a \gate
 \end{align}
 Thus,
 \begin{align}
-\text{rank}\brak{\mathbf{A}} = \text{rank}\brak{\sbrak{\mathbf{A}\mid\mathbf{b}}} = 2 < n = 3
+\text{rank}\brak{\vec{A}} = \text{rank}\brak{\sbrak{\vec{A}\mid\vec{b}}} = 2 < n = 3
 \end{align}
 From \eqref{eq:rc}, the system is consistent with $n - r = 1$ free variable. From \eqref{eq:cross}, the solution is
 \begin{align}
-\mathbf{x} = \kappa\brak{\myvec{1\\ 1\\ 1}\times\myvec{1\\ 0\\ 2}} = \kappa\myvec{2\\ -1\\ -1},\quad \kappa\in\mathbb{R}
+\vec{x} = \kappa\brak{\myvec{1\\ 1\\ 1}\times\myvec{1\\ 0\\ 2}} = \kappa\myvec{2\\ -1\\ -1},\quad \kappa\in\mathbb{R}
 \end{align}
 which is a line through the origin (the intersection of two planes).
 
@@ -245,11 +245,11 @@ which is a line through the origin (the intersection of two planes).
 
 \solution Let $B_1$, $B_2$ denote choosing Bag I, Bag II and $E$ the event of drawing a black ball. The prior and likelihood vectors are
 \begin{align}
-\boldsymbol{\pi} = \myvec{\frac{1}{2}\\ \frac{1}{2}},\quad \boldsymbol{\ell} = \myvec{\frac{6}{10}\\ \frac{3}{7}}
+\vec{\pi} = \myvec{\frac{1}{2}\\ \frac{1}{2}},\quad \vec{l} = \myvec{\frac{6}{10}\\ \frac{3}{7}}
 \end{align}
 From \eqref{eq:total},
 \begin{align}
-\pr{E} = \boldsymbol{\pi}^\top\boldsymbol{\ell} = \frac{1}{2}\brak{\frac{3}{5} + \frac{3}{7}} = \frac{18}{35}
+\pr{E} = \vec{\pi}^\top\vec{l} = \frac{1}{2}\brak{\frac{3}{5} + \frac{3}{7}} = \frac{18}{35}
 \end{align}
 From \eqref{eq:bayes},
 \begin{align}
@@ -272,7 +272,7 @@ l_{21}^2 + l_{22}^2 &= 50 \implies l_{22}^2 = 25 \implies \abs{l_{22}} = 5
 \end{align}
 Thus,
 \begin{align}
-\mathbf{L} = \myvec{3 & 0\\ 5 & 5},\quad \mathbf{L}\mathbf{L}^\top = \myvec{9 & 15\\ 15 & 50}
+\vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{9 & 15\\ 15 & 50}
 \end{align}
 \codebox{codes/ce1/q27.py}
 
@@ -285,15 +285,15 @@ The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \gate
 
 \solution Let
 \begin{align}
-\mathbf{A} = \myvec{1 & 1\\ 3 & 1},\quad \mathbf{b} = \myvec{7\\ 13},\quad \mathbf{x} = \myvec{x\\ y}
+\vec{A} = \myvec{1 & 1\\ 3 & 1},\quad \vec{b} = \myvec{7\\ 13},\quad \vec{x} = \myvec{x\\ y}
 \end{align}
 The given equation is
 \begin{align}
-\norm{\mathbf{A}\mathbf{x} - \mathbf{b}}^2 = 0
+\norm{\vec{A}\vec{x} - \vec{b}}^2 = 0
 \end{align}
 From \eqref{eq:zeronorm},
 \begin{align}
-\mathbf{A}\mathbf{x} = \mathbf{b}
+\vec{A}\vec{x} = \vec{b}
 \end{align}
 Reducing the augmented matrix:
 \begin{align}
@@ -310,11 +310,11 @@ x^3 + y^3 = 27 + 64 = 91
 
 \solution The travel time vector (in hours) is
 \begin{align}
-\mathbf{t} = \frac{1}{60}\myvec{4\\ 5\\ 8},\quad \mathbf{1}^\top\mathbf{t} = \frac{17}{60}\text{ h}
+\vec{t} = \frac{1}{60}\myvec{4\\ 5\\ 8},\quad \vec{1}^\top\vec{t} = \frac{17}{60}\text{ h}
 \end{align}
 From \eqref{eq:sms} with $n = 3$ and $d = 2$ km,
 \begin{align}
-v_s = \frac{nd}{\mathbf{1}^\top\mathbf{t}} = \frac{3\times 2}{\frac{17}{60}} = \frac{360}{17} \approx 21.18\text{ km/h}
+v_s = \frac{nd}{\vec{1}^\top\vec{t}} = \frac{3\times 2}{\frac{17}{60}} = \frac{360}{17} \approx 21.18\text{ km/h}
 \end{align}
 Equivalently, the spot speeds are $\myvec{30 & 24 & 15}$ km/h and their harmonic mean is
 \begin{align}
@@ -405,7 +405,7 @@ Y\brak{s} = \frac{a}{s-3} + \frac{b}{s+2} \implies y\brak{t} = ae^{3t} + be^{-2t
 \end{align}
 Equivalently, from \eqref{eq:ss}, the exponents are the eigenvalues of
 \begin{align}
-\mathbf{A} = \myvec{0 & 1\\ 6 & 1},\quad \abs{\lambda\mathbf{I} - \mathbf{A}} = \lambda^2 - \lambda - 6 = 0 \implies \lambda = 3, -2
+\vec{A} = \myvec{0 & 1\\ 6 & 1},\quad \abs{\lambda\vec{I} - \vec{A}} = \lambda^2 - \lambda - 6 = 0 \implies \lambda = 3, -2
 \end{align}
 Substituting $e^t = x$:
 \begin{align}
@@ -428,16 +428,16 @@ After application of the boundary conditions, the stiffness matrix of the truss 
 \end{multicols}
 \solution The unit direction vectors of the members are
 \begin{align}
-\mathbf{m}_{PQ} = \frac{1}{\sqrt{2}}\myvec{1\\ 1},\quad \mathbf{m}_{QR} = \frac{1}{\sqrt{2}}\myvec{1\\ -1}
+\vec{m}_{PQ} = \frac{1}{\sqrt{2}}\myvec{1\\ 1},\quad \vec{m}_{QR} = \frac{1}{\sqrt{2}}\myvec{1\\ -1}
 \end{align}
 From \eqref{eq:kbar},
 \begin{align}
-\mathbf{k}_{PQ} &= \frac{AE}{L}\mathbf{m}_{PQ}\mathbf{m}_{PQ}^\top = \frac{AE}{L}\myvec{0.5 & 0.5\\ 0.5 & 0.5}\\
-\mathbf{k}_{QR} &= \frac{AE}{L}\mathbf{m}_{QR}\mathbf{m}_{QR}^\top = \frac{AE}{L}\myvec{0.5 & -0.5\\ -0.5 & 0.5}
+\vec{k}_{PQ} &= \frac{AE}{L}\vec{m}_{PQ}\vec{m}_{PQ}^\top = \frac{AE}{L}\myvec{0.5 & 0.5\\ 0.5 & 0.5}\\
+\vec{k}_{QR} &= \frac{AE}{L}\vec{m}_{QR}\vec{m}_{QR}^\top = \frac{AE}{L}\myvec{0.5 & -0.5\\ -0.5 & 0.5}
 \end{align}
 After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak{u,v}$ block at $Q$ remains, which receives contributions from both members:
 \begin{align}
-\mathbf{K} = \mathbf{k}_{PQ} + \mathbf{k}_{QR} = \frac{AE}{L}\myvec{1 & 0\\ 0 & 1}
+\vec{K} = \vec{k}_{PQ} + \vec{k}_{QR} = \frac{AE}{L}\myvec{1 & 0\\ 0 & 1}
 \end{align}
 
 \begin{figure}[H]
@@ -462,13 +462,13 @@ What is the absolute value of the maximum bending moment (in kN-m) in the frame?
 \end{multicols}
 \solution From the figure, the frame has a hinge at $A$, a roller at $B$, columns of height 3 m and a beam $CD$ of span 4 m. A horizontal load of 50 kN acts at $C$ and a vertical load of 90 kN acts at the mid-point $E$ of $CD$:
 \begin{align}
-\mathbf{A} = \myvec{0\\ 0},\ \mathbf{C} = \myvec{0\\ 3},\ \mathbf{E} = \myvec{2\\ 3},\ \mathbf{D} = \myvec{4\\ 3},\ \mathbf{B} = \myvec{4\\ 0},\quad \mathbf{F}_C = \myvec{50\\ 0},\ \mathbf{F}_E = \myvec{0\\ -90}
+\vec{A} = \myvec{0\\ 0},\ \vec{C} = \myvec{0\\ 3},\ \vec{E} = \myvec{2\\ 3},\ \vec{D} = \myvec{4\\ 3},\ \vec{B} = \myvec{4\\ 0},\quad \vec{F}_C = \myvec{50\\ 0},\ \vec{F}_E = \myvec{0\\ -90}
 \end{align}
-The reactions are $\mathbf{R}_A = \myvec{H_A & V_A}^\top$ and $\mathbf{R}_B = \myvec{0 & V_B}^\top$. From \eqref{eq:equil} with moments about $\mathbf{A}$,
+The reactions are $\vec{R}_A = \myvec{H_A & V_A}^\top$ and $\vec{R}_B = \myvec{0 & V_B}^\top$. From \eqref{eq:equil} with moments about $\vec{A}$,
 \begin{align}
-\brak{\mathbf{C}-\mathbf{A}}\times\mathbf{F}_C &= 0\times 0 - 3\times 50 = -150\\
-\brak{\mathbf{E}-\mathbf{A}}\times\mathbf{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
-\brak{\mathbf{B}-\mathbf{A}}\times\mathbf{R}_B &= 4V_B
+\brak{\vec{C}-\vec{A}}\times\vec{F}_C &= 0\times 0 - 3\times 50 = -150\\
+\brak{\vec{E}-\vec{A}}\times\vec{F}_E &= 2\times\brak{-90} - 3\times 0 = -180\\
+\brak{\vec{B}-\vec{A}}\times\vec{R}_B &= 4V_B
 \end{align}
 In matrix form:
 \begin{align}
@@ -476,11 +476,11 @@ In matrix form:
 \end{align}
 Using \eqref{eq:bm}, the bending moment in column $AC$ at height $y$ (forces below the section) is
 \begin{align}
-\abs{M} = \abs{\brak{\mathbf{A} - \myvec{0\\ y}}\times\mathbf{R}_A} = 50y \implies \abs{M_C} = 150\text{ kN m}
+\abs{M} = \abs{\brak{\vec{A} - \myvec{0\\ y}}\times\vec{R}_A} = 50y \implies \abs{M_C} = 150\text{ kN m}
 \end{align}
 and in the beam at $E$ (forces to the right of the section) is
 \begin{align}
-\abs{M_E} = \abs{\brak{\mathbf{B} - \mathbf{E}}\times\mathbf{R}_B} = \abs{2\times 82.5 - \brak{-3}\times 0} = 165\text{ kN m}
+\abs{M_E} = \abs{\brak{\vec{B} - \vec{E}}\times\vec{R}_B} = \abs{2\times 82.5 - \brak{-3}\times 0} = 165\text{ kN m}
 \end{align}
 In column $BD$, the roller reaction is vertical and along the column, so $M = 0$.
 The maximum bending moment is 165 kN m under the 90 kN load.
@@ -535,9 +535,9 @@ $y$ & 28 & 4 & 16\\ \hline
 \end{center}
 If a second-degree interpolating polynomial $P_2\brak{x}$ is used to represent $y$, the value of $P_2\brak{0}$ is \underline{\hspace{2cm}} (rounded off to the nearest integer). \gate
 
-\solution From \eqref{eq:vander},
+\solution Let $\vec{c} = \myvec{c_0 & c_1 & c_2}^\top$ and $\vec{y} = \myvec{28 & 4 & 16}^\top$. From \eqref{eq:vander},
 \begin{align}
-\myvec{1 & -2 & 4\\ 1 & 1 & 1\\ 1 & 2 & 4}\myvec{c_0\\ c_1\\ c_2} = \myvec{28\\ 4\\ 16}
+\myvec{1 & -2 & 4\\ 1 & 1 & 1\\ 1 & 2 & 4}\vec{c} = \vec{y}
 \end{align}
 Reducing the augmented matrix:
 \begin{align}
@@ -548,7 +548,11 @@ Reducing the augmented matrix:
 \end{align}
 Thus,
 \begin{align}
-P_2\brak{x} = 5x^2 - 3x + 2 \implies P_2\brak{0} = \myvec{1 & 0 & 0}\myvec{c_0\\ c_1\\ c_2} = 2
+\vec{c} = \myvec{2\\ -3\\ 5} \implies P_2\brak{x} = 5x^2 - 3x + 2
+\end{align}
+and
+\begin{align}
+P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 \end{align}
 
 \begin{figure}[H]
@@ -564,12 +568,12 @@ P_2\brak{x} = 5x^2 - 3x + 2 \implies P_2\brak{0} = \myvec{1 & 0 & 0}\myvec{c_0\\
 
 \solution Let each block have weight $W$ and let the rod make angle $\theta$ with the horizontal, with $c = \cos\theta$, $s = \sin\theta$. The rod is a two-force member carrying compression $C$ along
 \begin{align}
-\mathbf{e} = \frac{\mathbf{A} - \mathbf{B}}{\norm{\mathbf{A} - \mathbf{B}}} = \myvec{-c\\ s}
+\vec{e} = \frac{\vec{A} - \vec{B}}{\norm{\vec{A} - \vec{B}}} = \myvec{-c\\ s}
 \end{align}
 When sliding impends, $A$ moves down and $B$ moves away from the wall, so the friction forces are $\mu N_A$ (upward on $A$) and $\mu N_B$ (towards the wall on $B$). From \eqref{eq:equil}:
 \begin{align}
-\text{Block }A:&\quad \myvec{N_A\\ \mu N_A} + \myvec{0\\ -W} + C\myvec{-c\\ s} = \mathbf{0}\\
-\text{Block }B:&\quad \myvec{-\mu N_B\\ N_B} + \myvec{0\\ -W} - C\myvec{-c\\ s} = \mathbf{0}
+\text{Block }A:&\quad \myvec{N_A\\ \mu N_A} + \myvec{0\\ -W} + C\myvec{-c\\ s} = \vec{0}\\
+\text{Block }B:&\quad \myvec{-\mu N_B\\ N_B} + \myvec{0\\ -W} - C\myvec{-c\\ s} = \vec{0}
 \end{align}
 This gives four equations in three unknowns $\myvec{N_A & N_B & C}^\top$:
 \begin{align}
