@@ -7,20 +7,12 @@
 \section*{\textarabic{المسائل}}    % "Problems" (only Arabic text in the document)
 \setcounter{subsection}{1}         % labels become 1.1, 1.2, ...
 
-\begin{enumerate}[
-    label=\thesubsection.\arabic*, 
-    ref=\thesubsection.\theenumi, 
-    itemsep=0pt, 
-    leftmargin=*, 
-    align=left, 
-    labelwidth=2.5em, 
-    labelsep=0.5em
-]
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
 
 % ----------------------------------------------------------- Q3
 \item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 0
 \item 1
 \item 2
@@ -53,7 +45,7 @@ Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q03.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q03.pdf}
 \caption{The parabolas $y = x^2$ and $y = -x^2 - 2x - 1$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -66,7 +58,7 @@ Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and
 % ----------------------------------------------------------- Q7
 \item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $40^\circ$
 \item $50^\circ$
 \item $60^\circ$
@@ -101,7 +93,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q07.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q07.pdf}
 \caption{Circle with diameter $PQ$, $\angle ROS = 80^\circ$ and $\angle RTS = 50^\circ$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -116,7 +108,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged.
 The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \underline{\hspace{2cm}} \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 5
 \item 4
 \item 3
@@ -159,7 +151,7 @@ The number of ON bulbs after Step 8 is
 % ----------------------------------------------------------- Q10
 \item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 13
 \item 26
 \item 39
@@ -191,14 +183,14 @@ PQ = 7\times 6 = 42
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q10.py}@*)
 \end{lstlisting}
 
-% ----------------------------------------------------------- Q11
+% ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
 \begin{align}
 \vec{P} = \myvec{1 & 0 & 1\\ 0 & 1 & 0\\ 1 & 0 & 1}
 \end{align}
 The TRUE option is \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item Trace of $\vec{P}$ is equal to the sum of the Eigen values of $\vec{P}$.
 \item $\vec{P}^\top\vec{P}$ is an identity matrix.
 \item $\vec{P}$ is a skew-symmetric matrix.
@@ -224,7 +216,7 @@ so option (A) is true. The remaining options are false since
 \end{align}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q11.py}@*)
-\end{lstlisting; standard}
+\end{lstlisting}
 
 % ----------------------------------------------------------- Q12
 \item Given:
@@ -233,7 +225,7 @@ so option (A) is true. The remaining options are false since
 \end{align}
 The above system of equations represents a \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item plane
 \item line
 \item volume
@@ -256,7 +248,7 @@ which is a line through the origin (the intersection of two planes).
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q12.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q12.pdf}
 \caption{The two planes and their line of intersection}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -374,7 +366,7 @@ v_s = \frac{3}{\frac{1}{30} + \frac{1}{24} + \frac{1}{15}} = 21.18\text{ km/h}
 \end{align}
 The value of $f\brak{1}$ is \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 1
 \item 2
 \item $\frac{1}{2}$
@@ -401,7 +393,7 @@ f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q36.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q36.pdf}
 \caption{The integrand attains its upper bound $\frac{x^2}{4}$ only for $f\brak{x} = \frac{x}{2}$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -418,7 +410,7 @@ x^2\frac{d^2y}{dx^2} = 6y
 \end{align}
 Considering $a$ and $b$ as arbitrary constants, the general solution of the equation is \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $y\brak{x} = ax^3 + \frac{b}{x^2}$
 \item $y\brak{x} = ax^2 + \frac{b}{x^3}$
 \item $y\brak{x} = ax^2 + b\ln x$
@@ -461,7 +453,7 @@ y\brak{x} = ax^3 + \frac{b}{x^2}
 
 After application of the boundary conditions, the stiffness matrix of the truss becomes: \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item $\frac{AE}{L}\myvec{1 & 1\\ 1 & 1}$
 \item $\frac{AE}{L}\myvec{1 & 0.5\\ 0.5 & 1}$
 \item $\frac{AE}{L}\myvec{1 & 0\\ 0 & 1}$
@@ -484,7 +476,7 @@ After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q38.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q38.pdf}
 \caption{Two-member truss with degrees of freedom $u$, $v$ at $Q$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -499,7 +491,7 @@ After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak
 
 What is the absolute value of the maximum bending moment (in kN-m) in the frame? \gate
 \begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt, ref=\alph*]
+\begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 165
 \item 150
 \item 240
@@ -533,7 +525,7 @@ The maximum bending moment is 165 kN m under the 90 kN load.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q39.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q39.pdf}
 \caption{Frame loading and bending moment diagram}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -568,7 +560,7 @@ Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q48.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q48.pdf}
 \caption{One Newton-Raphson step for $f\brak{x} = e^{-x} - x$ from $x_0 = 0.5$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -611,7 +603,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q49.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q49.pdf}
 \caption{Interpolating polynomial through the given points}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -655,7 +647,7 @@ taking the positive root.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q50.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q50.pdf}
 \caption{Blocks $A$ and $B$ connected by a rigid rod at $\theta = 45^\circ$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -689,7 +681,7 @@ F = \frac{3.6}{\frac{1}{10000} + \frac{1}{2500}} = \frac{3.6}{0.0005} = 7200\tex
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth,keepaspectratio]{figs/q51.pdf}
+\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q51.pdf}
 \caption{Rod $AB$ connected in series with spring $BC$ under thermal loading}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
