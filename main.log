@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  1 OCT 2026 10:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  1 OCT 2026 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1433,7 +1433,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 l.85 ...in\alpha}$ with $\vec{e}_\alpha \triangleq
                                                    \myvec{\cos\alpha \\ \sin...
 
-? rr
+? r
 OK, entering \nonstopmode...
 [4] [5] [6]
 Underfull \hbox (badness 1997) in paragraph at lines 264--266
@@ -1808,10 +1808,6 @@ Package pdftex.def Info: figs/q51.pdf  used on input line 690.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
