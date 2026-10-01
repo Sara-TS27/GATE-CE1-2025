@@ -4,8 +4,8 @@
 % Each problem is an \item of the outer enumerate.
 % Options are a nested enumerate so they are NOT numbered as problems.
 
-\section*{\textarabic{المسائل}}   % "Problems" (only Arabic text in the document)
-\setcounter{subsection}{1}        % labels become 1.1, 1.2, ...
+\section*{\textarabic{المسائل}}    % "Problems" (only Arabic text in the document)
+\setcounter{subsection}{1}         % labels become 1.1, 1.2, ...
 
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt]
 
@@ -45,7 +45,7 @@ Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q03.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q03.pdf}
 \caption{The two parabolas and the line $x + y = -\frac{1}{2}$ from the pencil}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -93,7 +93,7 @@ and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q07.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q07.pdf}
 \caption{Circle with diameter $PQ$, $\angle ROS = 80^\circ$ and $\angle RTS = 50^\circ$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -143,7 +143,7 @@ The number of ON bulbs after Step 8 is
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q09.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q09.pdf}
 \caption{Bulb states from the initial configuration to Step 8}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -250,7 +250,7 @@ which is a line through the origin (the intersection of two planes).
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q12.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q12.pdf}
 \caption{The two planes and their line of intersection}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -395,7 +395,7 @@ f\brak{x} = \frac{x}{2} \implies f\brak{1} = \frac{1}{2}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q36.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q36.pdf}
 \caption{The integrand attains its upper bound $\frac{x^2}{4}$ only for $f\brak{x} = \frac{x}{2}$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -471,14 +471,14 @@ From \eqref{eq:kbar},
 \vec{k}_{PQ} &= \frac{AE}{L}\vec{m}_{PQ}\vec{m}_{PQ}^\top = \frac{AE}{L}\myvec{0.5 & 0.5\\ 0.5 & 0.5}\\
 \vec{k}_{QR} &= \frac{AE}{L}\vec{m}_{QR}\vec{m}_{QR}^\top = \frac{AE}{L}\myvec{0.5 & -0.5\\ -0.5 & 0.5}
 \end{align}
-After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak{u,v}$ block at $Q$ remains, which receives contributions from both members:
+After deleting the restrained degrees of freedom at $P$ and $R$, only the $\brak{u,v}$ block at $Q$ receives contributions from both members:
 \begin{align}
 \vec{K} = \vec{k}_{PQ} + \vec{k}_{QR} = \frac{AE}{L}\myvec{1 & 0\\ 0 & 1}
 \end{align}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q38.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q38.pdf}
 \caption{Two-member truss with degrees of freedom $u$, $v$ at $Q$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -527,7 +527,7 @@ The maximum bending moment is 165 kN m under the 90 kN load.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q39.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q39.pdf}
 \caption{Frame loading and bending moment diagram}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -562,7 +562,7 @@ Subsequent iterations converge to $x_2 = x_3 = 0.567143$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q48.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q48.pdf}
 \caption{One Newton-Raphson step for $f\brak{x} = e^{-x} - x$ from $x_0 = 0.5$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -605,7 +605,7 @@ P_2\brak{0} = \myvec{1 & 0 & 0}\vec{c} = 2
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q49.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q49.pdf}
 \caption{Interpolating polynomial through the given points}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -649,7 +649,7 @@ taking the positive root.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q50.pdf}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q50.pdf}
 \caption{Blocks $A$ and $B$ connected by a rigid rod at $\theta = 45^\circ$}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
@@ -666,29 +666,25 @@ The internal force (in kN) that will develop in the spring $BC$ when the tempera
 
 \solution From the figure, the length of rod $AB$ is $L = 3$ m $= 3000$ mm. The rod stiffness is
 \begin{align}
-k_r = \frac{AE}{L} = \frac{500\times 60\times 10^3}{3000} = 10^4\text{ N/mm}
+k_r = \frac{AE}{L} = \frac{500\times 60\times 10^3}{3000} = 10^4\text{ N/mm} = 10000\text{ N/mm}
 \end{align}
-The equivalent thermal load is
+The free thermal expansion of the rod is
 \begin{align}
-F_{th} = AE\alpha\Delta T = 500\times 60\times 10^3\times 12\times 10^{-6}\times 100 = 36000\text{ N}
+\delta_{\text{th}} = L\alpha\Delta T = 3000 \times 12\times 10^{-6} \times 100 = 3.6\text{ mm}
 \end{align}
-Assembling \eqref{eq:kuf} for nodes $A$, $B$, $C$:
+Since the rod and spring are in series between fixed supports, the internal compressive force $F$ satisfies
 \begin{align}
-\myvec{k_r & -k_r & 0\\ -k_r & k_r + k & -k\\ 0 & -k & k}\myvec{u_A\\ u_B\\ u_C} = \myvec{-F_{th} + R_A\\ F_{th}\\ R_C}
+\frac{F}{k_r} + \frac{F}{k_s} = \delta_{\text{th}} \implies F = \frac{\delta_{\text{th}}}{\frac{1}{k_r} + \frac{1}{k_s}}
 \end{align}
-With $u_A = u_C = 0$, deleting the first and third rows and columns:
+Substituting $k_r = 10000\text{ N/mm}$ and $k_s = 2500\text{ N/mm}$:
 \begin{align}
-\brak{k_r + k}u_B = F_{th} \implies u_B = \frac{36000}{10^4 + 2500} = 2.88\text{ mm}
-\end{align}
-The force in the spring is
-\begin{align}
-F_{BC} = ku_B = 2500\times 2.88 = 7200\text{ N} = 7.2\text{ kN}
+F = \frac{3.6}{\frac{1}{10000} + \frac{1}{2500}} = \frac{3.6}{0.0005} = 7200\text{ N} = 7.2\text{ kN}
 \end{align}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q51.pdf}
-\caption{Force in spring $BC$ versus temperature rise of rod $AB$}
+\includegraphics[width=0.85\columnwidth,keepaspectratio]{figs/q51.pdf}
+\caption{Rod $AB$ connected in series with spring $BC$ under thermal loading}
 \end{figure}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q51.py}@*)
