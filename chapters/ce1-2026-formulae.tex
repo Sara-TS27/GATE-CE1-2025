@@ -1,4 +1,4 @@
-% chapters/ce1-2025-formulae.tex
+%chapters/ce1-2025-formulae.tex
 % Labels added so every \eqref{} used in ce1-2025-problems.tex resolves.
 % Lines marked  %% NEW  are additions/changes made for labelling.
 
@@ -10,8 +10,14 @@
 Every second-degree curve $ax^2 + 2bxy + cy^2 + 2dx + 2ey + f = 0$ can be written in matrix-vector form as:
 \begin{align}
 \vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0, \quad \vec{V} = \myvec{a & b \\ b & c} = \vec{V}^\top, \quad \vec{u} = \myvec{d \\ e}
+\label{eq:conic} %% NEW
 \end{align}
-The conic is a parabola if $\abs{\vec{V}} = 0$, an ellipse if $\abs{\vec{V}} > 0$, and a hyperbola if $\abs{\vec{V}} < 0$. For a circle with centre $\vec{c}$ and radius $r$, $\norm{\vec{x} - \vec{c}}^2 = r^2$ gives $\vec{V} = \vec{I}$, $\vec{u} = -\vec{c}$, and $f = \norm{\vec{c}}^2 - r^2$.
+The conic is classified by the determinant of $\vec{V}$:
+\begin{align} %% NEW (was inline)
+\abs{\vec{V}} = \mydet{a & b \\ b & c} = ac - b^2 \begin{cases} = 0, & \text{parabola} \\ > 0, & \text{ellipse} \\ < 0, & \text{hyperbola} \end{cases}
+\label{eq:class} %% NEW
+\end{align}
+For a circle with centre $\vec{c}$ and radius $r$, $\norm{\vec{x} - \vec{c}}^2 = r^2$ gives $\vec{V} = \vec{I}$, $\vec{u} = -\vec{c}$, and $f = \norm{\vec{c}}^2 - r^2$.
 
 \item Line-Conic Intersection:
 The points of intersection of a line $L: \vec{x} = \vec{h} + \kappa \vec{m}$ ($\kappa \in \mathbb{R}$) with a conic section $\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0$ are given by:
@@ -23,7 +29,12 @@ where the parameter values $\kappa_i$ are:
 \kappa_i = \frac{-\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}} \pm \sqrt{\sbrak{\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top \vec{V} \vec{m}}}}{\vec{m}^\top \vec{V} \vec{m}}
 \label{eq:kappa} %% NEW
 \end{align}
-with $g\brak{\vec{h}} = \vec{h}^\top \vec{V} \vec{h} + 2\vec{u}^\top \vec{h} + f$. The line meets the conic at two, one, or no real points according as the discriminant
+with
+\begin{align} %% NEW (was inline)
+g\brak{\vec{h}} = \vec{h}^\top \vec{V} \vec{h} + 2\vec{u}^\top \vec{h} + f
+\label{eq:gh} %% NEW
+\end{align}
+The line meets the conic at two, one, or no real points according as the discriminant
 \begin{align} %% NEW (was inline; now displayed so it can be referenced)
 \Delta = \sbrak{\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top \vec{V} \vec{m}}
 \label{eq:disc} %% NEW
@@ -35,6 +46,7 @@ Substituting $\vec{x} = \vec{h} + \kappa \vec{m}$ into the conic equation and us
 \begin{align}
 \brak{\vec{h} + \kappa \vec{m}}^\top \vec{V} \brak{\vec{h} + \kappa \vec{m}} + 2\vec{u}^\top \brak{\vec{h} + \kappa \vec{m}} + f &= 0 \\
 \kappa^2 \brak{\vec{m}^\top \vec{V} \vec{m}} + 2\kappa \vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}} + g\brak{\vec{h}} &= 0
+\label{eq:quadk} %% NEW
 \end{align}
 When $\Delta = 0$, the two roots coincide and the line is tangent to the conic.
 
@@ -49,10 +61,12 @@ The intersection of two conics with parameters $\brak{\vec{V}_1, \vec{u}_1, f_1}
 The pencil represents a pair of straight lines (a degenerate conic) if and only if:
 \begin{align}
 \mydet{\vec{V}_1 + \mu \vec{V}_2 & \vec{u}_1 + \mu \vec{u}_2 \\ \brak{\vec{u}_1 + \mu \vec{u}_2}^\top & f_1 + \mu f_2} = 0
+\label{eq:degen} %% NEW
 \end{align}
 If $\vec{V}_1 = \vec{V}_2$ (e.g., two circles), choosing $\mu = -1$ removes the second-degree terms, leaving the common chord (radical axis):
 \begin{align}
 2\brak{\vec{u}_1 - \vec{u}_2}^\top \vec{x} + \brak{f_1 - f_2} = 0
+\label{eq:chord} %% NEW
 \end{align}
 \end{itemize}
 
@@ -62,8 +76,13 @@ If $\vec{V}_1 = \vec{V}_2$ (e.g., two circles), choosing $\mu = -1$ removes the 
 A line through point $\vec{A}$ with direction vector $\vec{m}$ can be written in parametric form or normal form using normal vector $\vec{n}$ ($\vec{n}^\top \vec{m} = 0$):
 \begin{align}
 \vec{x} = \vec{A} + \kappa \vec{m}, \quad \vec{n}^\top \brak{\vec{x} - \vec{A}} = 0
+\label{eq:lineform} %% NEW
 \end{align}
-In 2D, if $\vec{m} = \myvec{m_1 \\ m_2}$, then $\vec{n} = \myvec{-m_2 \\ m_1}$.
+In 2D, if $\vec{m} = \myvec{m_1 \\ m_2}$, then
+\begin{align} %% NEW (was inline)
+\vec{n} = \myvec{-m_2 \\ m_1}
+\label{eq:normal} %% NEW
+\end{align}
 
 \item Line Intersection and Solvability:
 The lines $\vec{x} = \vec{A} + \kappa_1 \vec{m}_1$ and $\vec{x} = \vec{B} + \kappa_2 \vec{m}_2$ meet where:
@@ -118,6 +137,21 @@ For any vector $\vec{v} \in \mathbb{R}^n$,
 \begin{align} %% NEW (was inline)
 \norm{\vec{v}}^2 = \vec{v}^\top \vec{v} = \sum_i v_i^2 = 0 \iff \vec{v} = \vec{0}
 \label{eq:zeronorm} %% NEW
+\end{align}
+\end{itemize}
+
+\item Determinants and Cofactor Expansion %% NEW (whole item)
+\begin{itemize}
+\item Expansion Along a Row:
+For $\vec{A} \in \mathbb{R}^{n \times n}$, expanding along row $i$ with minor $M_{ij}$ (the determinant after deleting row $i$ and column $j$):
+\begin{align}
+\mydet{\vec{A}} = \sum_{j=1}^n \brak{-1}^{i+j} a_{ij} M_{ij}
+\label{eq:detexp} %% NEW
+\end{align}
+For a $2 \times 2$ matrix:
+\begin{align}
+\mydet{a & b \\ c & d} = ad - bc
+\label{eq:det2} %% NEW
 \end{align}
 \end{itemize}
 
