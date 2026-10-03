@@ -19,30 +19,76 @@
 \item 3
 \end{enumerate}
 \end{multicols}
-\solution The given curves can be written in the form $\vec{x}^\top\vec{V}\vec{x} + 2\vec{u}^\top\vec{x} + f = 0$:
-\begin{align}
-x^2 - y = 0 &\implies \vec{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
-x^2 + 2x + y + 1 = 0 &\implies \vec{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
-\end{align}
-Choosing $\mu = -1$ in the pencil \eqref{eq:pencil} eliminates the second-degree terms $\brak{\vec{V}_1 - \vec{V}_2 = \vec{0}}$:
-\begin{align}
-2\brak{\vec{u}_1 - \vec{u}_2}^\top\vec{x} + \brak{f_1 - f_2} &= 0\\
-2\myvec{-1 & -1}\vec{x} - 1 = 0 \implies \myvec{1 & 1}\vec{x} &= -\frac{1}{2}
-\end{align}
-All common points of the two curves lie on this line. A point on the line and its direction vector are
-\begin{align}
-\vec{h} = \myvec{0\\ -\frac{1}{2}},\quad \vec{m} = \myvec{1\\ -1}
-\end{align}
-Substituting into \eqref{eq:disc} for the first curve:
-\begin{align}
-\vec{m}^\top\vec{V}_1\vec{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
-\vec{V}_1\vec{h} + \vec{u}_1 &= \myvec{0\\ 0} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
-\vec{m}^\top\brak{\vec{V}_1\vec{h} + \vec{u}_1} &= \myvec{1 & -1}\myvec{0\\ -\frac{1}{2}} = \frac{1}{2}\\
-g\brak{\vec{h}} &= \vec{h}^\top\vec{V}_1\vec{h} + 2\vec{u}_1^\top\vec{h} + f_1 = 0 + \frac{1}{2} + 0 = \frac{1}{2}\\
-\Delta &= \brak{\frac{1}{2}}^2 - \frac{1}{2}\brak{1} = -\frac{1}{4} < 0
-\end{align}
-Since the discriminant is negative, $\kappa$ in \eqref{eq:kappa} is not real and the curves do not meet in the real plane.
 
+\item \textbf{Conic in Vector Form:} Every second-degree curve 
+    \begin{equation}
+        ax^{2} + 2bxy + cy^{2} + 2dx + 2ey + f = 0 \label{eq:1.1.1.1}
+    \end{equation}
+    can be written as
+    \begin{equation}
+        \mathbf{x}^{\top}\mathbf{V}\mathbf{x} + 2\mathbf{u}^{\top}\mathbf{x} + f = 0 \label{eq:1.1.1.2}
+    \end{equation}
+    where
+    \[
+        \mathbf{x} = \begin{pmatrix} x \\ y \end{pmatrix}, \quad 
+        \mathbf{V} = \begin{pmatrix} a & b \\ b & c \end{pmatrix} = \mathbf{V}^{\top}, \quad 
+        \mathbf{u} = \begin{pmatrix} d \\ e \end{pmatrix}
+    \]
+    The conic is a parabola if $|\mathbf{V}| = 0$, an ellipse if $|\mathbf{V}| > 0$, and a hyperbola if $|\mathbf{V}| < 0$. For a circle with centre $\mathbf{c} = \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$ and radius $r$, the equation $\|\mathbf{x} - \mathbf{c}\|^{2} = r^{2}$ gives:
+    \[
+        \mathbf{V} = \mathbf{I} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad 
+        \mathbf{u} = -\mathbf{c} = \begin{pmatrix} -c_1 \\ -c_2 \end{pmatrix}, \quad 
+        f = \|\mathbf{c}\|^{2} - r^{2} = c_1^2 + c_2^2 - r^2
+    \]
+
+    \item \textbf{Line-Conic Intersection:} The points of intersection of a line $L : \mathbf{x} = \mathbf{h} + \kappa \mathbf{m}$ ($\kappa \in \mathbb{R}$) with a conic section $\mathbf{x}^{\top}\mathbf{V}\mathbf{x} + 2\mathbf{u}^{\top}\mathbf{x} + f = 0$ are given by
+    \begin{equation}
+        \mathbf{x}_{i} = \mathbf{h} + \kappa_{i}\mathbf{m} \label{eq:1.1.1.3}
+    \end{equation}
+    where the parameter values $\kappa_{i}$ are:
+    \begin{equation}
+        \kappa_{i} = \frac{-\mathbf{m}^{\top}(\mathbf{V}\mathbf{h} + \mathbf{u}) \pm \sqrt{[\mathbf{m}^{\top}(\mathbf{V}\mathbf{h} + \mathbf{u})]^{2} - g(\mathbf{h})(\mathbf{m}^{\top}\mathbf{V}\mathbf{m})}}{\mathbf{m}^{\top}\mathbf{V}\mathbf{m}} \label{eq:1.1.1.4}
+    \end{equation}
+    with $g(\mathbf{h}) = \mathbf{h}^{\top}\mathbf{V}\mathbf{h} + 2\mathbf{u}^{\top}\mathbf{h} + f$. The line meets the conic at two, one, or no real points according as the discriminant
+    \begin{equation}
+        \Delta = [\mathbf{m}^{\top}(\mathbf{V}\mathbf{h} + \mathbf{u})]^{2} - g(\mathbf{h})(\mathbf{m}^{\top}\mathbf{V}\mathbf{m}) \label{eq:1.1.1.5}
+    \end{equation}
+    is positive, zero, or negative.
+
+    \item \textbf{Derivation of the Intersection Parameter:} Substituting $\mathbf{x} = \mathbf{h} + \kappa \mathbf{m}$ into the conic equation and using $\mathbf{V} = \mathbf{V}^{\top}$:
+    \begin{equation}
+        (\mathbf{h} + \kappa \mathbf{m})^{\top}\mathbf{V}(\mathbf{h} + \kappa \mathbf{m}) + 2\mathbf{u}^{\top}(\mathbf{h} + \kappa \mathbf{m}) + f = 0 \label{eq:1.1.1.6}
+    \end{equation}
+    \begin{equation}
+        \kappa^{2}(\mathbf{m}^{\top}\mathbf{V}\mathbf{m}) + 2\kappa \mathbf{m}^{\top}(\mathbf{V}\mathbf{h} + \mathbf{u}) + g(\mathbf{h}) = 0 \label{eq:1.1.1.7}
+    \end{equation}
+    This is a quadratic equation in $\kappa$, and applying the quadratic formula yields Equation~\eqref{eq:1.1.1.4}. Each real root $\kappa_{i}$ gives one point of intersection through Equation~\eqref{eq:1.1.1.3}. When $\Delta = 0$, the two roots coincide, and the line is tangent to the conic.
+
+    \item \textbf{Pencil of Conics:} The intersection of two conics with parameters $(\mathbf{V}_{1}, \mathbf{u}_{1}, f_{1})$ and $(\mathbf{V}_{2}, \mathbf{u}_{2}, f_{2})$ lies on every member of the pencil:
+    \begin{equation}
+        \mathbf{x}^{\top}(\mathbf{V}_{1} + \mu \mathbf{V}_{2})\mathbf{x} + 2(\mathbf{u}_{1} + \mu \mathbf{u}_{2})^{\top}\mathbf{x} + (f_{1} + \mu f_{2}) = 0 \label{eq:1.1.1.8}
+    \end{equation}
+
+    \item \textbf{Degenerate Conic and Common Chord:} The pencil in Equation~\eqref{eq:1.1.1.8} is a pair of straight lines (a degenerate conic) if and only if:
+    \begin{equation}
+        \begin{vmatrix}
+            \mathbf{V}_{1} + \mu \mathbf{V}_{2} & \mathbf{u}_{1} + \mu \mathbf{u}_{2} \\
+            (\mathbf{u}_{1} + \mu \mathbf{u}_{2})^{\top} & f_{1} + \mu f_{2}
+        \end{vmatrix} = 0 \label{eq:1.1.1.9}
+    \end{equation}
+    In full $3 \times 3$ block matrix notation, this determinant is expressed as:
+    \[
+        \begin{vmatrix}
+            a_1 + \mu a_2 & b_1 + \mu b_2 & d_1 + \mu d_2 \\
+            b_1 + \mu b_2 & c_1 + \mu c_2 & e_1 + \mu e_2 \\
+            d_1 + \mu d_2 & e_1 + \mu e_2 & f_1 + \mu f_2
+        \end{vmatrix} = 0
+    \]
+    Every point common to both conics lies on every member of the pencil, so the common points lie on these lines. If $\mathbf{V}_{1} = \mathbf{V}_{2}$ (for example, two circles), choosing $\mu = -1$ removes the second-degree terms ($\mathbf{V}_{1} - \mathbf{V}_{2} = \mathbf{0}$) and leaves the common chord (radical axis):
+    \begin{equation}
+        2(\mathbf{u}_{1} - \mathbf{u}_{2})^{\top}\mathbf{x} + (f_{1} - f_{2}) = 0 \label{eq:1.1.1.10}
+    \end{equation}
+\end{itemize}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q03.pdf}
