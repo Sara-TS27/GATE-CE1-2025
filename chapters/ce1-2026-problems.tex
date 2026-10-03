@@ -19,17 +19,21 @@
 \item 3
 \end{enumerate}
 \end{multicols}
-\subsection*{Intersection of Conics and Common Chord}
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+
+
 
 \begin{itemize}
-\item Every second-degree curve 
-\begin{equation}
+    \item Every second-degree curve 
+    \begin{equation}
         ax^{2} + 2bxy + cy^{2} + 2dx + 2ey + f = 0 \label{eq:conic_scalar}
-\end{equation}
+    \end{equation}
     can be written as
-\begin{equation}
+    \begin{equation}
         x^{\top}Vx + 2u^{\top}x + f = 0 \label{eq:conic_vector}
-\end{equation}
+    \end{equation}
     where
     \[
         x = \begin{pmatrix} x \\ y \end{pmatrix}, \quad 
@@ -42,27 +46,28 @@
         u = -c = \begin{pmatrix} -c_1 \\ -c_2 \end{pmatrix}, \quad 
         f = \|c\|^{2} - r^{2} = c_1^2 + c_2^2 - r^2
     \]
-\item The points of intersection of a line $L : x = h + \kappa m$ ($\kappa \in \mathbb{R}$) with a conic section $x^{\top}Vx + 2u^{\top}x + f = 0$ are given by
-\begin{equation}
+
+    \item The points of intersection of a line $L : x = h + \kappa m$ ($\kappa \in \mathbb{R}$) with a conic section $x^{\top}Vx + 2u^{\top}x + f = 0$ are given by
+    \begin{equation}
         x_{i} = h + \kappa_{i}m \label{eq:intersection_point}
-\end{equation}
+    \end{equation}
     where the parameter values $\kappa_{i}$ are:
-\begin{equation}
-\kappa_{i} = \frac{-m^{\top}(Vh + u) \pm \sqrt{[m^{\top}(Vh + u)]^{2} - g(h)(m^{\top}Vm)}}{m^{\top}Vm} \label{eq:intersection_parameter}
-\end{equation}
+    \begin{equation}
+        \kappa_{i} = \frac{-m^{\top}(Vh + u) \pm \sqrt{[m^{\top}(Vh + u)]^{2} - g(h)(m^{\top}Vm)}}{m^{\top}Vm} \label{eq:intersection_parameter}
+    \end{equation}
     with $g(h) = h^{\top}Vh + 2u^{\top}h + f$. The line meets the conic at two, one, or no real points according as the discriminant
-\begin{equation}
-\Delta = [m^{\top}(Vh + u)]^{2} - g(h)(m^{\top}Vm) \label{eq:discriminant}
-\end{equation}
+    \begin{equation}
+        \Delta = [m^{\top}(Vh + u)]^{2} - g(h)(m^{\top}Vm) \label{eq:discriminant}
+    \end{equation}
     is positive, zero, or negative.
 
-\item Substituting $x = h + \kappa m$ into the conic equation and using $V = V^{\top}$:
-\begin{equation}
+    \item Substituting $x = h + \kappa m$ into the conic equation and using $V = V^{\top}$:
+    \begin{equation}
         (h + \kappa m)^{\top}V(h + \kappa m) + 2u^{\top}(h + \kappa m) + f = 0 \label{eq:derivation_step1}
-\end{equation}
-\begin{equation}
-\kappa^{2}(m^{\top}Vm) + 2\kappa m^{\top}(Vh + u) + g(h) = 0 \label{eq:derivation_step2}
-\end{equation}
+    \end{equation}
+    \begin{equation}
+        \kappa^{2}(m^{\top}Vm) + 2\kappa m^{\top}(Vh + u) + g(h) = 0 \label{eq:derivation_step2}
+    \end{equation}
     This is a quadratic equation in $\kappa$, and applying the quadratic formula yields Equation~\eqref{eq:intersection_parameter}. Each real root $\kappa_{i}$ gives one point of intersection through Equation~\eqref{eq:intersection_point}. When $\Delta = 0$, the two roots coincide, and the line is tangent to the conic.
 
     \item The intersection of two conics with parameters $(V_{1}, u_{1}, f_{1})$ and $(V_{2}, u_{2}, f_{2})$ lies on every member of the pencil:
@@ -89,16 +94,14 @@
     \begin{equation}
         2(u_{1} - u_{2})^{\top}x + (f_{1} - f_{2}) = 0 \label{eq:common_chord}
     \end{equation}
-
 \end{itemize}
-\begin{figure}[H]
+
+\end{documentgin{figure}[H]
 \centering
 \includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q03.pdf}
 \caption{The parabolas $y = x^2$ and $y = -x^2 - 2x - 1$}
 \end{figure}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q03.py}@*)
-\end{lstlisting}
+
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q03.pdf}@*)
 \end{lstlisting}
