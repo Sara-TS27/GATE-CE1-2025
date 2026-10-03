@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  3 OCT 2026 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  3 OCT 2026 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1647,7 +1647,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.328 ...ffness matrix of the truss becomes: \gate
+l.324 ...ffness matrix of the truss becomes: \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1656,14 +1656,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [15]
-<figs/q38.pdf, id=450, 433.62pt x 289.08pt>
+<figs/q38.pdf, id=448, 433.62pt x 289.08pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
-Package pdftex.def Info: figs/q38.pdf  used on input line 353.
+Package pdftex.def Info: figs/q38.pdf  used on input line 349.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
- [16 <./figs/q38.pdf>]
+
 ! Undefined control sequence.
-l.366 ...ding moment (in kN-m) in the frame? \gate
+l.362 ...ding moment (in kN-m) in the frame? \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1671,19 +1671,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (43.64688pt too wide) detected at line 378
+[16 <./figs/q38.pdf>]
+Overfull \hbox (43.64688pt too wide) detected at line 374
 []
  []
 
-<figs/q39.pdf, id=519, 505.89pt x 361.35pt>
+<figs/q39.pdf, id=518, 505.89pt x 361.35pt>
 File: figs/q39.pdf Graphic file (type pdf)
 <use figs/q39.pdf>
-Package pdftex.def Info: figs/q39.pdf  used on input line 402.
+Package pdftex.def Info: figs/q39.pdf  used on input line 398.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
 [17]
 ! Undefined control sequence.
-l.417 \gate
+l.413 \gate
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1691,14 +1691,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q48.pdf, id=537, 433.62pt x 325.215pt>
+<figs/q48.pdf, id=535, 433.62pt x 325.215pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
-Package pdftex.def Info: figs/q48.pdf  used on input line 437.
+Package pdftex.def Info: figs/q48.pdf  used on input line 433.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
 [18 <./figs/q39.pdf>]
 ! Undefined control sequence.
-l.456 ...ounded off to the nearest integer). \gate
+l.452 ...ounded off to the nearest integer). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1707,14 +1707,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [19 <./figs/q48.pdf>]
-<figs/q49.pdf, id=660, 433.62pt x 325.215pt>
+<figs/q49.pdf, id=658, 433.62pt x 325.215pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
-Package pdftex.def Info: figs/q49.pdf  used on input line 480.
+Package pdftex.def Info: figs/q49.pdf  used on input line 476.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
 
 ! Undefined control sequence.
-l.491 ...rounded off to two decimal places). \gate
+l.487 ...rounded off to two decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1723,14 +1723,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [20 <./figs/q49.pdf>]
-<figs/q50.pdf, id=720, 361.35pt x 361.35pt>
+<figs/q50.pdf, id=718, 361.35pt x 361.35pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
-Package pdftex.def Info: figs/q50.pdf  used on input line 524.
+Package pdftex.def Info: figs/q50.pdf  used on input line 520.
 (pdftex.def)             Requested size: 254.9356pt x 254.93925pt.
  [21]
 ! Undefined control sequence.
-l.537 ...(rounded off to one decimal place). \gate
+l.533 ...(rounded off to one decimal place). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1739,10 +1739,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [22 <./figs/q50.pdf>]
-<figs/q51.pdf, id=785, 433.62pt x 289.08pt>
+<figs/q51.pdf, id=783, 433.62pt x 289.08pt>
 File: figs/q51.pdf Graphic file (type pdf)
 <use figs/q51.pdf>
-Package pdftex.def Info: figs/q51.pdf  used on input line 558.
+Package pdftex.def Info: figs/q51.pdf  used on input line 554.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
 ) [23 <./figs/q51.pdf>] (./main.aux)
  ***********
@@ -1753,8 +1753,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 50654 strings out of 474222
- 1214052 string characters out of 5748734
+ 50653 strings out of 474222
+ 1214039 string characters out of 5748734
  1952975 words of memory out of 5000000
  71872 multiletter control sequences out of 15000+600000
  595491 words of font info for 122 fonts, out of 8000000 for 9000
@@ -1779,10 +1779,10 @@ fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on main.pdf (23 pages, 406928 bytes).
+Output written on main.pdf (23 pages, 406624 bytes).
 PDF statistics:
- 995 PDF objects out of 1000 (max. 8388607)
- 579 compressed objects within 6 object streams
- 280 named destinations out of 1000 (max. 500000)
+ 993 PDF objects out of 1000 (max. 8388607)
+ 577 compressed objects within 6 object streams
+ 279 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
