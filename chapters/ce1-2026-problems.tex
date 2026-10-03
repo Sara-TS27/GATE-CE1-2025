@@ -84,6 +84,58 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q3/q03plot.py}@*)
 \end{lstlisting}
+
+
+%--------- q7
+
+
+\item In the given figure, $PQ$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $PR$ and $QS$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*), itemsep=0pt]
+\item $40^\circ$
+\item $50^\circ$
+\item $60^\circ$
+\item $80^\circ$
+\end{enumerate}
+\end{multicols}
+\solution Let $O$ be the origin and the radius be $r$. Using the unit vector $\vec{w}_\theta = \myvec{\cos\theta\\ \sin\theta}$ from \eqref{eq:cosdiff},
+\begin{align}
+\vec{P} = r\vec{w}_{180^\circ} = -r\vec{w}_{0},\quad \vec{Q} = r\vec{w}_{0},\quad \vec{R} = r\vec{w}_\alpha,\quad \vec{S} = r\vec{w}_\beta
+\end{align}
+with $0 < \beta < \alpha < 180^\circ$. From \eqref{eq:cosdiff},
+\begin{align}
+\cos\angle ROS = \vec{w}_\alpha^\top\vec{w}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
+\end{align}
+The direction vectors of the lines $PR$ and $QS$ are
+\begin{align}
+\vec{R} - \vec{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
+\vec{S} - \vec{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
+\end{align}
+The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrightarrow{TR}$ is along $\vec{P} - \vec{R}$ and $\overrightarrow{TS}$ is along $\vec{Q} - \vec{S}$. Both are the negatives of the direction vectors above, and the scalars $2r\cos\frac{\alpha}{2}$ and $2r\sin\frac{\beta}{2}$ are positive. Using \eqref{eq:angle} with the unit vectors along these directions,
+\begin{align}
+\cos\angle RTS &= \myvec{\cos\frac{\alpha}{2} & \sin\frac{\alpha}{2}}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}\\
+&= \sin\frac{\alpha}{2}\cos\frac{\beta}{2} - \cos\frac{\alpha}{2}\sin\frac{\beta}{2} = \sin\frac{\alpha-\beta}{2}\\
+&= \sin 40^\circ = \cos 50^\circ\\
+\implies \angle RTS &= 50^\circ
+\end{align}
+For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$. From \eqref{eq:lineint},
+\begin{align}
+\myvec{\vec{R}-\vec{P} & -\brak{\vec{S}-\vec{Q}}}\myvec{\kappa_1\\ \kappa_2} = \vec{Q} - \vec{P} \implies \vec{T} = \myvec{0\\ 2.1445}
+\end{align}
+and \eqref{eq:angle} gives $\angle RTS = 50^\circ$. The correct option is (b).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q07.pdf}
+\caption{Circle with diameter $PQ$, $\angle ROS = 80^\circ$ and $\angle RTS = 50^\circ$}
+\end{figure}
+
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q07.py}@*)
+\end{lstlisting}
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q07.py}@*)
+\end{lstlisting}
 % ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
 \begin{align}
