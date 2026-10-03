@@ -238,7 +238,7 @@ The above system of equations represents a \gate
 \end{align}
 Thus,
 \begin{align}
-\text{rank}\brak{\vec{A}} = \text{rank}\brak{\sbrak{\vec{A}\mid\vec{b}}} = 2 < n = 3
+\text{rank}\brak{\vec{A}} = \text{rank}\brak{{\vec{A}\mid\vec{b}}} = 2 < n = 3
 \end{align}
 From \eqref{eq:rc}, the system is consistent with $n - r = 1$ free variable. From \eqref{eq:cross}, the solution is
 \begin{align}
@@ -330,36 +330,6 @@ x^3 + y^3 = 27 + 64 = 91
 \end{lstlisting}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q28.pdf}@*)
-\end{lstlisting}
-
-% ----------------------------------------------------------- Q33
-\item The travel times of three vehicles on a 2 km stretch of road are 4, 5, and 8 minutes. Assuming the speed of each vehicle to be constant in this stretch, the Space Mean Speed (in km/h) of the vehicles is \underline{\hspace{2cm}} (rounded off to two decimal places). \gate
-
-\solution The travel time vector (in hours) is
-\begin{align}
-\vec{t} = \frac{1}{60}\myvec{4\\ 5\\ 8},\quad \vec{1}^\top\vec{t} = \frac{17}{60}\text{ h}
-\end{align}
-From \eqref{eq:sms} with $n = 3$ and $d = 2$ km,
-\begin{align}
-v_s = \frac{nd}{\vec{1}^\top\vec{t}} = \frac{3\times 2}{\frac{17}{60}} = \frac{360}{17} \approx 21.18\text{ km/h}
-\end{align}
-Equivalently, the spot speeds are $\myvec{30 & 24 & 15}$ km/h and their harmonic mean is
-\begin{align}
-v_s = \frac{3}{\frac{1}{30} + \frac{1}{24} + \frac{1}{15}} = 21.18\text{ km/h}
-\end{align}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q33.py}@*)
-\end{lstlisting}
-
-% ----------------------------------------------------------- Q35
-\item The height of the plane of collimation of a levelling instrument is 100.000 m from a datum. The levelling instrument measures a Back Sight of 1.500 m on a vertically held staff at a ground point $P$. The reduced level (in m) of the ground point $P$ with respect to the datum is \underline{\hspace{2cm}} (rounded off to three decimal places). \gate
-
-\solution From \eqref{eq:rl},
-\begin{align}
-\text{RL}_P = \text{HI} - h = 100.000 - 1.500 = 98.500\text{ m}
-\end{align}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q35.py}@*)
 \end{lstlisting}
 
 % ----------------------------------------------------------- Q36
