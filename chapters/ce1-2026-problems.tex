@@ -24,15 +24,15 @@
 x^2 - y = 0 &\implies \vec{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
 x^2 + 2x + y + 1 = 0 &\implies \vec{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
 \end{align}
-Since
+Using \eqref{eq:class},
 \begin{align}
-\mydet{\vec{V}_1} = \mydet{1 & 0\\ 0 & 0} = 0,\quad \mydet{\vec{V}_2} = \mydet{1 & 0\\ 0 & 0} = 0
+\abs{\vec{V}_1} = \mydet{1 & 0\\ 0 & 0} = 0,\quad \abs{\vec{V}_2} = \mydet{1 & 0\\ 0 & 0} = 0
 \end{align}
-both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
+so both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
 \begin{align}
 \vec{x}^\top\myvec{1+\mu & 0\\ 0 & 0}\vec{x} + 2\myvec{\mu\\ \frac{\mu-1}{2}}^\top\vec{x} + \mu = 0
 \end{align}
-The pencil is degenerate when \eqref{eq:degen} holds. Expanding along the second row,
+The pencil is degenerate when \eqref{eq:degen} holds. Expanding along the second row using \eqref{eq:detexp} and \eqref{eq:det2},
 \begin{align}
 \mydet{1+\mu & 0 & \mu\\ 0 & 0 & \frac{\mu-1}{2}\\ \mu & \frac{\mu-1}{2} & \mu}
 &= -\frac{\mu-1}{2}\mydet{1+\mu & 0\\ \mu & \frac{\mu-1}{2}}\\
@@ -43,11 +43,11 @@ For $\mu = -1$, $\vec{V}_1 - \vec{V}_2 = \vec{0}$ and the second-degree terms va
 2\brak{\vec{u}_1 - \vec{u}_2}^\top\vec{x} + \brak{f_1 - f_2} &= 0\\
 2\myvec{-1 & -1}\vec{x} - 1 = 0 &\implies \myvec{1 & 1}\vec{x} = -\frac{1}{2}
 \end{align}
-The normal vector is $\vec{n} = \myvec{1\\ 1}$. From \eqref{eq:lineform} with $\vec{n}^\top\vec{m} = 0$, a point on the line and its direction vector are
+The normal vector is $\vec{n} = \myvec{1\\ 1}$. From \eqref{eq:normal} and \eqref{eq:lineform}, a point on the line and its direction vector are
 \begin{align}
 \vec{h} = \myvec{0\\ -\frac{1}{2}},\quad \vec{m} = \myvec{1\\ -1},\quad \vec{x} = \vec{h} + \kappa\vec{m}
 \end{align}
-Substituting this line into the first parabola using \eqref{eq:disc},
+Substituting this line into the first parabola using \eqref{eq:quadk} and \eqref{eq:gh},
 \begin{align}
 \vec{m}^\top\vec{V}_1\vec{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
 \vec{V}_1\vec{h} + \vec{u}_1 &= \myvec{1 & 0\\ 0 & 0}\myvec{0\\ -\frac{1}{2}} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
@@ -58,7 +58,7 @@ which gives
 \begin{align}
 \kappa^2 + \kappa + \frac{1}{2} = 0
 \end{align}
-The discriminant is
+The discriminant from \eqref{eq:disc} is
 \begin{align}
 \Delta = \sbrak{\vec{m}^\top\brak{\vec{V}_1\vec{h} + \vec{u}_1}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top\vec{V}_1\vec{m}} = \frac{1}{4} - \frac{1}{2} = -\frac{1}{4} < 0
 \end{align}
@@ -84,41 +84,6 @@ which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ p
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q03.py}@*)
 \end{lstlisting}
-% ----------------------------------------------------------- Q10
-\item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \gate
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt]
-\item 13
-\item 26
-\item 39
-\item 42
-\end{enumerate}
-\end{multicols}
-\solution The given equation can be written as
-\begin{align}
-P^2 - Q^2 = \brak{P-Q}\brak{P+Q} = 13
-\end{align}
-Since 13 is prime and $0 < P - Q < P + Q$,
-\begin{align}
-P - Q = 1,\quad P + Q = 13
-\end{align}
-Expressing in the matrix form \eqref{eq:axb}:
-\begin{align}
-\myvec{1 & -1\\ 1 & 1}\myvec{P\\ Q} = \myvec{1\\ 13}
-\end{align}
-Applying $R_2 \to R_2 - R_1$ on the augmented matrix:
-\begin{align}
-\myvec{1 & -1 & 1\\ 1 & 1 & 13} \xrightarrow{R_2\to R_2 - R_1} \myvec{1 & -1 & 1\\ 0 & 2 & 12} \implies Q = 6,\ P = 7
-\end{align}
-Therefore,
-\begin{align}
-PQ = 7\times 6 = 42
-\end{align}
-
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q10.py}@*)
-\end{lstlisting}
-
 % ----------------------------------------------------------- Q11 (1.1.15)
 \item Matrix $\vec{P}$ is given as
 \begin{align}
