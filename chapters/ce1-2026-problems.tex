@@ -111,7 +111,7 @@ The direction vectors of the lines $PR$ and $QS$ are
 \vec{R} - \vec{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
 \vec{S} - \vec{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
 \end{align}
-The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrightarrow{TR}$ is along $\vec{P} - \vec{R}$ and $\overrightarrow{TS}$ is along $\vec{Q} - \vec{S}$. Both are the negatives of the direction vectors above, and the scalars $2r\cos\frac{\alpha}{2}$ and $2r\sin\frac{\beta}{2}$ are positive. Using \eqref{eq:angle} with the unit vectors along these directions,
+The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence vector TR is along $\vec{P} - \vec{R}$ and vector TS is along $\vec{Q} - \vec{S}$. Both are the negatives of the direction vectors above, and the scalars $2r\cos\frac{\alpha}{2}$ and $2r\sin\frac{\beta}{2}$ are positive. Using \eqref{eq:angle} with the unit vectors along these directions,
 \begin{align}
 \cos\angle RTS &= \myvec{\cos\frac{\alpha}{2} & \sin\frac{\alpha}{2}}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}\\
 &= \sin\frac{\alpha}{2}\cos\frac{\beta}{2} - \cos\frac{\alpha}{2}\sin\frac{\beta}{2} = \sin\frac{\alpha-\beta}{2}\\
@@ -122,7 +122,7 @@ For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$. F
 \begin{align}
 \myvec{\vec{R}-\vec{P} & -\brak{\vec{S}-\vec{Q}}}\myvec{\kappa_1\\ \kappa_2} = \vec{Q} - \vec{P} \implies \vec{T} = \myvec{0\\ 2.1445}
 \end{align}
-and \eqref{eq:angle} gives $\angle RTS = 50^\circ$. The correct option is (b).
+and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
 
 \begin{figure}[H]
 \centering
@@ -235,18 +235,51 @@ From \eqref{eq:bayes},
 \begin{align}
 \myvec{9 & 15\\ 15 & 50}
 \end{align}
-By performing Cholesky decomposition, $\abs{l_{22}}$ of the lower triangular matrix is \underline{\hspace{2cm}} (in integer). \gate
 
-\solution Comparing with \eqref{eq:chol2},
-\begin{align}
-l_{11}^2 &= 9 \implies l_{11} = 3\\
-l_{11}l_{21} &= 15 \implies l_{21} = 5\\
-l_{21}^2 + l_{22}^2 &= 50 \implies l_{22}^2 = 25 \implies \abs{l_{22}} = 5
-\end{align}
-Thus,
-\begin{align}
-\vec{L} = \myvec{3 & 0\\ 5 & 5},\quad \vec{L}\vec{L}^\top = \myvec{9 & 15\\ 15 & 50}
-\end{align}
+\solution A symmetric positive definite matrix $A \in \mathbb{R}^{2 \times 2}$ given as
+\[
+    A = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix}
+\]
+can be factored using standard LU decomposition into $A = L_{\text{LU}} U$ with a unit lower triangular matrix $L_{\text{LU}}$:
+\begin{equation}
+    \begin{pmatrix} 1 & 0 \\ l_{21} & 1 \end{pmatrix} \begin{pmatrix} u_{11} & u_{12} \\ 0 & u_{22} \end{pmatrix} = \begin{pmatrix} u_{11} & u_{12} \\ l_{21}u_{11} & l_{21}u_{12} + u_{22} \end{pmatrix} = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix} \label{eq:lu_system}
+\end{equation}
+Equating entries yields $u_{11} = 9$, $u_{12} = 15$, $l_{21} = 15/9 = 5/3$, and $u_{22} = 50 - (5/3)(15) = 25$. This gives:
+\begin{equation}
+    L_{\text{LU}} = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix}, \quad U = \begin{pmatrix} 9 & 15 \\ 0 & 25 \end{pmatrix} \label{eq:lu_result}
+\end{equation}
+Factoring out the diagonal matrix $D = \text{diag}(9, 25)$ transforms the LU decomposition into $A = L_{\text{LU}} D L_{\text{LU}}^\top$:
+\begin{equation}
+    A = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix} \begin{pmatrix} 9 & 0 \\ 0 & 25 \end{pmatrix} \begin{pmatrix} 1 & \frac{5}{3} \\ 0 & 1 \end{pmatrix} \label{eq:ldl_result}
+\end{equation}
+By absorbing $D^{1/2} = \text{diag}(\sqrt{9}, \sqrt{25}) = \text{diag}(3, 5)$ into $L_{\text{LU}}$, the Cholesky factor $L$ for $A = LL^\top$ is derived:
+\begin{equation}
+    L = L_{\text{LU}} D^{1/2} = \begin{pmatrix} 1 & 0 \\ \frac{5}{3} & 1 \end{pmatrix} \begin{pmatrix} 3 & 0 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix} \label{eq:cholesky_from_lu}
+\end{equation}
+
+Alternatively, using the general Cholesky algorithm directly, $A = LL^\top$ computes $l_{ij}$ for $1 \le j \le i \le n$ via:
+\begin{equation}
+    l_{jj} = \sqrt{a_{jj} - \sum_{k=1}^{j-1} l_{jk}^2} \label{eq:cholesky_diag}
+\end{equation}
+\begin{equation}
+    l_{ij} = \frac{1}{l_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk} \right), \quad \text{for } i > j \label{eq:cholesky_offdiag}
+\end{equation}
+Evaluating Equation~\eqref{eq:cholesky_diag} for $j = 1$ gives:
+\begin{equation}
+    l_{11} = \sqrt{a_{11}} = \sqrt{9} = 3 \label{eq:step_l11}
+\end{equation}
+Evaluating Equation~\eqref{eq:cholesky_offdiag} for $i = 2, j = 1$ gives:
+\begin{equation}
+    l_{21} = \frac{a_{21}}{l_{11}} = \frac{15}{3} = 5 \label{eq:step_l21}
+\end{equation}
+Evaluating Equation~\eqref{eq:cholesky_diag} for $j = 2$ gives:
+\begin{equation}
+    l_{22} = \sqrt{a_{22} - l_{21}^2} = \sqrt{50 - 5^2} = \sqrt{25} = 5 \label{eq:step_l22}
+\end{equation}
+Both approaches confirm that the Cholesky factor matrix and diagonal value are:
+\begin{equation}
+    L = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix}, \quad |l_{22}| = 5 \label{eq:final_answer}
+\end{equation}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1q27/q27.py}@*)
 \end{lstlisting}
@@ -256,6 +289,47 @@ Thus,
 \begin{align}
 \brak{x + y - 7}^2 + \brak{y + 3x - 13}^2 = 0
 \end{align}
+
+
+A symmetric positive definite matrix $A \in \mathbb{R}^{n \times n}$ can be factorized as
+\begin{equation}
+    A = LL^{\top} \label{eq:1.1.5.1}
+\end{equation}
+where $L$ is a lower triangular matrix with positive diagonal entries. The general formulas for computing the entries $l_{ij}$ of $L$ for $1 \le j \le i \le n$ are given by:
+\begin{equation}
+    l_{jj} = \sqrt{a_{jj} - \sum_{k=1}^{j-1} l_{jk}^2} \label{eq:cholesky_diag}
+\end{equation}
+\begin{equation}
+    l_{ij} = \frac{1}{l_{jj}} \left( a_{ij} - \sum_{k=1}^{j-1} l_{ik} l_{jk} \right), \quad \text{for } i > j \label{eq:cholesky_offdiag}
+\end{equation}
+
+Given the matrix:
+\[
+    A = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix}
+\]
+
+Applying Equation~\eqref{eq:cholesky_diag} for $j = 1$:
+\begin{equation}
+    l_{11} = \sqrt{a_{11}} = \sqrt{9} = 3 \label{eq:1.2.8.2}
+\end{equation}
+
+Applying Equation~\eqref{eq:cholesky_offdiag} for $i = 2, j = 1$:
+\begin{equation}
+    l_{21} = \frac{a_{21}}{l_{11}} = \frac{15}{3} = 5 \label{eq:1.2.8.3}
+\end{equation}
+
+Applying Equation~\eqref{eq:cholesky_diag} for $j = 2$:
+\begin{equation}
+    l_{22} = \sqrt{a_{22} - l_{21}^2} = \sqrt{50 - 5^2} = \sqrt{25} = 5 \label{eq:1.2.8.4}
+\end{equation}
+
+Thus, the lower triangular matrix $L$ and the product $LL^{\top}$ are:
+\begin{equation}
+    L = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix}, \quad LL^{\top} = \begin{pmatrix} 3 & 0 \\ 5 & 5 \end{pmatrix} \begin{pmatrix} 3 & 5 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 9 & 15 \\ 15 & 50 \end{pmatrix} \label{eq:1.2.8.5}
+\end{equation}
+
+Therefore, $|l_{22}| = 5$.
+
 The value of $\brak{x^3 + y^3}$ is \underline{\hspace{2cm}} (in integer). \gate
 
 \solution Let
