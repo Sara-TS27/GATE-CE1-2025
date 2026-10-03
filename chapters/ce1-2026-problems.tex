@@ -10,7 +10,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
 
 % ----------------------------------------------------------- Q3
-	\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
+\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 0
@@ -19,77 +19,63 @@
 \item 3
 \end{enumerate}
 \end{multicols}
-\solution Write both curves in the form \eqref{eq:conic}:
+\solution Writing both curves in the form \eqref{eq:conic},
 \begin{align}
 x^2 - y = 0 &\implies \vec{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
 x^2 + 2x + y + 1 = 0 &\implies \vec{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
 \end{align}
-Since $\mydet{\vec{V}_1} = \mydet{\vec{V}_2} = 0$, both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
+Since
+\begin{align}
+\mydet{\vec{V}_1} = \mydet{1 & 0\\ 0 & 0} = 0,\quad \mydet{\vec{V}_2} = \mydet{1 & 0\\ 0 & 0} = 0
+\end{align}
+both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
 \begin{align}
 \vec{x}^\top\myvec{1+\mu & 0\\ 0 & 0}\vec{x} + 2\myvec{\mu\\ \frac{\mu-1}{2}}^\top\vec{x} + \mu = 0
 \end{align}
-
-\textbf{Step 1: Degenerate members of the pencil.}
-Using the determinant condition \eqref{eq:degen},
+The pencil is degenerate when \eqref{eq:degen} holds. Expanding along the second row,
 \begin{align}
 \mydet{1+\mu & 0 & \mu\\ 0 & 0 & \frac{\mu-1}{2}\\ \mu & \frac{\mu-1}{2} & \mu}
 &= -\frac{\mu-1}{2}\mydet{1+\mu & 0\\ \mu & \frac{\mu-1}{2}}\\
-&= -\frac{\brak{\mu-1}^2\brak{\mu+1}}{4} = 0
-\implies \mu = -1,\ \mu = 1
+&= -\frac{\brak{\mu-1}^2\brak{\mu+1}}{4} = 0 \implies \mu = -1,\ \mu = 1
 \end{align}
-
-\textbf{Step 2: Common chord ($\mu=-1$).}
-Here $\vec{V}_1 - \vec{V}_2 = \vec{0}$, so the second-degree terms vanish and \eqref{eq:chord} gives
+For $\mu = -1$, $\vec{V}_1 - \vec{V}_2 = \vec{0}$ and the second-degree terms vanish. From \eqref{eq:chord},
 \begin{align}
 2\brak{\vec{u}_1 - \vec{u}_2}^\top\vec{x} + \brak{f_1 - f_2} &= 0\\
 2\myvec{-1 & -1}\vec{x} - 1 = 0 &\implies \myvec{1 & 1}\vec{x} = -\frac{1}{2}
 \end{align}
-Its normal vector is $\vec{n} = \myvec{1\\ 1}$, so the direction vector is $\vec{m} = \myvec{1\\ -1}$ (from $\vec{n}^\top\vec{m} = 0$). A point on the line is
+The normal vector is $\vec{n} = \myvec{1\\ 1}$. From \eqref{eq:lineform} with $\vec{n}^\top\vec{m} = 0$, a point on the line and its direction vector are
 \begin{align}
-\vec{h} = \myvec{0\\ -\frac{1}{2}}, \qquad \myvec{1 & 1}\vec{h} = -\frac{1}{2}
+\vec{h} = \myvec{0\\ -\frac{1}{2}},\quad \vec{m} = \myvec{1\\ -1},\quad \vec{x} = \vec{h} + \kappa\vec{m}
 \end{align}
-All common points of the two parabolas lie on
-\begin{align}
-\vec{x} = \vec{h} + \kappa\vec{m} = \myvec{0\\ -\frac{1}{2}} + \kappa\myvec{1\\ -1}
-\end{align}
-
-\textbf{Step 3: Intersect the line with the first parabola.}
-From \eqref{eq:disc},
+Substituting this line into the first parabola using \eqref{eq:disc},
 \begin{align}
 \vec{m}^\top\vec{V}_1\vec{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
 \vec{V}_1\vec{h} + \vec{u}_1 &= \myvec{1 & 0\\ 0 & 0}\myvec{0\\ -\frac{1}{2}} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
 \vec{m}^\top\brak{\vec{V}_1\vec{h} + \vec{u}_1} &= \myvec{1 & -1}\myvec{0\\ -\frac{1}{2}} = \frac{1}{2}\\
 g\brak{\vec{h}} &= \vec{h}^\top\vec{V}_1\vec{h} + 2\vec{u}_1^\top\vec{h} + f_1 = 0 + \frac{1}{2} + 0 = \frac{1}{2}
 \end{align}
-The quadratic in $\kappa$ is
+which gives
 \begin{align}
 \kappa^2 + \kappa + \frac{1}{2} = 0
 \end{align}
-and its discriminant is
+The discriminant is
 \begin{align}
-\Delta = \sbrak{\vec{m}^\top\brak{\vec{V}_1\vec{h}+\vec{u}_1}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top\vec{V}_1\vec{m}}
-= \frac{1}{4} - \frac{1}{2} = -\frac{1}{4} < 0
+\Delta = \sbrak{\vec{m}^\top\brak{\vec{V}_1\vec{h} + \vec{u}_1}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top\vec{V}_1\vec{m}} = \frac{1}{4} - \frac{1}{2} = -\frac{1}{4} < 0
 \end{align}
 From \eqref{eq:kappa},
 \begin{align}
 \kappa = -\frac{1}{2} \pm \frac{j}{2}
-\implies \vec{x}_i = \myvec{-\frac{1}{2} \pm \frac{j}{2}\\ \ \ \ \ \ \mp\frac{j}{2}}
 \end{align}
-which is not real.
-
-\textbf{Step 3 (check): the other degenerate member ($\mu = 1$).}
+which is not real. As a check, the other degenerate member $\mu = 1$ gives
 \begin{align}
-\brak{x^2 - y} + \brak{x^2 + 2x + y + 1} = 2x^2 + 2x + 1 = 0
-\implies x = \frac{-1 \pm j}{2}
+\brak{x^2 - y} + \brak{x^2 + 2x + y + 1} = 2x^2 + 2x + 1 = 0 \implies x = \frac{-1 \pm j}{2}
 \end{align}
-This is a pair of imaginary parallel lines, so no real point exists. Both degenerate members agree.
-
-\textbf{Conclusion:} The curves do not meet in the real $\brak{x,y}$ plane, so the number of intersection points is $0$. The answer is option (a).
+which is again not real. Hence the curves do not meet in the real $\brak{x,y}$ plane and the number of intersection points is $0$. The correct option is (a).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q03.pdf}
-\caption{The two parabolas and the common-chord line $x + y = -\frac{1}{2}$}
+\caption{The two parabolas and the line $x + y = -\frac{1}{2}$ from the pencil}
 \end{figure}
 
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]

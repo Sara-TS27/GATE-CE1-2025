@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  3 OCT 2026 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.9.2)  3 OCT 2026 14:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1437,6 +1437,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 l.85 ...in\alpha}$ with $\vec{e}_\alpha \triangleq
                                                    \myvec{\cos\alpha \\ \sin...
 
+? ^^[[Dr
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
 ? r
 OK, entering \nonstopmode...
 [4] [5] [6]
@@ -1566,85 +1572,23 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 \documentclass
-                   {article}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Reference `eq:conic' on page 8 undefined on input line 22.
 
 
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \usepackage
-                {amsmath,amssymb}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Reference `eq:degen' on page 8 undefined on input line 33.
 
 
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \usepackage
-                {hyperref}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Reference `eq:chord' on page 8 undefined on input line 42.
 
 [8]
-Runaway argument?
-{documentgin{figure}[H] \centering \includegraphics [width=0.7\columnwidth \ETC
-.
-! Paragraph ended before \end  was complete.
-<to be read again> 
-                   \par 
-l.104 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+<figs/q03.pdf, id=166, 722.7pt x 578.16pt>
+File: figs/q03.pdf Graphic file (type pdf)
+<use figs/q03.pdf>
+Package pdftex.def Info: figs/q03.pdf  used on input line 91.
+(pdftex.def)             Requested size: 148.66171pt x 118.92937pt.
+ [9 <./figs/q03.pdf>]
 ! Undefined control sequence.
-l.110 ...le RTS$ is \underline{\hspace{2cm}} \gate
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[9]
-<figs/q07.pdf, id=188, 433.62pt x 433.62pt>
-File: figs/q07.pdf Graphic file (type pdf)
-<use figs/q07.pdf>
-Package pdftex.def Info: figs/q07.pdf  used on input line 147.
-(pdftex.def)             Requested size: 254.9356pt x 254.94035pt.
-
-! Undefined control sequence.
-l.160 ... Step 8 is \underline{\hspace{2cm}} \gate
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[10 <./figs/q07.pdf>] [11]
-! Undefined control sequence.
-l.203 ...and $Q$ is \underline{\hspace{2cm}} \gate
+l.102 ...and $Q$ is \underline{\hspace{2cm}} \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1653,7 +1597,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.242 The TRUE option is \gate
+l.141 The TRUE option is \gate
                               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1661,9 +1605,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[12]
+[10]
 ! Undefined control sequence.
-l.277 ...ve system of equations represents a \gate
+l.176 ...ve system of equations represents a \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1671,14 +1615,58 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q12.pdf, id=292, 505.89pt x 433.62pt>
+<figs/q12.pdf, id=257, 505.89pt x 433.62pt>
 File: figs/q12.pdf Graphic file (type pdf)
 <use figs/q12.pdf>
-Package pdftex.def Info: figs/q12.pdf  used on input line 302.
+Package pdftex.def Info: figs/q12.pdf  used on input line 201.
 (pdftex.def)             Requested size: 254.9356pt x 218.51653pt.
+[11]
+! Undefined control sequence.
+l.212 ...rounded off to two decimal places). \gate
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[12 <./figs/q12.pdf>]
+! Undefined control sequence.
+l.235 ...derline{\hspace{2cm}} (in integer). \gate
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.256 ...derline{\hspace{2cm}} (in integer). \gate
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 [13]
 ! Undefined control sequence.
-l.313 ...rounded off to two decimal places). \gate
+l.290 The value of $f\brak{1}$ is \gate
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figs/q36.pdf, id=357, 433.62pt x 289.08pt>
+File: figs/q36.pdf Graphic file (type pdf)
+<use figs/q36.pdf>
+Package pdftex.def Info: figs/q36.pdf  used on input line 319.
+(pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
+[14 <./figs/q36.pdf>]
+! Undefined control sequence.
+l.334 ...general solution of the equation is \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1686,18 +1674,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[14 <./figs/q12.pdf>]
 ! Undefined control sequence.
-l.336 ...derline{\hspace{2cm}} (in integer). \gate
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.357 ...derline{\hspace{2cm}} (in integer). \gate
+l.377 ...ffness matrix of the truss becomes: \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1706,48 +1684,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [15]
-! Undefined control sequence.
-l.391 The value of $f\brak{1}$ is \gate
-                                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<figs/q36.pdf, id=392, 433.62pt x 289.08pt>
-File: figs/q36.pdf Graphic file (type pdf)
-<use figs/q36.pdf>
-Package pdftex.def Info: figs/q36.pdf  used on input line 420.
-(pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
-[16 <./figs/q36.pdf>]
-! Undefined control sequence.
-l.435 ...general solution of the equation is \gate
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.478 ...ffness matrix of the truss becomes: \gate
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[17]
-<figs/q38.pdf, id=484, 433.62pt x 289.08pt>
+<figs/q38.pdf, id=447, 433.62pt x 289.08pt>
 File: figs/q38.pdf Graphic file (type pdf)
 <use figs/q38.pdf>
-Package pdftex.def Info: figs/q38.pdf  used on input line 503.
+Package pdftex.def Info: figs/q38.pdf  used on input line 402.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
- [18 <./figs/q38.pdf>]
+ [16 <./figs/q38.pdf>]
 ! Undefined control sequence.
-l.516 ...ding moment (in kN-m) in the frame? \gate
+l.415 ...ding moment (in kN-m) in the frame? \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1756,18 +1700,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (43.64688pt too wide) detected at line 528
+Overfull \hbox (43.64688pt too wide) detected at line 427
 []
  []
 
-<figs/q39.pdf, id=552, 505.89pt x 361.35pt>
+<figs/q39.pdf, id=516, 505.89pt x 361.35pt>
 File: figs/q39.pdf Graphic file (type pdf)
 <use figs/q39.pdf>
-Package pdftex.def Info: figs/q39.pdf  used on input line 552.
+Package pdftex.def Info: figs/q39.pdf  used on input line 451.
 (pdftex.def)             Requested size: 254.9356pt x 182.0971pt.
-[19]
+[17]
 ! Undefined control sequence.
-l.567 \gate
+l.466 \gate
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1775,14 +1719,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<figs/q48.pdf, id=571, 433.62pt x 325.215pt>
+<figs/q48.pdf, id=534, 433.62pt x 325.215pt>
 File: figs/q48.pdf Graphic file (type pdf)
 <use figs/q48.pdf>
-Package pdftex.def Info: figs/q48.pdf  used on input line 587.
+Package pdftex.def Info: figs/q48.pdf  used on input line 486.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
-[20 <./figs/q39.pdf>]
+[18 <./figs/q39.pdf>]
 ! Undefined control sequence.
-l.606 ...ounded off to the nearest integer). \gate
+l.505 ...ounded off to the nearest integer). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1790,15 +1734,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[21 <./figs/q48.pdf>]
-<figs/q49.pdf, id=694, 433.62pt x 325.215pt>
+[19 <./figs/q48.pdf>]
+<figs/q49.pdf, id=657, 433.62pt x 325.215pt>
 File: figs/q49.pdf Graphic file (type pdf)
 <use figs/q49.pdf>
-Package pdftex.def Info: figs/q49.pdf  used on input line 630.
+Package pdftex.def Info: figs/q49.pdf  used on input line 529.
 (pdftex.def)             Requested size: 254.9356pt x 191.20526pt.
 
 ! Undefined control sequence.
-l.641 ...rounded off to two decimal places). \gate
+l.540 ...rounded off to two decimal places). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1806,15 +1750,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[22 <./figs/q49.pdf>]
-<figs/q50.pdf, id=754, 361.35pt x 361.35pt>
+[20 <./figs/q49.pdf>]
+<figs/q50.pdf, id=717, 361.35pt x 361.35pt>
 File: figs/q50.pdf Graphic file (type pdf)
 <use figs/q50.pdf>
-Package pdftex.def Info: figs/q50.pdf  used on input line 674.
+Package pdftex.def Info: figs/q50.pdf  used on input line 573.
 (pdftex.def)             Requested size: 254.9356pt x 254.93925pt.
- [23]
+ [21]
 ! Undefined control sequence.
-l.687 ...(rounded off to one decimal place). \gate
+l.586 ...(rounded off to one decimal place). \gate
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1822,17 +1766,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[24 <./figs/q50.pdf>]
-<figs/q51.pdf, id=818, 433.62pt x 289.08pt>
+[22 <./figs/q50.pdf>]
+<figs/q51.pdf, id=782, 433.62pt x 289.08pt>
 File: figs/q51.pdf Graphic file (type pdf)
 <use figs/q51.pdf>
-Package pdftex.def Info: figs/q51.pdf  used on input line 708.
+Package pdftex.def Info: figs/q51.pdf  used on input line 607.
 (pdftex.def)             Requested size: 254.9356pt x 169.96022pt.
-) [25 <./figs/q51.pdf>] (./main.aux)
+) [23 <./figs/q51.pdf>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1841,13 +1788,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AECD4EA8E89543E18ECC298902A6A7D9;313.
  ) 
 Here is how much of TeX's memory you used:
- 50693 strings out of 474222
- 1214641 string characters out of 5748734
- 1956975 words of memory out of 5000000
- 71876 multiletter control sequences out of 15000+600000
+ 50663 strings out of 474222
+ 1214242 string characters out of 5748734
+ 1952975 words of memory out of 5000000
+ 71875 multiletter control sequences out of 15000+600000
  595491 words of font info for 122 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,109p,1194b,1257s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,109p,1194b,1254s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -1860,18 +1807,17 @@ msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (25 pages, 432400 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on main.pdf (23 pages, 411910 bytes).
 PDF statistics:
- 1045 PDF objects out of 1200 (max. 8388607)
- 625 compressed objects within 7 object streams
- 315 named destinations out of 1000 (max. 500000)
+ 993 PDF objects out of 1000 (max. 8388607)
+ 577 compressed objects within 6 object streams
+ 286 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
