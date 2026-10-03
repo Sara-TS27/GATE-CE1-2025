@@ -1,4 +1,4 @@
-% chapters/ce1-2025-problems.tex
+%\ chapters/ce1-2025-problems.tex
 % GATE CE1 - Problems (BT25 format)
 % Compile with XeLaTeX. Main language = English, Arabic only in heading.
 % Each problem is an \item of the outer enumerate.
@@ -10,7 +10,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, itemsep=0pt, leftmargin=*]
 
 % ----------------------------------------------------------- Q3
-\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
+	\item At how many points will the curves $y = x^2$ and $y = -x^2 - 2x - 1$ intersect in the real $\brak{x,y}$ plane? \gate
 \begin{multicols}{2}
 \begin{enumerate}[label=\alph*), itemsep=0pt]
 \item 0
@@ -19,186 +19,85 @@
 \item 3
 \end{enumerate}
 \end{multicols}
-\documentclass{article}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref}
-
-
-
-\begin{itemize}
-    \item Every second-degree curve 
-    \begin{equation}
-        ax^{2} + 2bxy + cy^{2} + 2dx + 2ey + f = 0 \label{eq:conic_scalar}
-    \end{equation}
-    can be written as
-    \begin{equation}
-        x^{\top}Vx + 2u^{\top}x + f = 0 \label{eq:conic_vector}
-    \end{equation}
-    where
-    \[
-        x = \begin{pmatrix} x \\ y \end{pmatrix}, \quad 
-        V = \begin{pmatrix} a & b \\ b & c \end{pmatrix} = V^{\top}, \quad 
-        u = \begin{pmatrix} d \\ e \end{pmatrix}
-    \]
-    The conic is a parabola if $|V| = 0$, an ellipse if $|V| > 0$, and a hyperbola if $|V| < 0$. For a circle with centre $c = \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$ and radius $r$, the equation $\|x - c\|^{2} = r^{2}$ gives:
-    \[
-        V = I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, \quad 
-        u = -c = \begin{pmatrix} -c_1 \\ -c_2 \end{pmatrix}, \quad 
-        f = \|c\|^{2} - r^{2} = c_1^2 + c_2^2 - r^2
-    \]
-
-    \item The points of intersection of a line $L : x = h + \kappa m$ ($\kappa \in \mathbb{R}$) with a conic section $x^{\top}Vx + 2u^{\top}x + f = 0$ are given by
-    \begin{equation}
-        x_{i} = h + \kappa_{i}m \label{eq:intersection_point}
-    \end{equation}
-    where the parameter values $\kappa_{i}$ are:
-    \begin{equation}
-        \kappa_{i} = \frac{-m^{\top}(Vh + u) \pm \sqrt{[m^{\top}(Vh + u)]^{2} - g(h)(m^{\top}Vm)}}{m^{\top}Vm} \label{eq:intersection_parameter}
-    \end{equation}
-    with $g(h) = h^{\top}Vh + 2u^{\top}h + f$. The line meets the conic at two, one, or no real points according as the discriminant
-    \begin{equation}
-        \Delta = [m^{\top}(Vh + u)]^{2} - g(h)(m^{\top}Vm) \label{eq:discriminant}
-    \end{equation}
-    is positive, zero, or negative.
-
-    \item Substituting $x = h + \kappa m$ into the conic equation and using $V = V^{\top}$:
-    \begin{equation}
-        (h + \kappa m)^{\top}V(h + \kappa m) + 2u^{\top}(h + \kappa m) + f = 0 \label{eq:derivation_step1}
-    \end{equation}
-    \begin{equation}
-        \kappa^{2}(m^{\top}Vm) + 2\kappa m^{\top}(Vh + u) + g(h) = 0 \label{eq:derivation_step2}
-    \end{equation}
-    This is a quadratic equation in $\kappa$, and applying the quadratic formula yields Equation~\eqref{eq:intersection_parameter}. Each real root $\kappa_{i}$ gives one point of intersection through Equation~\eqref{eq:intersection_point}. When $\Delta = 0$, the two roots coincide, and the line is tangent to the conic.
-
-    \item The intersection of two conics with parameters $(V_{1}, u_{1}, f_{1})$ and $(V_{2}, u_{2}, f_{2})$ lies on every member of the pencil:
-    \begin{equation}
-        x^{\top}(V_{1} + \mu V_{2})x + 2(u_{1} + \mu u_{2})^{\top}x + (f_{1} + \mu f_{2}) = 0 \label{eq:pencil}
-    \end{equation}
-
-    \item The pencil in Equation~\eqref{eq:pencil} is a pair of straight lines (a degenerate conic) if and only if:
-    \begin{equation}
-        \begin{vmatrix}
-            V_{1} + \mu V_{2} & u_{1} + \mu u_{2} \\
-            (u_{1} + \mu u_{2})^{\top} & f_{1} + \mu f_{2}
-        \end{vmatrix} = 0 \label{eq:degenerate_determinant}
-    \end{equation}
-    In full $3 \times 3$ block matrix notation, this determinant is expressed as:
-    \[
-        \begin{vmatrix}
-            a_1 + \mu a_2 & b_1 + \mu b_2 & d_1 + \mu d_2 \\
-            b_1 + \mu b_2 & c_1 + \mu c_2 & e_1 + \mu e_2 \\
-            d_1 + \mu d_2 & e_1 + \mu e_2 & f_1 + \mu f_2
-        \end{vmatrix} = 0
-    \]
-    Every point common to both conics lies on every member of the pencil, so the common points lie on these lines. If $V_{1} = V_{2}$ (for example, two circles), choosing $\mu = -1$ removes the second-degree terms ($V_{1} - V_{2} = 0$) and leaves the common chord (radical axis):
-    \begin{equation}
-        2(u_{1} - u_{2})^{\top}x + (f_{1} - f_{2}) = 0 \label{eq:common_chord}
-    \end{equation}
-\end{itemize}
-
-\end{documentgin{figure}[H]
-\centering
-\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q03.pdf}
-\caption{The parabolas $y = x^2$ and $y = -x^2 - 2x - 1$}
-\end{figure}
-
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q03.pdf}@*)
-\end{lstlisting}
-
-% ----------------------------------------------------------- Q7
-\item In the given figure, $\overline{PQ}$ is the diameter of a circle with center $O$. Two points $R$ and $S$ are chosen on the circle such that $\angle ROS = 80^\circ$. When $\overline{PR}$ and $\overline{QS}$ are extended, they meet at $T$. The value of $\angle RTS$ is \underline{\hspace{2cm}} \gate
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt]
-\item $40^\circ$
-\item $50^\circ$
-\item $60^\circ$
-\item $80^\circ$
-\end{enumerate}
-\end{multicols}
-\solution Let $O$ be the origin and the radius be $r$. Then
+\solution Write both curves in the form \eqref{eq:conic}:
 \begin{align}
-\vec{P} = r\vec{e}_{180^\circ} = -r\vec{e}_{0},\quad \vec{Q} = r\vec{e}_{0},\quad \vec{R} = r\vec{e}_\alpha,\quad \vec{S} = r\vec{e}_\beta
+x^2 - y = 0 &\implies \vec{V}_1 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_1 = \myvec{0\\ -\frac{1}{2}},\ f_1 = 0\\
+x^2 + 2x + y + 1 = 0 &\implies \vec{V}_2 = \myvec{1 & 0\\ 0 & 0},\ \vec{u}_2 = \myvec{1\\ \frac{1}{2}},\ f_2 = 1
 \end{align}
-with $0 < \beta < \alpha < 180^\circ$ and, from \eqref{eq:cosdiff},
+Since $\mydet{\vec{V}_1} = \mydet{\vec{V}_2} = 0$, both curves are parabolas. Any common point lies on every member of the pencil \eqref{eq:pencil}:
 \begin{align}
-\cos\angle ROS = \vec{e}_\alpha^\top\vec{e}_\beta = \cos\brak{\alpha-\beta} \implies \alpha - \beta = 80^\circ
+\vec{x}^\top\myvec{1+\mu & 0\\ 0 & 0}\vec{x} + 2\myvec{\mu\\ \frac{\mu-1}{2}}^\top\vec{x} + \mu = 0
 \end{align}
-The direction vectors of the lines $PR$ and $QS$ are
+
+\textbf{Step 1: Degenerate members of the pencil.}
+Using the determinant condition \eqref{eq:degen},
 \begin{align}
-\vec{R} - \vec{P} &= r\myvec{1+\cos\alpha\\ \sin\alpha} = 2r\cos\frac{\alpha}{2}\myvec{\cos\frac{\alpha}{2}\\ \sin\frac{\alpha}{2}}\\
-\vec{S} - \vec{Q} &= r\myvec{\cos\beta - 1\\ \sin\beta} = 2r\sin\frac{\beta}{2}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}
+\mydet{1+\mu & 0 & \mu\\ 0 & 0 & \frac{\mu-1}{2}\\ \mu & \frac{\mu-1}{2} & \mu}
+&= -\frac{\mu-1}{2}\mydet{1+\mu & 0\\ \mu & \frac{\mu-1}{2}}\\
+&= -\frac{\brak{\mu-1}^2\brak{\mu+1}}{4} = 0
+\implies \mu = -1,\ \mu = 1
 \end{align}
-The point $T$ lies beyond $R$ on $PR$ and beyond $S$ on $QS$. Hence $\overrightarrow{TR}$ is along $\vec{P} - \vec{R}$ and $\overrightarrow{TS}$ is along $\vec{Q} - \vec{S}$. Using \eqref{eq:angle},
+
+\textbf{Step 2: Common chord ($\mu=-1$).}
+Here $\vec{V}_1 - \vec{V}_2 = \vec{0}$, so the second-degree terms vanish and \eqref{eq:chord} gives
 \begin{align}
-\cos\angle RTS &= \myvec{\cos\frac{\alpha}{2} & \sin\frac{\alpha}{2}}\myvec{-\sin\frac{\beta}{2}\\ \cos\frac{\beta}{2}}\\
-&= \sin\frac{\alpha}{2}\cos\frac{\beta}{2} - \cos\frac{\alpha}{2}\sin\frac{\beta}{2} = \sin\frac{\alpha-\beta}{2}\\
-&= \sin 40^\circ = \cos 50^\circ\\
-\implies \angle RTS &= 50^\circ
+2\brak{\vec{u}_1 - \vec{u}_2}^\top\vec{x} + \brak{f_1 - f_2} &= 0\\
+2\myvec{-1 & -1}\vec{x} - 1 = 0 &\implies \myvec{1 & 1}\vec{x} = -\frac{1}{2}
 \end{align}
-For a numerical check, take $r = 1$, $\alpha = 130^\circ$, $\beta = 50^\circ$ so that $\alpha - \beta = 80^\circ$. From \eqref{eq:lineint},
+Its normal vector is $\vec{n} = \myvec{1\\ 1}$, so the direction vector is $\vec{m} = \myvec{1\\ -1}$ (from $\vec{n}^\top\vec{m} = 0$). A point on the line is
 \begin{align}
-\myvec{\vec{R}-\vec{P} & -\brak{\vec{S}-\vec{Q}}}\myvec{\kappa_1\\ \kappa_2} = \vec{Q} - \vec{P} \implies \vec{T} = \myvec{0\\ 2.1445}
+\vec{h} = \myvec{0\\ -\frac{1}{2}}, \qquad \myvec{1 & 1}\vec{h} = -\frac{1}{2}
 \end{align}
-and \eqref{eq:angle} gives $\angle RTS = 50^\circ$.
+All common points of the two parabolas lie on
+\begin{align}
+\vec{x} = \vec{h} + \kappa\vec{m} = \myvec{0\\ -\frac{1}{2}} + \kappa\myvec{1\\ -1}
+\end{align}
+
+\textbf{Step 3: Intersect the line with the first parabola.}
+From \eqref{eq:disc},
+\begin{align}
+\vec{m}^\top\vec{V}_1\vec{m} &= \myvec{1 & -1}\myvec{1 & 0\\ 0 & 0}\myvec{1\\ -1} = 1\\
+\vec{V}_1\vec{h} + \vec{u}_1 &= \myvec{1 & 0\\ 0 & 0}\myvec{0\\ -\frac{1}{2}} + \myvec{0\\ -\frac{1}{2}} = \myvec{0\\ -\frac{1}{2}}\\
+\vec{m}^\top\brak{\vec{V}_1\vec{h} + \vec{u}_1} &= \myvec{1 & -1}\myvec{0\\ -\frac{1}{2}} = \frac{1}{2}\\
+g\brak{\vec{h}} &= \vec{h}^\top\vec{V}_1\vec{h} + 2\vec{u}_1^\top\vec{h} + f_1 = 0 + \frac{1}{2} + 0 = \frac{1}{2}
+\end{align}
+The quadratic in $\kappa$ is
+\begin{align}
+\kappa^2 + \kappa + \frac{1}{2} = 0
+\end{align}
+and its discriminant is
+\begin{align}
+\Delta = \sbrak{\vec{m}^\top\brak{\vec{V}_1\vec{h}+\vec{u}_1}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top\vec{V}_1\vec{m}}
+= \frac{1}{4} - \frac{1}{2} = -\frac{1}{4} < 0
+\end{align}
+From \eqref{eq:kappa},
+\begin{align}
+\kappa = -\frac{1}{2} \pm \frac{j}{2}
+\implies \vec{x}_i = \myvec{-\frac{1}{2} \pm \frac{j}{2}\\ \ \ \ \ \ \mp\frac{j}{2}}
+\end{align}
+which is not real.
+
+\textbf{Step 3 (check): the other degenerate member ($\mu = 1$).}
+\begin{align}
+\brak{x^2 - y} + \brak{x^2 + 2x + y + 1} = 2x^2 + 2x + 1 = 0
+\implies x = \frac{-1 \pm j}{2}
+\end{align}
+This is a pair of imaginary parallel lines, so no real point exists. Both degenerate members agree.
+
+\textbf{Conclusion:} The curves do not meet in the real $\brak{x,y}$ plane, so the number of intersection points is $0$. The answer is option (a).
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\columnwidth,keepaspectratio]{figs/q07.pdf}
-\caption{Circle with diameter $PQ$, $\angle ROS = 80^\circ$ and $\angle RTS = 50^\circ$}
+\includegraphics[width=0.5\columnwidth,height=0.22\textheight,keepaspectratio]{figs/q03.pdf}
+\caption{The two parabolas and the common-chord line $x + y = -\frac{1}{2}$}
 \end{figure}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q07.py}@*)
-\end{lstlisting}
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q07.pdf}@*)
-\end{lstlisting}
-
-% ----------------------------------------------------------- Q9
-\item Consider a linear arrangement of seven bulbs, each of which can be in the ON or OFF states. The initial configuration of the bulbs is shown in the figure. In every Step, the states of the bulbs are changed based on the following rules:
-Any OFF bulb with exactly one ON neighbor at the end of the previous Step is turned ON. Any ON bulb with both neighbors ON at the end of the previous Step is turned OFF. The state of any bulb not meeting the conditions above is left unchanged.
-The state of bulbs at the end of Step 1 and Step 2 are also shown in the figure. The number of bulbs which are ON at the end of Step 8 is \underline{\hspace{2cm}} \gate
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*), itemsep=0pt]
-\item 5
-\item 4
-\item 3
-\item 0
-\end{enumerate}
-\end{multicols}
-\solution Let $\vec{x}_k\in\cbrak{0,1}^7$ be the state vector after Step $k$ and $\vec{s}_k = \vec{A}\vec{x}_k$ from \eqref{eq:adj}, where
-\begin{align}
-\vec{A} = \myvec{0&1&0&0&0&0&0\\ 1&0&1&0&0&0&0\\ 0&1&0&1&0&0&0\\ 0&0&1&0&1&0&0\\ 0&0&0&1&0&1&0\\ 0&0&0&0&1&0&1\\ 0&0&0&0&0&1&0}
-\end{align}
-The rules give the update
-\begin{align}
-\vec{x}_{k+1} = \vec{x}_k + \brak{\vec{1} - \vec{x}_k}\odot\sbrak{\vec{s}_k = 1} - \vec{x}_k\odot\sbrak{\vec{s}_k = 2}
-\label{eq:bulbupdate}
-\end{align}
-where $\odot$ is the element-wise product and $\sbrak{\cdot}$ is 1 when the condition holds. The initial configuration has only the middle bulb ON:
-\begin{align}
-\vec{x}_0 &= \myvec{0&0&0&1&0&0&0}^\top, & \vec{s}_0 &= \myvec{0&0&1&0&1&0&0}^\top\\
-\vec{x}_1 &= \myvec{0&0&1&1&1&0&0}^\top, & \vec{s}_1 &= \myvec{0&1&1&2&1&1&0}^\top\\
-\vec{x}_2 &= \myvec{0&1&1&0&1&1&0}^\top, & \vec{s}_2 &= \myvec{1&1&1&2&1&1&1}^\top\\
-\vec{x}_3 &= \myvec{1&1&1&0&1&1&1}^\top, & \vec{s}_3 &= \myvec{1&2&1&2&1&2&1}^\top\\
-\vec{x}_4 &= \myvec{1&0&1&0&1&0&1}^\top, & \vec{s}_4 &= \myvec{0&2&0&2&0&2&0}^\top
-\end{align}
-$\vec{x}_1$ and $\vec{x}_2$ agree with Step 1 and Step 2 in the figure. In $\vec{x}_4$, every OFF bulb has two ON neighbours and every ON bulb has none, so \eqref{eq:bulbupdate} gives
-\begin{align}
-\vec{x}_5 = \vec{x}_4 \implies \vec{x}_8 = \vec{x}_4 = \myvec{1&0&1&0&1&0&1}^\top
-\end{align}
-The number of ON bulbs after Step 8 is
-\begin{align}
-\vec{1}^\top\vec{x}_8 = 4
-\end{align}
 
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q09.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/ce1/q03.py}@*)
 \end{lstlisting}
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q09.pdf}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/q03.py}@*)
 \end{lstlisting}
-
 % ----------------------------------------------------------- Q10
 \item $P$ and $Q$ are two positive integers such that $P^2 = Q^2 + 13$. The product of the numbers $P$ and $Q$ is \underline{\hspace{2cm}} \gate
 \begin{multicols}{2}
